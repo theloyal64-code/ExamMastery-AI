@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101828">
+  <meta name="description" content="AI-powered exam preparation for CBSE, ICSE and Odisha Adarsha Vidyalaya students.">
+  <title>ExamMastery AI | Learn Smarter</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #182230;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #101828;
+      color: white;
+      padding: 18px 16px;
+    }
+
+    .nav {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #71e0b5;
+    }
+
+    .language {
+      padding: 9px;
+      border-radius: 8px;
+      border: 1px solid #526078;
+      background: #202d42;
+      color: white;
+      max-width: 125px;
+    }
+
+    .hero {
+      padding: 54px 18px;
+      text-align: center;
+      background: linear-gradient(145deg, #e4f8ef, #edf3ff);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 12px;
+      background: white;
+      color: #087f5b;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: clamp(30px, 6vw, 48px);
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      max-width: 620px;
+      margin: 0 auto 24px;
+      color: #475467;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 22px;
+      background: #087f5b;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .section {
+      max-width: 1000px;
+      padding: 38px 16px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: 27px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #667085;
+      margin-bottom: 25px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: white;
+      padding: 22px;
+      border-radius: 15px;
+      border: 1px solid #e4e7ec;
+      box-shadow: 0 4px 14px rgba(16, 24, 40, 0.04);
+    }
+
+    .icon {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #667085;
+      font-size: 14px;
+    }
+
+    .study-box {
+      background: white;
+      border: 1px solid #e4e7ec;
+      border-radius: 15px;
+      padding: 22px;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin: 14px 0 6px;
+    }
+
+    select, input, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #d0d5dd;
+      border-radius: 9px;
+      background: white;
+      font-size: 15px;
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .study-box .button {
+      width: 100%;
+      margin-top: 18px;
+    }
+
+    #result {
+      display: none;
+      margin-top: 18px;
+      padding: 16px;
+      border-radius: 10px;
+      background: #e4f8ef;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    .notice {
+      font-size: 13px;
+      color: #667085;
+      margin-top: 12px;
+    }
+
+    footer {
+      background: #101828;
+      color: #d0d5dd;
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 420px) {
+      .logo {
+        font-size: 18px;
+      }
+
+      .hero {
+        padding: 42px 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="nav">
+      <div class="logo">ExamMastery<span> AI</span></div>
+
+      <select class="language" id="language" aria-label="Choose language">
+        <option value="English">English</option>
+        <option value="Hindi">हिन्दी</option>
+        <option value="Odia">ଓଡ଼ିଆ</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="badge">YOUR LEARNING JOURNEY STARTS HERE</div>
+
+      <h1>Learn Smarter.<br>Prepare Better.</h1>
+
+      <p id="heroText">
+        Your exam preparation companion for Classes 6–10.
+        Understand concepts, practise questions and build confidence.
+      </p>
+
+      <a href="#study" class="button" id="startButton">
+        Start Learning →
+      </a>
+    </section>
+
+    <section class="section">
+      <h2 id="featuresTitle">Everything You Need to Prepare</h2>
+      <p class="subtitle" id="featuresSubtitle">
+        Build strong concepts and prepare with confidence.
+      </p>
+
+      <div class="grid">
+        <article class="card">
+          <div class="icon">📚</div>
+          <h3 id="notesTitle">Smart Study Notes</h3>
+          <p id="notesText">Revise important concepts, definitions and formulas.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🎯</div>
+          <h3 id="practiceTitle">Question Practice</h3>
+          <p id="practiceText">Practise MCQs and test your understanding.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">📝</div>
+          <h3 id="examTitle">Mock Tests</h3>
+          <p id="examText">Prepare for exams with timed practice tests.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🤖</div>
+          <h3 id="aiTitle">AI Study Assistant</h3>
+          <p id="aiText">Our planned AI assistant will help explain difficult concepts.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="study">
+      <h2 id="studyTitle">Create Your Study Plan</h2>
+      <p class="subtitle" id="studySubtitle">
+        Choose your class and subject to get a starter plan.
+      </p>
+
+      <div class="study-box">
+        <label for="board" id="boardLabel">Board</label>
+        <select id="board">
+          <option value="CBSE">CBSE</option>
+          <option value="ICSE">ICSE</option>
+          <option value="OAV">Odisha Adarsha Vidyalaya</option>
+        </select>
+
+        <label for="className" id="classLabel">Class</label>
+        <select id="className">
+          <option value="6">Class 6</option>
+          <option value="7">Class 7</option>
+          <option value="8">Class 8</option>
+          <option value="9">Class 9</option>
+          <option value="10" selected>Class 10</option>
+        </select>
+
+        <label for="subject" id="subjectLabel">Subject</label>
+        <select id="subject">
+          <option value="Mathematics">Mathematics</option>
+          <option value="Science">Science</option>
+          <option value="English">English</option>
+          <option value="Social Science">Social Science</option>
+          <option value="Hindi">Hindi</option>
+          <option value="Odia">Odia</option>
+        </select>
+
+        <label for="minutes" id="timeLabel">Daily study time</label>
+        <select id="minutes">
+          <option value="30">30 minutes</option>
+          <option value="60" selected>1 hour</option>
+          <option value="90">1.5 hours</option>
+          <option value="120">2 hours</option>
+        </select>
+
+        <button class="button" id="planButton" onclick="createPlan()">
+          Create My Study Plan
+        </button>
+
+        <div id="result" role="status" aria-live="polite"></div>
+
+        <p class="notice" id="notice">
+          This is a basic demo. It does not yet use an AI service,
+          save student accounts or verify official syllabus coverage.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 ExamMastery AI</p>
+    <p>Learn with understanding. Improve with practice.</p>
+  </footer>
+
+  <script>
+    const translations = {
+      English: {
+        hero: "Your exam preparation companion for Classes 6–10. Understand concepts, practise questions and build confidence.",
+        start: "Start Learning →",
+        features: "Everything You Need to Prepare",
+        subtitle: "Build strong concepts and prepare with confidence.",
+        notes: "Smart Study Notes",
+        notesText: "Revise important concepts, definitions and formulas.",
+        practice: "Question Practice",
+        practiceText: "Practise MCQs and test your understanding.",
+        exam: "Mock Tests",
+        examText: "Prepare for exams with timed practice tests.",
+        ai: "AI Study Assistant",
+        aiText: "Our planned AI assistant will help explain difficult concepts.",
+        study: "Create Your Study Plan",
+        studySubtitle: "Choose your class and subject to get a starter plan.",
+        board: "Board",
+        className: "Class",
+        subject: "Subject",
+        time: "Daily study time",
+        plan: "Create My Study Plan",
+        notice: "This is a basic demo. It does not yet use an AI service, save student accounts or verify official syllabus coverage.",
+        resultTitle: "Your Starter Study Plan",
+        first: "Review one topic and write down key concepts.",
+        second: "Solve 5–10 practice questions.",
+        third: "Check your mistakes and revise difficult areas.",
+        daily: "Daily study time",
+        reminder: "Confirm your board's syllabus before choosing study materials."
+      },
+      Hindi: {
+        hero: "कक्षा 6–10 के लिए परीक्षा की तैयारी करें। अवधारणाएँ समझें, प्रश्नों का अभ्यास करें और आत्मविश्वास बढ़ाएँ।",
+        start: "पढ़ाई शुरू करें →",
+        features: "बेहतर तैयारी के लिए ज़रूरी सुविधाएँ",
+        subtitle: "अवधारणाएँ मज़बूत करें और आत्मविश्वास से तैयारी करें।",
+        notes: "स्मार्ट स्टडी नोट्स",
+        notesText: "महत्वपूर्ण अवधारणाएँ, परिभाषाएँ और सूत्र दोहराएँ।",
+        practice: "प्रश्नों का अभ्यास",
+        practiceText: "MCQ हल करें और अपनी समझ जाँचें।",
+        exam: "मॉक टेस्ट",
+        examText: "समय-सीमा वाले अभ्यास टेस्ट दें।",
+        ai: "AI स्टडी सहायक",
+        aiText: "प्रस्तावित AI सहायक कठिन विषय समझाने में मदद करेगा।",
+        study: "अपना स्टडी प्लान बनाएँ",
+        studySubtitle: "कक्षा और विषय चुनकर शुरुआती योजना पाएँ।",
+        board: "बोर्ड",
+        className: "कक्षा",
+        subject: "विषय",
+        time: "प्रतिदिन पढ़ाई का समय",
+        plan: "मेरा स्टडी प्लान बनाएँ",
+        notice: "यह एक शुरुआती डेमो है। इसमें अभी AI सेवा, छात्र खाते या आधिकारिक पाठ्यक्रम की पुष्टि उपलब्ध नहीं है।",
+        resultTitle: "आपकी शुरुआती अध्ययन योजना",
+        first: "एक विषय पढ़ें और मुख्य बातें लिखें।",
+        second: "5–10 अभ्यास प्रश्न हल करें।",
+        third: "गलतियों को जाँचें और कठिन विषय दोहराएँ।",
+        daily: "प्रतिदिन पढ़ाई का समय",
+        reminder: "अध्ययन सामग्री चुनने से पहले अपने बोर्ड का पाठ्यक्रम जाँचें।"
+      },
+      Odia: {
+        hero: "ଷଷ୍ଠରୁ ଦଶମ ଶ୍ରେଣୀ ପର୍ଯ୍ୟନ୍ତ ପରୀକ୍ଷା ପାଇଁ ପ୍ରସ୍ତୁତ ହୁଅନ୍ତୁ। ବିଷୟ ବୁଝନ୍ତୁ, ପ୍ରଶ୍ନ ଅଭ୍ୟାସ କରନ୍ତୁ ଏବଂ ଆତ୍ମବିଶ୍ୱାସ ବଢ଼ାନ୍ତୁ।",
+        start: "ପଢ଼ା ଆରମ୍ଭ କରନ୍ତୁ →",
+        features: "ପ୍ରସ୍ତୁତି ପାଇଁ ଆବଶ୍ୟକ ସୁବିଧା",
+        subtitle: "ବିଷୟକୁ ଭଲଭାବେ ବୁଝନ୍ତୁ ଓ ଆତ୍ମବିଶ୍ୱାସର ସହ ପ୍ରସ୍ତୁତ ହୁଅନ୍ତୁ।",
+        notes: "ପଢ଼ା ନୋଟ୍ସ",
+        notesText: "ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ବିଷୟ, ସଂଜ୍ଞା ଓ ସୂତ୍ର ପୁନରାବୃତ୍ତି କରନ୍ତୁ।",
+        practice: "ପ୍ରଶ୍ନ ଅଭ୍ୟାସ",
+        practiceText: "MCQ ଅଭ୍ୟାସ କରନ୍ତୁ ଏବଂ ନିଜ ବୁଝାମଣା ପରୀକ୍ଷା କରନ୍ତୁ।",
+        exam: "ମକ୍ ଟେଷ୍ଟ",
+        examText: "ସମୟ ନିର୍ଦ୍ଧାରିତ ପରୀକ୍ଷା ଅଭ୍ୟାସ କରନ୍ତୁ।",
+        ai: "AI ପଢ଼ା ସହାୟକ",
+        aiText: "ଭବିଷ୍ୟତର AI ସହାୟକ କଠିନ ବିଷୟ ବୁଝାଇବାରେ ସାହାଯ୍ୟ କରିବ।",
+        study: "ନିଜ ପଢ଼ା ଯୋଜନା ତିଆରି କରନ୍ତୁ",
+        studySubtitle: "ଶ୍ରେଣୀ ଓ ବିଷୟ ବାଛି ପ୍ରାରମ୍ଭିକ ଯୋଜନା ପାଆନ୍ତୁ।",
+        board: "ବୋର୍ଡ",
+        className: "ଶ୍ରେଣୀ",
+        subject: "ବିଷୟ",
+        time: "ଦୈନିକ ପଢ଼ା ସମୟ",
+        plan: "ମୋ ପଢ଼ା ଯୋଜନା ତିଆରି କରନ୍ତୁ",
+        notice: "ଏହା ଏକ ପ୍ରାରମ୍ଭିକ ଡେମୋ। ଏଥିରେ ବର୍ତ୍ତମାନ AI ସେବା, ଛାତ୍ର ଆକାଉଣ୍ଟ କିମ୍ବା ଅଧିକୃତ ପାଠ୍ୟକ୍ରମ ଯାଞ୍ଚ ନାହିଁ।",
+        resultTitle: "ଆପଣଙ୍କ ପ୍ରାରମ୍ଭିକ ପଢ଼ା ଯୋଜନା",
+        first: "ଗୋଟିଏ ବିଷୟ ପଢ଼ନ୍ତୁ ଏବଂ ମୁଖ୍ୟ କଥା ଲେଖନ୍ତୁ।",
+        second: "୫–୧୦ଟି ଅଭ୍ୟାସ ପ୍ରଶ୍ନ ସମାଧାନ କରନ୍ତୁ।",
+        third: "ଭୁଲଗୁଡ଼ିକ ଯାଞ୍ଚ କରି କଠିନ ବିଷୟ ପୁଣି ପଢ଼ନ୍ତୁ।",
+        daily: "ଦୈନିକ ପଢ଼ା ସମୟ",
+        reminder: "ପଢ଼ା ସାମଗ୍ରୀ ବାଛିବା ପୂର୍ବରୁ ନିଜ ବୋର୍ଡର ପାଠ୍ୟକ୍ରମ ଯାଞ୍ଚ କରନ୍ତୁ।"
+      }
+    };
+
+    function applyLanguage() {
+      const lang = translations[document.getElementById("language").value];
+
+      const ids = {
+        heroText: "hero",
+        startButton: "start",
+        featuresTitle: "features",
+        featuresSubtitle: "subtitle",
+        notesTitle: "notes",
+        notesText: "notesText",
+        practiceTitle: "practice",
+        practiceText: "practiceText",
+        examTitle: "exam",
+        examText: "examText",
+        aiTitle: "ai",
+        aiText: "aiText",
+        studyTitle: "study",
+        studySubtitle: "studySubtitle",
+        boardLabel: "board",
+        classLabel: "className",
+        subjectLabel: "subject",
+        timeLabel: "time",
+        planButton: "plan",
+        notice: "notice"
+      };
+
+      for (const id in ids) {
+        document.getElementById(id).textContent = lang[ids[id]];
+      }
+    }
+
+    document.getElementById("language").addEventListener("change", applyLanguage);
+
+    function createPlan() {
+      const lang = translations[document.getElementById("language").value];
+      const board = document.getElementById("board").selectedOptions[0].text;
+      const className = document.getElementById("className").value;
+      const subject = document.getElementById("subject").value;
+      const minutes = document.getElementById("minutes").value;
+
+      const result = document.getElementById("result");
+
+      result.textContent =
+        lang.resultTitle + "\n\n" +
+        board + " | Class " + className + "\n" +
+        subject + "\n" +
+        lang.daily + ": " + minutes + " minutes\n\n" +
+        "1. " + lang.first + "\n" +
+        "2. " + lang.second + "\n" +
+        "3. " + lang.third + "\n\n" +
+        lang.reminder;
+
+      result.style.display = "block";
+    }
+  </script>
+
+</body>
+  </html>
