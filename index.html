@@ -21,7 +21,7 @@ or:{eyebrow:"ଆପଣଙ୍କ ବ୍ୟକ୍ତିଗତ ପଢ଼ା ଜା�
 };
 let L="en",text="",name="",size=16,done=0,points=0;const $=x=>document.getElementById(x),t=k=>T[L][k]||T.en[k]||k;
 let authMode="register";let currentUser=null;
-function authBase(){return (window.EXAMMASTERY_API_URL||"").replace(/\\/+$/,"")}
+function authBase(){return (window.EXAMMASTERY_API_URL||"").replace(/\/+$/,"")}
 function setAuthMode(mode){authMode=mode;const registering=mode==="register";$("nameWrap").style.display=registering?"block":"none";$("authGradeWrap").style.display=registering?"block":"none";$("authBoardWrap").style.display=registering?"block":"none";$("authSubmit").textContent=registering?"Create account":"Log in";$("authToggle").textContent=registering?"I already have an account":"Create a new account";$("authPassword").autocomplete=registering?"new-password":"current-password";$("authStatus").textContent=authBase()?"Account service ready.":"Backend deployment and API URL are still required for online accounts."}
 $("authToggle").onclick=()=>setAuthMode(authMode==="register"?"login":"register");
 function showUser(user){currentUser=user;$("authBadge").textContent="SIGNED IN";$("authWelcome").innerHTML="<h3>Welcome, "+escapeHtml(user.name)+"</h3><p class='muted'>"+escapeHtml(user.email)+" · Class "+escapeHtml(user.grade)+" · "+escapeHtml(user.board)+"</p>";$("authLogout").style.display="inline-block";$("authSubmit").style.display="none";$("authToggle").style.display="none";$("nameWrap").style.display="none";$("authGradeWrap").style.display="none";$("authBoardWrap").style.display="none";$("authStatus").textContent="You are logged in on this device.";$("pc").value=user.grade;$("pb").value=user.board;$("grade").value=user.grade;$("board").value=user.board;$("cs").textContent=user.grade}
