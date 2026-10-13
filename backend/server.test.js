@@ -1,11 +1,12 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";
+import { fileURLToPath } from "node:url";
 
 async function withServer(fn) {
   const port = 3100 + Math.floor(Math.random() * 1000);
   const child = spawn(process.execPath, ["server.js"], {
-    cwd: new URL(".", import.meta.url),
+    cwd: fileURLToPath(new URL(".", import.meta.url)),
     env: { ...process.env, PORT: String(port), OPENAI_API_KEY: "" },
     stdio: "ignore"
   });
