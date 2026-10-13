@@ -9,6 +9,24 @@ This overlay includes the updated premium HTML as the GitHub Pages homepage (`in
 
 ## Prototype limitations
 - The UI, language selector, local PDF text extraction/reader, and demo quiz are from the supplied HTML prototype.
-- The Study Tutor is demo-only and is not connected to a live AI backend.
+- The Study Tutor uses the backend endpoint when `window.EXAMMASTERY_API_URL` is configured; live answers require an AI provider key on the backend.
+- Email/password signup and login endpoints are implemented in `backend/server.js`; production use requires HTTPS hosting, PostgreSQL `DATABASE_URL`, a strong `JWT_SECRET`, and configuring the frontend API base URL. Passwords are hashed with bcrypt; session tokens expire after 7 days.
 - PDF text extraction depends on PDF.js being available in the browser/WebView; scanned-page OCR is not included.
 - This is a debug APK for testing, not a signed Play Store release.
+
+
+## Live AI tutor backend (setup required)
+
+The tutor UI now calls a server-side endpoint when `window.EXAMMASTERY_API_URL` is configured. The API key must remain on the backend and must never be placed in the HTML or Android app.
+
+1. Deploy the `backend/` folder as a Node.js service on a host that supports Node 20+, and attach a PostgreSQL database.
+2. Set `OPENAI_API_KEY` in the host's secret/environment settings; optionally set `OPENAI_MODEL` and `ALLOWED_ORIGINS`. Never commit a real API key.
+3. Set `window.EXAMMASTERY_API_URL` in `index.html` to the deployed backend's HTTPS base URL (no trailing slash), and mirror the same change into `app/src/main/assets/index.html`.
+4. Redeploy GitHub Pages and rebuild the APK. Until a backend is deployed and configured, the tutor will clearly report that it is not connected.
+
+Health check: `GET /health`. Tutor endpoint: `POST /api/tutor` with JSON fields `question`, optional `context`, `grade`, `board`, and `subject`.
+
+
+## One-click backend deployment
+
+A Render Blueprint is provided in `render.yaml`. Open the repository in Render Blueprint setup, review the proposed Node.js service and PostgreSQL database, and confirm creation. Render will ask you to supply `OPENAI_API_KEY` privately; do not put secrets in GitHub files. After deployment, copy the HTTPS service URL, set it as `window.EXAMMASTERY_API_URL` in both `index.html` and `app/src/main/assets/index.html`, then commit and rebuild. The free database/service may sleep or have provider-specific limits; verify the current plan before confirming.

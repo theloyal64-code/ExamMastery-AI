@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: exammastery-ai-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    plan: free
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: exammastery-ai-db
+          property: connectionString
+      - key: PGSSL
+        value: require
+      - key: ALLOWED_ORIGINS
+        value: https://theloyal64-code.github.io
+
+databases:
+  - name: exammastery-ai-db
+    plan: free
+    databaseName: exammastery_ai
+    user: exammastery_ai_user
