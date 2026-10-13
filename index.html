@@ -38,7 +38,7 @@ $("ask").onclick=async()=>{
   $("ask").disabled=true;$("chat").scrollTop=$("chat").scrollHeight;
   try {
     if(!window.EXAMMASTERY_API_URL) throw new Error("AI backend is not connected yet. Backend deployment and API configuration are still required.");
-    const response=await fetch(window.EXAMMASTERY_API_URL.replace(/\\/$/,"")+"/api/tutor",{
+    const response=await fetch(window.EXAMMASTERY_API_URL.replace(/\/+$/,"")+"/api/tutor",{
       method:"POST",headers:{"Content-Type":"application/json"},
       body:JSON.stringify({question:q,context:text.slice(0,24000),grade:$("grade").value,board:$("board").value,subject:$("subject").value})
     });
