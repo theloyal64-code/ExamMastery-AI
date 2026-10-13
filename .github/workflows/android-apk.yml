@@ -10,6 +10,7 @@ on:
     branches:
       - main
       - master
+      - fix/android-apk-build
 
 permissions:
   contents: read
