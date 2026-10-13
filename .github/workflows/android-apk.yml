@@ -27,6 +27,12 @@ jobs:
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
 
+      - name: Show repository files
+        run: |
+          pwd
+          ls -la
+          find app -maxdepth 4 -type f
+
       - name: Check Android project
         run: |
           test -f settings.gradle
