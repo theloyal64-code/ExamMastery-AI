@@ -29,7 +29,28 @@ $("extract").onclick=async()=>{let f=$("pdf").files[0];if(!f){toast(t("noPDF"));
 $("download").onclick=()=>{if(!text){toast(t("noExtract"));return}let a=document.createElement("a");a.href=URL.createObjectURL(new Blob([text],{type:"text/plain;charset=utf-8"}));a.download=(name||"book.pdf").replace(/\.pdf$/i,"")+".txt";a.click();URL.revokeObjectURL(a.href)};
 $("bigger").onclick=()=>{$("book").style.fontSize=(size=Math.min(30,size+2))+"px";toast(t("larger"))};$("smaller").onclick=()=>{$("book").style.fontSize=(size=Math.max(12,size-2))+"px";toast(t("smaller"))};
 $("find").onclick=()=>{let q=$("search").value.trim(),i=text.toLowerCase().indexOf(q.toLowerCase());if(i<0||!q){toast(t("notFound"));return}let b=$("book");b.textContent=text;let before=text.slice(0,i),after=text.slice(i+q.length);b.textContent="";b.append(document.createTextNode(before));let m=document.createElement("mark");m.textContent=text.slice(i,i+q.length);m.style.cssText="background:#68f0c0;color:#07121b";b.append(m,document.createTextNode(after));m.scrollIntoView({block:"center",behavior:"smooth"});toast(t("found"))};
-$("ask").onclick=()=>{let q=$("question").value.trim();if(!q){toast(t("askFirst"));return}let u=document.createElement("div");u.className="bubble user";u.textContent=q;$("chat").append(u);let a=document.createElement("div");a.className="bubble ai";let reply=t("generic");if(text){let terms=q.toLowerCase().split(/\W+/).filter(w=>w.length>3),chunks=text.split(/[.!?\n]/).filter(s=>s.trim().length>20),best="",nmax=0;chunks.forEach(c=>{let n=terms.filter(w=>c.toLowerCase().includes(w)).length;if(n>nmax){best=c.trim();nmax=n}});if(best&&nmax)reply=t("fromBook")+best}a.textContent=reply;$("chat").append(a);$("chat").scrollTop=$("chat").scrollHeight;$("question").value=""};
+window.EXAMMASTERY_API_URL = window.EXAMMASTERY_API_URL || "";
+$("ask").onclick=async()=>{
+  let q=$("question").value.trim();
+  if(!q){toast(t("askFirst"));return}
+  const u=document.createElement("div");u.className="bubble user";u.textContent=q;$("chat").append(u);
+  const a=document.createElement("div");a.className="bubble ai";a.textContent="Thinking…";$("chat").append(a);
+  $("ask").disabled=true;$("chat").scrollTop=$("chat").scrollHeight;
+  try {
+    if(!window.EXAMMASTERY_API_URL) throw new Error("AI backend is not connected yet. Backend deployment and API configuration are still required.");
+    const response=await fetch(window.EXAMMASTERY_API_URL.replace(/\\/$/,"")+"/api/tutor",{
+      method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({question:q,context:text.slice(0,24000),grade:$("grade").value,board:$("board").value,subject:$("subject").value})
+    });
+    const data=await response.json().catch(()=>({}));
+    if(!response.ok) throw new Error(data.error||"Tutor request failed.");
+    a.textContent=data.answer||"No answer returned.";
+  } catch(e) {
+    a.textContent=e.message||"Could not connect to the AI tutor.";
+  } finally {
+    $("ask").disabled=false;$("chat").scrollTop=$("chat").scrollHeight;$("question").value="";
+  }
+};
 function bind(){document.querySelectorAll(".option").forEach(b=>b.onclick=()=>{let q=b.closest(".q");if(q.dataset.done)return;q.dataset.done="1";done++;if(b.dataset.ok==="1"){points++;q.querySelector(".result").textContent=t("right")}else q.querySelector(".result").textContent=t("wrong");q.querySelectorAll(".option").forEach(x=>x.disabled=true);$("qc").textContent=done;$("score").textContent=t("score")+": "+points+" / "+done})}bind();
 $("reset").onclick=()=>{done=points=0;document.querySelectorAll(".q").forEach(q=>{delete q.dataset.done;q.querySelector(".result").textContent="";q.querySelectorAll(".option").forEach(b=>b.disabled=false)});$("qc").textContent="0";$("score").textContent="";toast(t("resetdone"))};
 $("save").onclick=()=>{$("cs").textContent=$("pc").value;$("grade").value=$("pc").value;$("ql").value=$("pc").value;$("board").value=$("pb").value;toast(t("saved"))};translate();
