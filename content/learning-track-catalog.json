@@ -26,7 +26,9 @@
         "scert-odisha-curriculum",
         "scert-odisha-new-books",
         "bse-odisha-class-ix-x-syllabus",
-        "bse-odisha-hsc-class-x-2026-27"
+        "bse-odisha-hsc-class-x-2026-27",
+        "bse-odisha-class-ix-2026-27",
+        "bse-odisha-class-x-2026-27"
       ],
       "textbookRule": "Use the current official Odisha textbook for the exact class, subject, medium, and academic session. Do not substitute NCERT chapters by default.",
       "verificationStatus": "in_review",
@@ -54,7 +56,8 @@
         "English"
       ],
       "curriculumAuthoritySourceIds": [
-        "bse-odisha-class-ix-x-syllabus"
+        "bse-odisha-class-ix-x-syllabus",
+        "bse-odisha-class-x-2026-27"
       ],
       "textbookRule": "Keep Madhyama Class IX/X syllabus and prescribed materials separate from HSC. Verify the exact academic session, subject, medium and official source before mapping questions.",
       "verificationStatus": "in_review",
