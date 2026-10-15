@@ -199,8 +199,8 @@
         "bse-odisha-hsc-class-x-2026-27"
       ],
       "subjects": [],
-      "verificationStatus": "source_found",
-      "notes": "BSE Odisha official listing dated 08 May 2026 confirms Class X HSC 2026–27 break-up syllabus and identifies its subject-wise PDF. PDF fetch timed out; no subject/chapter data has been verified or published. Madhyama is a separate syllabus and must not be merged with HSC."
+      "verificationStatus": "in_review",
+      "notes": "Official BSE Odisha HSC Class X 2026–27 PDF retrieved from the Model Syllabus page. Partial English (SLE) extraction is in content/odisha-class10-hsc-2026-27.json. Full subject coverage is not yet verified; HSC and Madhyama remain separate tracks."
     }
   ]
 }
