@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "updatedOn": "2026-10-15",
+  "purpose": "Keep board curriculum, school category, medium, and school-prescribed textbook as separate dimensions. These profiles define the data model and do not assert that syllabus coverage is complete.",
+  "trackDefinitions": [
+    {
+      "trackId": "ODISHA_STATE_BOARD",
+      "displayName": "Odisha State Board",
+      "board": "ODISHA_BOARD",
+      "schoolCategory": "state_board_school",
+      "qualificationTracks": [
+        "HSC"
+      ],
+      "classes": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "supportedMediums": [
+        "Odia",
+        "English"
+      ],
+      "curriculumAuthoritySourceIds": [
+        "scert-odisha-curriculum",
+        "scert-odisha-new-books",
+        "bse-odisha-class-ix-x-syllabus",
+        "bse-odisha-hsc-class-x-2026-27"
+      ],
+      "textbookRule": "Use the current official Odisha textbook for the exact class, subject, medium, and academic session. Do not substitute NCERT chapters by default.",
+      "verificationStatus": "in_review",
+      "currentEvidence": {
+        "class10HscSession": "2026-27",
+        "officialSyllabusListing": "https://bseodisha.nic.in/model_syllabus/",
+        "note": "BSE Odisha lists separate HSC and Madhyama syllabi for Classes IX and X for 2026-27. HSC and Madhyama must remain separate records."
+      },
+      "coverageNote": "Class X HSC has only a partial English (SLE) extraction in odisha-class10-hsc-2026-27.json. Remaining subjects and Classes VI-IX are not yet verified."
+    },
+    {
+      "trackId": "OAV_NCERT",
+      "displayName": "Odisha Adarsha Vidyalaya (OAV)",
+      "board": "CBSE",
+      "schoolCategory": "odisha_adarsha_vidyalaya",
+      "classes": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "supportedMediums": [
+        "English"
+      ],
+      "curriculumAuthoritySourceIds": [
+        "ncert-textbooks"
+      ],
+      "textbookRule": "Treat OAV as a distinct school profile. Verify its current class-wise curriculum and actual prescribed book/edition before mapping content; do not assume the State Board profile or a private school's list applies.",
+      "verificationStatus": "not_verified",
+      "coverageNote": "Separate OAV-specific current-session syllabus and prescribed-book mapping still needs official verification."
+    },
+    {
+      "trackId": "PRIVATE_CBSE_SCHOOL",
+      "displayName": "Private CBSE school",
+      "board": "CBSE",
+      "schoolCategory": "private_cbse_school",
+      "classes": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "supportedMediums": [
+        "English",
+        "Hindi"
+      ],
+      "curriculumAuthoritySourceIds": [
+        "ncert-textbooks"
+      ],
+      "textbookRule": "Store CBSE curriculum outcomes separately from each school's prescribed textbook title, publisher, edition, and school year. Never assume every CBSE school uses only NCERT textbooks.",
+      "verificationStatus": "not_verified",
+      "coverageNote": "School-specific profiles (for example DAV or St. Xavier's) must be created only from verified school-provided or official school sources."
+    },
+    {
+      "trackId": "CISCE_ICSE",
+      "displayName": "CISCE / ICSE school",
+      "board": "CISCE_ICSE",
+      "schoolCategory": "cisce_school",
+      "classes": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "supportedMediums": [
+        "English"
+      ],
+      "curriculumAuthoritySourceIds": [
+        "cisce-publications"
+      ],
+      "textbookRule": "Keep CISCE curriculum requirements distinct from school-selected textbooks, particularly in Classes VI-VIII. Verify class, subject, syllabus session, book title, and edition independently.",
+      "verificationStatus": "not_verified",
+      "coverageNote": "Full current-session syllabus and book mapping are pending."
+    }
+  ],
+  "requiredMappingFields": [
+    "trackId",
+    "board",
+    "schoolCategory",
+    "qualificationTrack",
+    "class",
+    "academicSession",
+    "subject",
+    "medium",
+    "curriculumSourceId",
+    "curriculumVerificationStatus",
+    "prescribedBookTitle",
+    "publisher",
+    "editionOrPublicationYear",
+    "bookSourceUrl",
+    "bookVerificationStatus",
+    "chapterTitle",
+    "chapterVerificationStatus"
+  ],
+  "statusDefinitions": {
+    "not_verified": "Profile or claim recorded, but current official evidence has not been checked.",
+    "in_review": "Official sources are being checked; do not present the record as complete.",
+    "verified": "Current session, class, subject, medium, source, chapter mapping and prescribed book status have been checked.",
+    "published": "Verified record has original learning content and questions and passed content QA."
+  }
+}
