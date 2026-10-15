@@ -56,7 +56,7 @@ for (const track of learningTracks.trackDefinitions || []) {
     if (!sourceIds.has(sourceId)) errors.push("Learning track " + track.trackId + " references unknown source ID " + sourceId);
   }
 }
-for (const requiredTrack of ["ODISHA_STATE_BOARD", "OAV_NCERT", "PRIVATE_CBSE_SCHOOL", "CISCE_ICSE"]) {
+for (const requiredTrack of ["ODISHA_STATE_BOARD", "ODISHA_MADHYAMA", "OAV_NCERT", "PRIVATE_CBSE_SCHOOL", "CISCE_ICSE"]) {
   if (!trackIds.has(requiredTrack)) errors.push("Missing required distinct learning track: " + requiredTrack);
 }
 if (!Array.isArray(learningTracks.requiredMappingFields) || !learningTracks.requiredMappingFields.includes("medium") || !learningTracks.requiredMappingFields.includes("prescribedBookTitle") || !learningTracks.requiredMappingFields.includes("academicSession")) {
