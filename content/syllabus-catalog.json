@@ -181,11 +181,13 @@
       "sourceIds": [
         "scert-odisha-curriculum",
         "bse-odisha-class-ix-x-syllabus",
-        "odisha-curriculum-framework-2025"
+        "odisha-curriculum-framework-2025",
+        "bse-odisha-class-ix-2026-27",
+        "bse-odisha-class-x-2026-27"
       ],
       "subjects": [],
       "verificationStatus": "not_verified",
-      "notes": "Subject and chapter lists must be extracted from the current official source; do not infer from generic sample topics. For secondary classes, verify HSC and Madhyama break-up syllabi separately for academic session 2026–27."
+      "notes": "BSE Odisha publishes separate HSC and Madhyama Class IX break-up syllabi for 2026–27. Detailed subject/chapter extraction and visual verification remain pending; do not merge qualification tracks."
     },
     {
       "board": "ODISHA_BOARD",
@@ -196,11 +198,12 @@
         "odisha-class-x-textbooks",
         "bse-odisha-class-ix-x-syllabus",
         "odisha-curriculum-framework-2025",
-        "bse-odisha-hsc-class-x-2026-27"
+        "bse-odisha-hsc-class-x-2026-27",
+        "bse-odisha-class-x-2026-27"
       ],
       "subjects": [],
       "verificationStatus": "in_review",
-      "notes": "Official BSE Odisha HSC Class X 2026–27 PDF retrieved from the Model Syllabus page. Partial English (SLE) extraction is in content/odisha-class10-hsc-2026-27.json. Full subject coverage is not yet verified; HSC and Madhyama remain separate tracks."
+      "notes": "BSE Odisha publishes separate HSC and Madhyama Class X break-up syllabi for 2026–27. HSC English (SLE) has a partial extraction only; remaining subjects and Madhyama require page-by-page verification."
     }
   ]
 }
