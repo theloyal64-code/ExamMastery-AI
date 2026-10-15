@@ -35,7 +35,35 @@
         "officialSyllabusListing": "https://bseodisha.nic.in/model_syllabus/",
         "note": "BSE Odisha lists separate HSC and Madhyama syllabi for Classes IX and X for 2026-27. HSC and Madhyama must remain separate records."
       },
-      "coverageNote": "Class X HSC has only a partial English (SLE) extraction in odisha-class10-hsc-2026-27.json. Remaining subjects and Classes VI-IX are not yet verified."
+      "coverageNote": "Classes VI-VIII use SCERT textbook records; Classes IX-X must be mapped separately by HSC and Madhyama qualification. Class X HSC has only a partial English (SLE) extraction; no secondary track is marked verified."
+    },
+    {
+      "trackId": "ODISHA_MADHYAMA",
+      "displayName": "Odisha Madhyama (secondary qualification track)",
+      "board": "ODISHA_BOARD",
+      "schoolCategory": "state_board_school",
+      "qualificationTracks": [
+        "Madhyama"
+      ],
+      "classes": [
+        9,
+        10
+      ],
+      "supportedMediums": [
+        "Odia",
+        "English"
+      ],
+      "curriculumAuthoritySourceIds": [
+        "bse-odisha-class-ix-x-syllabus"
+      ],
+      "textbookRule": "Keep Madhyama Class IX/X syllabus and prescribed materials separate from HSC. Verify the exact academic session, subject, medium and official source before mapping questions.",
+      "verificationStatus": "in_review",
+      "currentEvidence": {
+        "academicSession": "2026-27",
+        "officialSyllabusListing": "https://bseodisha.nic.in/class_x_text_books/",
+        "note": "BSE Odisha lists separate Madhyama and HSC break-up syllabi for Classes IX and X; detailed chapter mappings are not yet verified."
+      },
+      "coverageNote": "Track separated in metadata only. Class IX and X subject-wise syllabus extraction, book mapping and QA remain pending."
     },
     {
       "trackId": "OAV_NCERT",
