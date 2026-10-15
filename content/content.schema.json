@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExamMastery learning content record",
+  "type": "object",
+  "required": [
+    "id",
+    "board",
+    "class",
+    "subject",
+    "kind",
+    "title",
+    "language",
+    "academicSession",
+    "verificationStatus"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]+$"
+    },
+    "board": {
+      "enum": [
+        "CBSE",
+        "CISCE_ICSE",
+        "ODISHA_BOARD"
+      ]
+    },
+    "class": {
+      "type": "integer",
+      "minimum": 6,
+      "maximum": 10
+    },
+    "subject": {
+      "type": "string",
+      "minLength": 1
+    },
+    "chapterId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "kind": {
+      "enum": [
+        "chapter",
+        "concept",
+        "notes",
+        "worked_example",
+        "question",
+        "answer_explanation",
+        "formula_sheet",
+        "revision_sheet",
+        "assessment_blueprint",
+        "book_reference"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "language": {
+      "enum": [
+        "English",
+        "Hindi",
+        "Odia"
+      ]
+    },
+    "academicSession": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sourceIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sourceReference": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "learningOutcome": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "difficulty": {
+      "enum": [
+        "not_applicable",
+        "easy",
+        "medium",
+        "hard"
+      ]
+    },
+    "content": {
+      "type": [
+        "object",
+        "string",
+        "null"
+      ]
+    },
+    "answer": {
+      "type": [
+        "object",
+        "string",
+        "null"
+      ]
+    },
+    "verificationStatus": {
+      "enum": [
+        "draft",
+        "needs_review",
+        "verified",
+        "published",
+        "retired"
+      ]
+    },
+    "redistributionPermission": {
+      "enum": [
+        "not_applicable_original",
+        "permission_confirmed",
+        "link_only",
+        "permission_pending",
+        "restricted"
+      ]
+    },
+    "reviewedBy": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reviewedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    }
+  },
+  "additionalProperties": false
+}
