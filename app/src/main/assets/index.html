@@ -452,13 +452,14 @@ const starterSyllabus={
 "Mathematics":["Arithmetic","Algebra"],
 "Science":["Physics","Biology"],
 "English":["Grammar","Vocabulary"],
-"Social Science":["Geography","Civics & History"]
+"Social Science":["Geography","Civics & History"],
+"Odia":["ଓଡ଼ିଆ ଭାଷା ଓ ବ୍ୟାକରଣ (ନମୁନା — ଅଧିକୃତ ଅଧ୍ୟାୟ ନୁହେଁ)"]
 };
 $("catalogBoard").onchange=()=>{renderOfficialCatalog();renderBookInventory();renderSyllabusExplorer();syncOdishaLanguage()};$("syllabusBoard").onchange=()=>syncCurriculumSelections("syllabusBoard");$("pb").onchange=()=>syncCurriculumSelections("pb");$("board").onchange=()=>syncCurriculumSelections("board");$("authBoard").onchange=()=>syncCurriculumSelections("authBoard");
 const syllabusKey=()=>["emai_syllabus_v1", $("syllabusBoard").value, $("syllabusClass").value, $("syllabusSubject").value].join(":");
 function readSyllabus(){try{const v=JSON.parse(localStorage.getItem(syllabusKey())||"{}");return v&&typeof v==="object"?v:{}}catch{return {}}}
 function writeSyllabus(data){try{localStorage.setItem(syllabusKey(),JSON.stringify(data));return true}catch(e){toast("Could not save progress on this device.");return false}}
-function getSyllabusItems(){const data=readSyllabus();const defaults=starterSyllabus[$("syllabusSubject").value]||[];const names=[...defaults,...(Array.isArray(data.custom)?data.custom:[])];return [...new Set(names)].map((name,i)=>({name,state:data.states&&data.states[name]||"not-started",id:i}))}
+function getSyllabusItems(){const data=readSyllabus(),subject=$("syllabusSubject").value,defaults=starterSyllabus[subject]||[],od=$("syllabusBoard").value==="Odisha Board"||$("syllabusBoard").value==="ODISHA_BOARD";const odiaNames={"Arithmetic":"ଅଙ୍କଗଣିତ (ନମୁନା)","Algebra":"ବୀଜଗଣିତ (ନମୁନା)","Physics":"ପଦାର୍ଥ ବିଜ୍ଞାନ (ନମୁନା)","Biology":"ଜୀବ ବିଜ୍ଞାନ (ନମୁନା)","Geography":"ଭୂଗୋଳ (ନମୁନା)","Civics & History":"ନାଗରିକ ଶାସ୍ତ୍ର ଓ ଇତିହାସ (ନମୁନା)"};const names=[...defaults.map(n=>od&&subject!=="English"?(odiaNames[n]||n):n),...(Array.isArray(data.custom)?data.custom:[])];return [...new Set(names)].map((name,i)=>({name,state:data.states&&data.states[name]||"not-started",id:i}))}
 function renderSyllabusTracker(){
  if(!$("syllabusChapterList"))return;
  const items=getSyllabusItems(),filter=$("syllabusFilter").value;
