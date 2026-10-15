@@ -273,7 +273,6 @@ function syncOdishaLanguage(sourceId){
 }
 function translateOdishaStatic(){
  if(!odishaUIActive){
- if(!odishaUIActive){
    document.querySelectorAll("[data-odia-original]").forEach(el=>{if(!el.dataset.k&&!el.children.length)el.textContent=el.dataset.odiaOriginal;delete el.dataset.odiaOriginal;});
    document.querySelectorAll("label[data-odia-label-original]").forEach(el=>{if(el.firstChild&&el.firstChild.nodeType===3)el.firstChild.nodeValue=el.dataset.odiaLabelOriginal;delete el.dataset.odiaLabelOriginal;});
    ["welTitle","welSub"].forEach(id=>{const el=$(id);if(el&&el.dataset.odiaHtmlOriginal){el.innerHTML=el.dataset.odiaHtmlOriginal;delete el.dataset.odiaHtmlOriginal;}});
