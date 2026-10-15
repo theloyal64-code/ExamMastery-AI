@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "updatedOn": "2026-10-15",
+  "scope": {
+    "boards": [
+      "CBSE",
+      "CISCE_ICSE",
+      "ODISHA_BOARD"
+    ],
+    "classes": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "learningLanguages": [
+      "English",
+      "Hindi",
+      "Odia"
+    ]
+  },
+  "verificationStatusDefinitions": {
+    "not_verified": "Target recorded; no official source-to-chapter verification completed yet.",
+    "source_found": "Official source identified but current session and complete chapter mapping not yet verified.",
+    "in_review": "Source and chapter mapping being checked.",
+    "verified": "Source, academic session, subject scope, and chapter list reviewed and checked.",
+    "published": "Verified content available in the app and passed content QA."
+  },
+  "coverage": [
+    {
+      "board": "CBSE",
+      "class": 6,
+      "academicSession": null,
+      "sourceIds": [
+        "ncert-textbooks"
+      ],
+      "subjects": [],
+      "verificationStatus": "not_verified",
+      "notes": "Subject and chapter lists must be extracted from the current official source; do not infer from generic sample topics."
+    },
+    {
+      "board": "CBSE",
+      "class": 7,
+      "academicSession": null,
+      "sourceIds": [
+        "ncert-textbooks"
+      ],
+      "subjects": [],
+      "verificationStatus": "not_verified",
+      "notes": "Subject and chapter lists must be extracted from the current official source; do not infer from generic sample topics."
+    },
+    {
+      "board": "CBSE",
+      "class": 8,
+      "academicSession": null,
+      "sourceIds": [
+        "ncert-textbooks"
+      ],
+      "subjects": [],
+      "verificationStatus": "not_verified",
+      "notes": "Subject and chapter lists must be extracted from the current official source; do not infer from generic sample topics."
+    },
+    {
+      "board": "CBSE",
+      "class": 9,
+      "academicSession": null,
+      "sourceIds": [
+        "ncert-textbooks"
+      ],
+      "subjects": [],
+      "verificationStatus": "not_verified",
+      "notes": "Subject and chapter lists must be extracted from the current official source; do not infer from generic sample topics."
+    },
+    {
+      "board": "CBSE",
+      "class": 10,
+      "academicSession": null,
+      "sourceIds": [
+        "ncert-textbooks"
+      ],
+      "subjects": [],
+      "verificationStatus": "not_verified",
+      "notes": "Subject and chapter lists must be extracted from the current official source; do not infer from generic sample topics."
+    },
+    {
+      "board": "CISCE_ICSE",
+      "class": 6,
+      "academicSession": null,
+      "sourceIds": [
+        "cisce-publications"
+      ],
+      "subjects": [],
+      "verificationStatus": "not_verified",
+      "notes": "School-selected textbooks may vary; use curriculum outcomes and record school book edition separately."
+    },
+    {
+      "board": "CISCE_ICSE",
+      "class": 7,
+      "academicSession": null,
+      "sourceIds": [
+        "cisce-publications"
+      ],
+      "subjects": [],
+      "verificationStatus": "not_verified",
+      "notes": "School-selected textbooks may vary; use curriculum outcomes and record school book edition separately."
+    },
+    {
+      "board": "CISCE_ICSE",
+      "class": 8,
+      "academicSession": null,
+      "sourceIds": [
+        "cisce-publications"
+      ],
+      "subjects": [],
+      "verificationStatus": "not_verified",
+      "notes": "School-selected textbooks may vary; use curriculum outcomes and record school book edition separately."
+    },
+    {
+      "board": "CISCE_ICSE",
+      "class": 9,
+      "academicSession": null,
+      "sourceIds": [
+        "cisce-publications"
+      ],
+      "subjects": [],
+      "verificationStatus": "not_verified",
+      "notes": "School-selected textbooks may vary; use curriculum outcomes and record school book edition separately."
+    },
+    {
+      "board": "CISCE_ICSE",
+      "class": 10,
+      "academicSession": null,
+      "sourceIds": [
+        "cisce-publications"
+      ],
+      "subjects": [],
+      "verificationStatus": "not_verified",
+      "notes": "School-selected textbooks may vary; use curriculum outcomes and record school book edition separately."
+    },
+    {
+      "board": "ODISHA_BOARD",
+      "class": 6,
+      "academicSession": null,
+      "sourceIds": [
+        "scert-odisha-curriculum",
+        "scert-odisha-new-books"
+      ],
+      "subjects": [],
+      "verificationStatus": "not_verified",
+      "notes": "Subject and chapter lists must be extracted from the current official source; do not infer from generic sample topics."
+    },
+    {
+      "board": "ODISHA_BOARD",
+      "class": 7,
+      "academicSession": null,
+      "sourceIds": [
+        "scert-odisha-curriculum",
+        "scert-odisha-new-books"
+      ],
+      "subjects": [],
+      "verificationStatus": "not_verified",
+      "notes": "Subject and chapter lists must be extracted from the current official source; do not infer from generic sample topics."
+    },
+    {
+      "board": "ODISHA_BOARD",
+      "class": 8,
+      "academicSession": null,
+      "sourceIds": [
+        "scert-odisha-curriculum",
+        "scert-odisha-new-books"
+      ],
+      "subjects": [],
+      "verificationStatus": "not_verified",
+      "notes": "Subject and chapter lists must be extracted from the current official source; do not infer from generic sample topics."
+    },
+    {
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "academicSession": null,
+      "sourceIds": [
+        "scert-odisha-curriculum"
+      ],
+      "subjects": [],
+      "verificationStatus": "not_verified",
+      "notes": "Subject and chapter lists must be extracted from the current official source; do not infer from generic sample topics."
+    },
+    {
+      "board": "ODISHA_BOARD",
+      "class": 10,
+      "academicSession": null,
+      "sourceIds": [
+        "scert-odisha-curriculum",
+        "odisha-class-x-textbooks"
+      ],
+      "subjects": [],
+      "verificationStatus": "not_verified",
+      "notes": "Subject and chapter lists must be extracted from the current official source; do not infer from generic sample topics."
+    }
+  ]
+}
