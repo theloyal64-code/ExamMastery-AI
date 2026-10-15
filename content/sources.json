@@ -91,6 +91,20 @@
       "status": "official_source_identified",
       "reusePolicy": "Framework document is a reference; individual textbook content rights remain separate.",
       "nextAction": "Use as context for updated curriculum, but verify class-specific syllabus and approved textbook lists separately."
+    },
+    {
+      "id": "bse-odisha-hsc-class-x-2026-27",
+      "board": "Odisha Board",
+      "purpose": [
+        "Class X HSC 2026–27 subject-wise break-up syllabus"
+      ],
+      "title": "BSE Odisha — Subject-wise Syllabus Class X HSC 2026–27",
+      "url": "https://bseodisha.nic.in/wp-content/uploads/2026/05/Subject_wise_syllabus_class_X_26_27.pdf",
+      "listingUrl": "https://bseodisha.nic.in/class_x_text_books/",
+      "publishedOn": "2026-05-08",
+      "status": "official_pdf_link_identified_not_extracted",
+      "reusePolicy": "Metadata and syllabus reference only. Do not bundle or republish the PDF without permission.",
+      "nextAction": "Retrieve and review PDF pages, transcribe complete subject/chapter coverage, and separately review Madhyama syllabus. PDF download timed out during current verification."
     }
   ]
 }
