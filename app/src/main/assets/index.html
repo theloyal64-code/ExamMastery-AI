@@ -131,7 +131,7 @@ $("ask").onclick=async()=>{
     if(!window.EXAMMASTERY_API_URL) throw new Error("AI backend is not connected yet. Backend deployment and API configuration are still required.");
     const response=await fetch(window.EXAMMASTERY_API_URL.replace(/\/+$/,"")+"/api/tutor",{
       method:"POST",headers:{"Content-Type":"application/json"},
-      body:JSON.stringify({question:q+"\\n\\nResponse language instruction: "+($("board").value==="Odisha Board"&&$("subject").value!=="English"?"Answer entirely in natural Odia (ଓଡ଼ିଆ), using Odia script.":"Answer in "+($("subject").value==="English"?"English":L==="or"?"Odia":"the selected interface language")+"."),context:text.slice(0,24000),grade:$("grade").value,board:$("board").value,subject:$("subject").value})
+      body:JSON.stringify({question:q,context:text.slice(0,24000),grade:$("grade").value,board:$("board").value,subject:$("subject").value,language:$("subject").value==="English"?"English":$("board").value==="Odisha Board"?"Odia":L==="or"?"Odia":L==="hi"?"Hindi":"auto"})
     });
     const data=await response.json().catch(()=>({}));
     if(!response.ok) throw new Error(data.error||"Tutor request failed.");
