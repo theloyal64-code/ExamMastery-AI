@@ -33,6 +33,12 @@ jobs:
           node -e "JSON.parse(require('fs').readFileSync('backend/package.json','utf8'))"
           cd backend && npm install && npm test
 
+      - name: Validate curriculum content registry
+        run: |
+          node --check scripts/validate-content.mjs
+          node scripts/validate-content.mjs
+          node -e "JSON.parse(require('fs').readFileSync('content/sources.json','utf8')); JSON.parse(require('fs').readFileSync('content/syllabus-catalog.json','utf8')); JSON.parse(require('fs').readFileSync('content/content.schema.json','utf8'))"
+
       - name: Set up Java
         uses: actions/setup-java@v4
         with:
