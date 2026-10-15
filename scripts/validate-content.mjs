@@ -7,6 +7,7 @@ const schema = readJson("../content/content.schema.json");
 const bookCatalog = readJson("../content/book-catalog.json");
 const class10 = readJson("../content/odisha-class10-hsc-2026-27.json");
 const learningTracks = readJson("../content/learning-track-catalog.json");
+const odishaClass6to8 = readJson("../content/odisha-class6-8-book-inventory.json");
 
 const errors = [];
 const sourceIds = new Set(sources.sources.map((source) => source.id));
@@ -62,6 +63,27 @@ if (!Array.isArray(learningTracks.requiredMappingFields) || !learningTracks.requ
   errors.push("Learning track mapping must distinguish medium, prescribed book, and academic session.");
 }
 
+
+if (odishaClass6to8.board !== "ODISHA_BOARD" || odishaClass6to8.sourceId !== "scert-odisha-new-books" || !sourceIds.has(odishaClass6to8.sourceId)) {
+  errors.push("Classes VI-VIII Odisha inventory must reference the official SCERT source.");
+}
+if (!Array.isArray(odishaClass6to8.classInventories)) errors.push("Odisha Classes VI-VIII inventory must contain classInventories.");
+const inventoriedClasses = new Set();
+for (const classRecord of odishaClass6to8.classInventories || []) {
+  if (![6, 7, 8].includes(classRecord.class)) errors.push("Unexpected class in Odisha Classes VI-VIII inventory.");
+  if (inventoriedClasses.has(classRecord.class)) errors.push("Duplicate Odisha textbook inventory class: " + classRecord.class);
+  inventoriedClasses.add(classRecord.class);
+  if (!Array.isArray(classRecord.titles) || classRecord.titles.length === 0) errors.push("No titles listed for Odisha Class " + classRecord.class);
+  const titles = new Set();
+  for (const entry of classRecord.titles || []) {
+    if (!entry.title || !entry.subjectCandidate) errors.push("Incomplete title record for Odisha Class " + classRecord.class);
+    if (titles.has(entry.title)) errors.push("Duplicate title in Odisha Class " + classRecord.class + ": " + entry.title);
+    titles.add(entry.title);
+  }
+}
+for (const classLevel of [6, 7, 8]) if (!inventoriedClasses.has(classLevel)) errors.push("Missing Odisha textbook inventory for Class " + classLevel);
+if (!odishaClass6to8.reuseNote || !Array.isArray(odishaClass6to8.sourceCaveats)) errors.push("Odisha Classes VI-VIII inventory must document verification/reuse caveats.");
+
 const expected = new Set();
 for (const board of catalog.scope.boards) {
   for (const classLevel of catalog.scope.classes) expected.add(`${board}:${classLevel}`);
@@ -91,4 +113,4 @@ if (errors.length) {
   for (const error of errors) console.error(`- ${error}`);
   process.exit(1);
 }
-console.log("Curriculum content validation passed: " + sources.sources.length + " official source records, " + catalog.coverage.length + " board/class coverage records, " + bookCatalog.entries.length + " textbook inventory entries, " + learningTracks.trackDefinitions.length + " distinct learning tracks. Odisha Class X extraction status: " + class10.extractionStatus + ".");
+console.log("Curriculum content validation passed: " + sources.sources.length + " official source records, " + catalog.coverage.length + " board/class coverage records, " + bookCatalog.entries.length + " textbook inventory entries, " + learningTracks.trackDefinitions.length + " distinct learning tracks and " + odishaClass6to8.classInventories.length + " Odisha Classes VI-VIII textbook inventories. Odisha Class X extraction status: " + class10.extractionStatus + ".");
