@@ -99,12 +99,12 @@
         "Class X HSC 2026–27 subject-wise break-up syllabus"
       ],
       "title": "BSE Odisha — Subject-wise Syllabus Class X HSC 2026–27",
-      "url": "https://bseodisha.nic.in/wp-content/uploads/2026/05/Subject_wise_syllabus_class_X_26_27.pdf",
-      "listingUrl": "https://bseodisha.nic.in/class_x_text_books/",
-      "publishedOn": "2026-05-08",
-      "status": "official_pdf_link_identified_not_extracted",
+      "url": "https://bseodisha.nic.in/wp-content/uploads/2026/05/ANNUAL-Subject_wise_syllabus_class_X_26_27-2.pdf",
+      "listingUrl": "https://bseodisha.nic.in/model_syllabus/",
+      "publishedOn": "2026-05-18",
+      "status": "official_pdf_retrieved_partial_extraction",
       "reusePolicy": "Metadata and syllabus reference only. Do not bundle or republish the PDF without permission.",
-      "nextAction": "Retrieve and review PDF pages, transcribe complete subject/chapter coverage, and separately review Madhyama syllabus. PDF download timed out during current verification."
+      "nextAction": "English (SLE) syllabus partially structured in content/odisha-class10-hsc-2026-27.json. Review PDF table layout visually, then extract remaining subjects; OCR text for Odia-script Mathematics and General Science chapter titles needs visual verification."
     }
   ]
 }
