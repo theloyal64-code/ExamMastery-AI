@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "updatedOn": "2026-10-15",
+  "board": "ODISHA_BOARD",
+  "sourceId": "scert-odisha-new-books",
+  "sourceUrl": "https://scert.odisha.gov.in/new-textbook-class-i-viii/",
+  "inventoryStatus": "listed_on_official_scert_page",
+  "reuseNote": "Inventory transcribes titles shown on the official SCERT listing only. It does not prove every title is the final prescribed book for every school/medium/session. Verify linked file, current corrigendum, edition, medium and reuse permissions before publication or redistribution.",
+  "classInventories": [
+    {
+      "class": 6,
+      "sourceListingGroup": "ଷଷ୍ଠ ଶ୍ରେଣୀ",
+      "titles": [
+        {
+          "title": "ଗଣିତ ପ୍ରକାଶ",
+          "subjectCandidate": "Mathematics"
+        },
+        {
+          "title": "ତଲାଶ",
+          "subjectCandidate": "Urdu / language title; confirm exact medium"
+        },
+        {
+          "title": "JASMINE",
+          "subjectCandidate": "English / language title; confirm exact role"
+        },
+        {
+          "title": "କୌଶଳ ବୋଧ",
+          "subjectCandidate": "Vocational / skill education"
+        },
+        {
+          "title": "ଜିଜ୍ଞାସା",
+          "subjectCandidate": "Science; subject mapping to verify"
+        },
+        {
+          "title": "ସାମାଜିକ ବିଜ୍ଞାନ ଅଧ୍ୟୟନ ଭାରତ ଓ ଆମ ପୃଥିବୀ",
+          "subjectCandidate": "Social Science"
+        },
+        {
+          "title": "କଳାକୁଞ୍ଜ",
+          "subjectCandidate": "Art Education"
+        },
+        {
+          "title": "ଖେଳ ଶିକ୍ଷା",
+          "subjectCandidate": "Physical Education"
+        },
+        {
+          "title": "ସଂସ୍କୃତକଳିକା ଭାଗ - ୧",
+          "subjectCandidate": "Sanskrit"
+        },
+        {
+          "title": "ସାହିତ୍ୟ ସୁଧା",
+          "subjectCandidate": "Odia / language title; confirm exact medium"
+        },
+        {
+          "title": "ହିନ୍ଦୀ କଳିକା",
+          "subjectCandidate": "Hindi"
+        }
+      ]
+    },
+    {
+      "class": 7,
+      "sourceListingGroup": "ସପ୍ତମ ଶ୍ରେଣୀ",
+      "titles": [
+        {
+          "title": "ସାମାଜିକ ବିଜ୍ଞାନ ଅଧ୍ୟୟନ ଭାରତ ଓ ଆମ ପୃଥିବୀ",
+          "subjectCandidate": "Social Science"
+        },
+        {
+          "title": "କଳାକୃତି",
+          "subjectCandidate": "Art Education"
+        },
+        {
+          "title": "ସଂସ୍କୃତକଳିକା ଭାଗ - ୨",
+          "subjectCandidate": "Sanskrit"
+        },
+        {
+          "title": "JASMINE",
+          "subjectCandidate": "English / language title; confirm exact role"
+        },
+        {
+          "title": "ଜିଜ୍ଞାସା",
+          "subjectCandidate": "Science; subject mapping to verify"
+        },
+        {
+          "title": "ତଲାଶ୍",
+          "subjectCandidate": "Urdu / language title; confirm exact medium"
+        },
+        {
+          "title": "କୌଶଳ ବୋଧ",
+          "subjectCandidate": "Vocational / skill education"
+        },
+        {
+          "title": "ଖେଳ ଶିକ୍ଷା",
+          "subjectCandidate": "Physical Education"
+        },
+        {
+          "title": "ସାହିତ୍ୟ ସୁମନ",
+          "subjectCandidate": "Odia / language title; confirm exact medium"
+        },
+        {
+          "title": "ଗଣିତ ପ୍ରକାଶ",
+          "subjectCandidate": "Mathematics"
+        },
+        {
+          "title": "ହିନ୍ଦୀ କଳିକା",
+          "subjectCandidate": "Hindi"
+        }
+      ]
+    },
+    {
+      "class": 8,
+      "sourceListingGroup": "ଅଷ୍ଟମ ଶ୍ରେଣୀ",
+      "titles": [
+        {
+          "title": "କୃତି",
+          "subjectCandidate": "Art Education; verify exact subject mapping"
+        },
+        {
+          "title": "ଖେଳ ଶିକ୍ଷା",
+          "subjectCandidate": "Physical Education"
+        },
+        {
+          "title": "ଜିଜ୍ଞାସା",
+          "subjectCandidate": "Science; subject mapping to verify"
+        },
+        {
+          "title": "ସଂସ୍କୃତକଳିକା ଭାଗ - ୩",
+          "subjectCandidate": "Sanskrit"
+        },
+        {
+          "title": "ସାମାଜିକ ବିଜ୍ଞାନ ଅଧ୍ୟୟନ ଭାରତ ଓ ଆମ ପୃଥିବୀ",
+          "subjectCandidate": "Social Science"
+        },
+        {
+          "title": "JASMINE",
+          "subjectCandidate": "English / language title; confirm exact role"
+        },
+        {
+          "title": "ଗଣିତ ପ୍ରକାଶ",
+          "subjectCandidate": "Mathematics"
+        },
+        {
+          "title": "ତଲାଶ୍",
+          "subjectCandidate": "Urdu / language title; confirm exact medium"
+        },
+        {
+          "title": "କୌଶଳ ବୋଧ",
+          "subjectCandidate": "Vocational / skill education"
+        },
+        {
+          "title": "ସାହିତ୍ୟ ସୁରଭି",
+          "subjectCandidate": "Odia / language title; confirm exact medium"
+        },
+        {
+          "title": "ହିନ୍ଦୀ କଳିକା",
+          "subjectCandidate": "Hindi"
+        },
+        {
+          "title": "ସଂଶୋଧିତ ପ୍ରସଙ୍ଗ \"ମହାନ୍ ବିପ୍ଳବୀ ମାଧୋ ସିଂହ\"",
+          "subjectCandidate": "Corrigendum / revised content notice; not a separate textbook"
+        },
+        {
+          "title": "ସଂଶୋଧିତ ବିଷୟ ବସ୍ତୁ (ସପ୍ତମ ଶ୍ରେଣୀ – “ସାହିତ୍ୟ ସୁମନ”)",
+          "subjectCandidate": "Class VII corrigendum listed in same portal table; do not map to Class VIII"
+        }
+      ]
+    }
+  ],
+  "sourceCaveats": [
+    "The page includes explicit corrigendum entries for Classes I-V and VI-VIII; inspect these before declaring a listed book final.",
+    "The official SCERT page lists the titles under class headings but some titles alone do not uniquely identify subject, medium or edition. Candidate subjects are tentative and must not be shown as verified.",
+    "SCERT's recent-programmes page states 17 books for Classes V and VIII were approved for AY 2026-27; this inventory alone does not establish which entries are among those approved books.",
+    "The list does not yet include chapter names because each book's table of contents and relevant official file have not been verified."
+  ]
+}
