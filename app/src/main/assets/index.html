@@ -66,6 +66,7 @@ const ODIA_UI_TEXT={
  "All chapters":"ସମସ୍ତ ଅଧ୍ୟାୟ","Not completed":"ଅସମ୍ପୂର୍ଣ୍ଣ","Completed":"ସମ୍ପୂର୍ଣ୍ଣ","Needs revision":"ପୁନରାବୃତ୍ତି ଆବଶ୍ୟକ",
 
  "Owner":"ମାଲିକ","Home":"ମୂଳପୃଷ୍ଠା","Books":"ବହି","AI Tutor":"ଏଆଇ ଶିକ୍ଷକ","Tests":"ପରୀକ୍ଷା","Profile":"ପ୍ରୋଫାଇଲ୍",
+ "Meet your personal AI study companion. Explore tools, challenge your knowledge, and build a plan that fits your goals.":"ଆପଣଙ୍କ ବ୍ୟକ୍ତିଗତ ଏଆଇ ପଢ଼ା ସହାୟକଙ୍କ ସହ ପରିଚିତ ହୁଅନ୍ତୁ। ଉପକରଣ ବ୍ୟବହାର କରନ୍ତୁ, ନିଜ ଜ୍ଞାନ ପରୀକ୍ଷା କରନ୍ତୁ ଏବଂ ନିଜ ପଢ଼ା ଯୋଜନା ତିଆରି କରନ୍ତୁ।",
  "Learn smarter. Grow stronger.":"ବୁଦ୍ଧିମତାର ସହ ପଢ଼ନ୍ତୁ। ଆହୁରି ଦକ୍ଷ ହୁଅନ୍ତୁ।",
  "YOUR NEXT LEVEL STARTS HERE":"ଆପଣଙ୍କ ଉନ୍ନତି ଏଠାରୁ ଆରମ୍ଭ",
  "Study smarter.":"ବୁଦ୍ଧିମତାର ସହ ପଢ଼ନ୍ତୁ।","Become unstoppable.":"ଆଗକୁ ବଢ଼ିଚାଲନ୍ତୁ।",
@@ -124,6 +125,7 @@ function translateOdishaStatic(){
  if(!odishaUIActive){
    document.querySelectorAll("[data-odia-original]").forEach(el=>{if(!el.dataset.k&&!el.children.length)el.textContent=el.dataset.odiaOriginal;delete el.dataset.odiaOriginal;});
    document.querySelectorAll("label[data-odia-label-original]").forEach(el=>{if(el.firstChild&&el.firstChild.nodeType===3)el.firstChild.nodeValue=el.dataset.odiaLabelOriginal;delete el.dataset.odiaLabelOriginal;});
+   ["welTitle","welSub"].forEach(id=>{const el=$(id);if(el&&el.dataset.odiaHtmlOriginal){el.innerHTML=el.dataset.odiaHtmlOriginal;delete el.dataset.odiaHtmlOriginal;}});
    return;
  }
  document.querySelectorAll("h1,h2,h3,.eyebrow,.testCard b,.testCard small,.tag,button,p").forEach(el=>{
@@ -132,6 +134,9 @@ function translateOdishaStatic(){
    const original=el.dataset.odiaOriginal.trim();
    if(ODIA_UI_TEXT[original])el.textContent=ODIA_UI_TEXT[original];
  });
+ const welcomeTitle=$("welTitle"),welcomeSub=$("welSub");
+ if(welcomeTitle){if(!welcomeTitle.dataset.odiaHtmlOriginal)welcomeTitle.dataset.odiaHtmlOriginal=welcomeTitle.innerHTML;welcomeTitle.innerHTML="ବୁଦ୍ଧିମତାର ସହ ପଢ଼ନ୍ତୁ।<br><em>ଆଗକୁ ବଢ଼ିଚାଲନ୍ତୁ।</em>";}
+ if(welcomeSub){if(!welcomeSub.dataset.odiaHtmlOriginal)welcomeSub.dataset.odiaHtmlOriginal=welcomeSub.innerHTML;welcomeSub.textContent=ODIA_UI_TEXT["Meet your personal AI study companion. Explore tools, challenge your knowledge, and build a plan that fits your goals."];}
  document.querySelectorAll("label").forEach(el=>{
    if(el.dataset.k||!el.firstChild||el.firstChild.nodeType!==3)return;
    if(!el.dataset.odiaLabelOriginal)el.dataset.odiaLabelOriginal=el.firstChild.nodeValue;
