@@ -171,6 +171,22 @@ const ODIA_UI_TEXT={
  "Not logged in. Create an account or log in to sync your learning progress.":"ଲଗଇନ୍ ହୋଇନାହିଁ। ପ୍ରଗତି ସିଙ୍କ୍ କରିବାକୁ ଖାତା ଖୋଲନ୍ତୁ କିମ୍ବା ଲଗଇନ୍ କରନ୍ତୁ।",
  "These preferences are saved on this device. Log in above to connect your account.":"ଏହି ପସନ୍ଦଗୁଡ଼ିକ ଏହି ଡିଭାଇସ୍‌ରେ ସଞ୍ଚିତ ହୁଏ। ଆକାଉଣ୍ଟ ସହ ଯୋଡ଼ିବାକୁ ଲଗଇନ୍ କରନ୍ତୁ।",
  "Create Free Account":"ମାଗଣା ଖାତା ଖୋଲନ୍ତୁ","Try Again":"ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ"
+,
+
+ "No PDF selected":"କୌଣସି PDF ବାଛାଯାଇନାହିଁ।","Could not extract text from this PDF.":"ଏହି PDF ରୁ ଟେକ୍ସଟ୍ ବାହାର କରିହେଲା ନାହିଁ।",
+ "Please enter a question.":"ଦୟାକରି ଏକ ପ୍ରଶ୍ନ ଲେଖନ୍ତୁ।","Please enter your name.":"ଦୟାକରି ନିଜ ନାମ ଲେଖନ୍ତୁ।",
+ "Please enter a valid email address.":"ଦୟାକରି ସଠିକ୍ ଇମେଲ୍ ଠିକଣା ଲେଖନ୍ତୁ।",
+ "Password must be at least 8 characters.":"ପାସୱାର୍ଡ ଅତି କମରେ ୮ଟି ଅକ୍ଷରର ହେବା ଦରକାର।",
+ "Something went wrong. Please try again.":"କିଛି ତ୍ରୁଟି ହେଲା। ଦୟାକରି ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।",
+ "Could not log in. Please try again.":"ଲଗଇନ୍ ହୋଇପାରିଲା ନାହିଁ। ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।",
+ "Account created successfully.":"ଖାତା ସଫଳତାର ସହ ତିଆରି ହେଲା।",
+ "Login successful.":"ଲଗଇନ୍ ସଫଳ ହେଲା।","Saved successfully.":"ସଫଳତାର ସହ ସଞ୍ଚୟ ହେଲା।",
+ "Text extracted successfully.":"ଟେକ୍ସଟ୍ ସଫଳତାର ସହ ବାହାର କରାଗଲା।",
+ "AI service is not configured yet.":"ଏଆଇ ସେବା ଏପର୍ଯ୍ୟନ୍ତ ସକ୍ରିୟ ହୋଇନାହିଁ।",
+ "AI service request failed. Check backend configuration.":"ଏଆଇ ସେବାରେ ତ୍ରୁଟି ହେଲା। ସେବା ସେଟିଂ ଯାଞ୍ଚ ଆବଶ୍ୟକ।",
+ "AI service rate limit reached. Try again shortly.":"ଏଆଇ ସେବାର ଅନୁରୋଧ ସୀମା ପୂରଣ ହୋଇଛି। କିଛି ସମୟ ପରେ ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।",
+ "Question or book excerpt is too long. Please shorten it.":"ପ୍ରଶ୍ନ କିମ୍ବା ବହିର ଅଂଶ ବହୁତ ଲମ୍ବା। ଦୟାକରି ଛୋଟ କରନ୍ତୁ।",
+ "No answer returned.":"କୌଣସି ଉତ୍ତର ମିଳିଲା ନାହିଁ।"
 
 };
 function syncCurriculumSelections(sourceId){
@@ -255,7 +271,7 @@ function loadProfile(){try{const p=JSON.parse(localStorage.getItem("examMasteryP
 function translate(){document.documentElement.lang=L;document.querySelectorAll("[data-k]").forEach(e=>{let v=t(e.dataset.k);if(v.includes("<br>"))e.innerHTML=v;else e.textContent=v});$("ls").textContent=L.toUpperCase();$("question").placeholder=t("question");$("search").placeholder=t("search");if(!$("book").textContent)$("meta").textContent=t("nobook");translateOdishaStatic();}
 $("lang").onchange=e=>{L=e.target.value;if(L==="or")odishaUIActive=true;else if(L!=="or")odishaUIActive=false;translate();toast(L==="hi"?"भाषा बदल गई":L==="or"?"ଭାଷା ବଦଳିଲା":"Language changed")};
 function go(id){document.querySelectorAll(".screen").forEach(e=>e.classList.toggle("on",e.id===id));document.querySelectorAll("[data-go]").forEach(e=>e.classList.toggle("active",e.dataset.go===id));if(id==="owner")refreshOwnerDashboard();window.scrollTo({top:0,behavior:"smooth"})}const swipeOrder=["owner","home","books","tutor","tests","profile"];let swipeStartX=0,swipeStartY=0;document.querySelector(".main").addEventListener("touchstart",e=>{if(e.touches.length!==1)return;swipeStartX=e.touches[0].clientX;swipeStartY=e.touches[0].clientY},{passive:true});document.querySelector(".main").addEventListener("touchend",e=>{if(!swipeStartX&&!swipeStartY)return;const dx=e.changedTouches[0].clientX-swipeStartX,dy=e.changedTouches[0].clientY-swipeStartY;swipeStartX=swipeStartY=0;if(Math.abs(dx)<65||Math.abs(dx)<Math.abs(dy)*1.25)return;const current=document.querySelector(".screen.on")?.id,index=swipeOrder.indexOf(current);if(index<0)return;const next=dx<0?index+1:index-1;if(next>=0&&next<swipeOrder.length)go(swipeOrder[next])},{passive:true});document.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>go(b.dataset.go));
-function toast(s){$("toast").textContent=s;$("toast").style.display="block";clearTimeout(window.tt);window.tt=setTimeout(()=>$("toast").style.display="none",2200)}
+function toast(s){$("toast").textContent=odishaUIActive?(ODIA_UI_TEXT[s]||s):s;$("toast").style.display="block";clearTimeout(window.tt);window.tt=setTimeout(()=>$("toast").style.display="none",2200)}
 if(window.pdfjsLib)pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
 $("extract").onclick=async()=>{let f=$("pdf").files[0];if(!f){toast(t("noPDF"));return}if(!window.pdfjsLib){toast(t("error"));return}try{$("extract").disabled=true;$("extract").textContent=t("extracting");let pdf=await pdfjsLib.getDocument({data:new Uint8Array(await f.arrayBuffer())}).promise,arr=[];for(let i=1;i<=pdf.numPages;i++){let p=await pdf.getPage(i),c=await p.getTextContent();arr.push(c.items.map(z=>z.str).join(" "))}text=arr.join("\n\n");name=f.name;$("book").textContent=text;$("book").style.fontSize=size+"px";$("bc").textContent="1";$("meta").textContent=f.name+" · "+pdf.numPages+" pages · "+text.length.toLocaleString()+" chars";toast(text.trim()?t("done"):t("noText"))}catch(e){toast(t("error"))}finally{$("extract").disabled=false;$("extract").textContent=t("extract")}};
 $("download").onclick=()=>{if(!text){toast(t("noExtract"));return}let a=document.createElement("a");a.href=URL.createObjectURL(new Blob([text],{type:"text/plain;charset=utf-8"}));a.download=(name||"book.pdf").replace(/\.pdf$/i,"")+".txt";a.click();URL.revokeObjectURL(a.href)};
@@ -266,7 +282,7 @@ $("ask").onclick=async()=>{
   let q=$("question").value.trim();
   if(!q){toast(t("askFirst"));return}
   const u=document.createElement("div");u.className="bubble user";u.textContent=q;$("chat").append(u);
-  const a=document.createElement("div");a.className="bubble ai";a.textContent="Thinking…";$("chat").append(a);
+  const a=document.createElement("div");a.className="bubble ai";a.textContent=odishaUIActive?"ଭାବୁଛି…":"Thinking…";$("chat").append(a);
   $("ask").disabled=true;$("chat").scrollTop=$("chat").scrollHeight;
   try {
     if(!window.EXAMMASTERY_API_URL) throw new Error("AI backend is not connected yet. Backend deployment and API configuration are still required.");
@@ -276,9 +292,9 @@ $("ask").onclick=async()=>{
     });
     const data=await response.json().catch(()=>({}));
     if(!response.ok) throw new Error(data.error||"Tutor request failed.");
-    a.textContent=data.answer||"No answer returned.";
+    a.textContent=data.answer||(odishaUIActive?"କୌଣସି ଉତ୍ତର ମିଳିଲା ନାହିଁ।":"No answer returned.");
   } catch(e) {
-    a.textContent=e.message||"Could not connect to the AI tutor.";
+    a.textContent=odishaUIActive?(ODIA_UI_TEXT[e.message]||"ଏଆଇ ଶିକ୍ଷକଙ୍କ ସହ ଯୋଡ଼ିହେବା ସମ୍ଭବ ହେଲା ନାହିଁ।"):(e.message||"Could not connect to the AI tutor.");
   } finally {
     $("ask").disabled=false;$("chat").scrollTop=$("chat").scrollHeight;$("question").value="";
   }
