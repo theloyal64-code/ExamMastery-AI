@@ -77,15 +77,21 @@ function syncOdishaLanguage(sourceId){
 }
 function translateOdishaStatic(){
  if(!odishaUIActive){
-   document.querySelectorAll("[data-odia-original]").forEach(el=>{if(!el.dataset.k)el.textContent=el.dataset.odiaOriginal;delete el.dataset.odiaOriginal;});
+   document.querySelectorAll("[data-odia-original]").forEach(el=>{if(!el.dataset.k&&!el.children.length)el.textContent=el.dataset.odiaOriginal;delete el.dataset.odiaOriginal;});
+   document.querySelectorAll("label[data-odia-label-original]").forEach(el=>{if(el.firstChild&&el.firstChild.nodeType===3)el.firstChild.nodeValue=el.dataset.odiaLabelOriginal;delete el.dataset.odiaLabelOriginal;});
    return;
  }
- document.querySelectorAll("h1,h2,h3,.eyebrow,.testCard b,.testCard small,label,.tag,button,p").forEach(el=>{
-   if(el.dataset.k)return;
-   if(el.children.length && !el.matches("button,.testCard b,.testCard small"))return;
+ document.querySelectorAll("h1,h2,h3,.eyebrow,.testCard b,.testCard small,.tag,button,p").forEach(el=>{
+   if(el.dataset.k||el.children.length)return;
    if(!el.dataset.odiaOriginal)el.dataset.odiaOriginal=el.textContent;
    const original=el.dataset.odiaOriginal.trim();
    if(ODIA_UI_TEXT[original])el.textContent=ODIA_UI_TEXT[original];
+ });
+ document.querySelectorAll("label").forEach(el=>{
+   if(el.dataset.k||!el.firstChild||el.firstChild.nodeType!==3)return;
+   if(!el.dataset.odiaLabelOriginal)el.dataset.odiaLabelOriginal=el.firstChild.nodeValue;
+   const original=el.dataset.odiaLabelOriginal.trim();
+   if(ODIA_UI_TEXT[original])el.firstChild.nodeValue=el.dataset.odiaLabelOriginal.replace(original,ODIA_UI_TEXT[original]);
  });
  const subject=$("qs")?.value;
  if(subject==="English"){
@@ -106,7 +112,7 @@ function loadProfile(){try{const p=JSON.parse(localStorage.getItem("examMasteryP
 
 
 function translate(){document.documentElement.lang=L;document.querySelectorAll("[data-k]").forEach(e=>{let v=t(e.dataset.k);if(v.includes("<br>"))e.innerHTML=v;else e.textContent=v});$("ls").textContent=L.toUpperCase();$("question").placeholder=t("question");$("search").placeholder=t("search");if(!$("book").textContent)$("meta").textContent=t("nobook");translateOdishaStatic();}
-$("lang").onchange=e=>{L=e.target.value;translate();toast(L==="hi"?"भाषा बदल गई":L==="or"?"ଭାଷା ବଦଳିଲା":"Language changed")};
+$("lang").onchange=e=>{L=e.target.value;if(L==="or")odishaUIActive=true;else if(L!=="or")odishaUIActive=false;translate();toast(L==="hi"?"भाषा बदल गई":L==="or"?"ଭାଷା ବଦଳିଲା":"Language changed")};
 function go(id){document.querySelectorAll(".screen").forEach(e=>e.classList.toggle("on",e.id===id));document.querySelectorAll("[data-go]").forEach(e=>e.classList.toggle("active",e.dataset.go===id));if(id==="owner")refreshOwnerDashboard();window.scrollTo({top:0,behavior:"smooth"})}const swipeOrder=["owner","home","books","tutor","tests","profile"];let swipeStartX=0,swipeStartY=0;document.querySelector(".main").addEventListener("touchstart",e=>{if(e.touches.length!==1)return;swipeStartX=e.touches[0].clientX;swipeStartY=e.touches[0].clientY},{passive:true});document.querySelector(".main").addEventListener("touchend",e=>{if(!swipeStartX&&!swipeStartY)return;const dx=e.changedTouches[0].clientX-swipeStartX,dy=e.changedTouches[0].clientY-swipeStartY;swipeStartX=swipeStartY=0;if(Math.abs(dx)<65||Math.abs(dx)<Math.abs(dy)*1.25)return;const current=document.querySelector(".screen.on")?.id,index=swipeOrder.indexOf(current);if(index<0)return;const next=dx<0?index+1:index-1;if(next>=0&&next<swipeOrder.length)go(swipeOrder[next])},{passive:true});document.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>go(b.dataset.go));
 function toast(s){$("toast").textContent=s;$("toast").style.display="block";clearTimeout(window.tt);window.tt=setTimeout(()=>$("toast").style.display="none",2200)}
 if(window.pdfjsLib)pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
@@ -183,7 +189,7 @@ document.querySelectorAll("[data-test-type]").forEach(b=>b.onclick=()=>{activeTe
 function updateQuizTopics(){const topics=Object.keys(quizBank[$("qs").value]||{});$("qTopic").innerHTML=topics.map(x=>'<option>'+escapeHtml(x)+'</option>').join("");const chapters=demoChapterMap[$("qs").value]||[];$("qChapter").innerHTML=chapters.map(([label])=>'<option value="'+escapeHtml(label)+'">'+escapeHtml(label)+'</option>').join("");updateQuizAvailability()}
 function getQuizPool(){const d=$("qDifficulty").value,subject=$("qs").value;let all=[];if(["topic","weak"].includes(activeTestType)){all=((quizBank[subject]||{})[$("qTopic").value]||[]).map(q=>({...q,subject,topic:$("qTopic").value}));}else if(isChapterTest()){const chosen=(demoChapterMap[subject]||[]).find(([label])=>label===$("qChapter").value);const topic=chosen&&chosen[1];all=((quizBank[subject]||{})[topic]||[]).map(q=>({...q,subject,topic,chapter:$("qChapter").value}));}else{Object.entries(quizBank).forEach(([s,topics])=>Object.entries(topics).forEach(([topic,questions])=>{if(activeTestType==="subject"&&s!==subject)return;questions.forEach(q=>all.push({...q,subject:s,topic}))}));}return all.filter(q=>d==="All"||q.d===d)}
 function updateQuizAvailability(){const n=getQuizPool().length;$("qAvailable").textContent=n+" sample questions available for this "+(isChapterTest()?"chapter":"topic/test");$("startQuiz").disabled=!n}
-$("qs").onchange=updateQuizTopics;$("qTopic").onchange=updateQuizAvailability;$("qChapter").onchange=updateQuizAvailability;$("qDifficulty").onchange=updateQuizAvailability;$("qBoard").onchange=()=>{if($("qBoard").value==="ODISHA_BOARD")$("qMedium").value="Odia";else if($("qBoard").value==="OAV"||$("qBoard").value==="CISCE_ICSE")$("qMedium").value="English";updateQuizAvailability();syncOdishaLanguage()};
+$("qs").onchange=updateQuizTopics;$("qTopic").onchange=updateQuizAvailability;$("qChapter").onchange=updateQuizAvailability;$("qDifficulty").onchange=updateQuizAvailability;$("qBoard").onchange=()=>{if($("qBoard").value==="ODISHA_BOARD")$("qMedium").value="Odia";else if($("qBoard").value==="OAV"||$("qBoard").value==="CISCE_ICSE")$("qMedium").value="English";updateQuizAvailability();syncOdishaLanguage("qBoard")};
 function startFocusedQuiz(){let pool=getQuizPool();if(!pool.length){toast("No questions available for this difficulty.");return}quizQuestions=pool.slice().sort(()=>Math.random()-.5).slice(0,Math.min(Number($("qCount").value)||10,pool.length));quizIndex=quizCorrect=quizAnswered=0;quizMode=$("qMode").value;$("quizSetup").style.display="none";$("quizResults").style.display="none";$("quizSession").style.display="block";$("quizSessionLabel").textContent=(testTypeNames[activeTestType]||"Focused Practice")+" · Class "+$("ql").value+" · "+(activeTestType==="topic"||activeTestType==="weak"?$("qs").value+" / "+$("qTopic").value:activeTestType==="chapter"?$("qs").value+" / "+$("qChapter").value:activeTestType==="subject"?$("qs").value:"Mixed subjects");renderFocusedQuestion()}
 function renderFocusedQuestion(){let q=quizQuestions[quizIndex];quizLocked=false;$("quizCounter").textContent="Question "+(quizIndex+1)+" of "+quizQuestions.length;$("quizProgress").style.width=(quizIndex/quizQuestions.length*100)+"%";$("quizQuestionMeta").textContent=q.d.toUpperCase()+" · "+(q.subject||$("qs").value).toUpperCase()+" · "+(q.topic||$("qTopic").value).toUpperCase();$("quizQuestion").textContent=q.q;$("quizOptions").innerHTML=q.o.map((v,i)=>'<button class="quizChoice" data-answer="'+i+'"><b style="color:var(--mint);margin-right:10px">'+String.fromCharCode(65+i)+'.</b>'+escapeHtml(v)+'</button>').join("");$("quizFeedback").style.display="none";$("quizFeedback").className="card";$("nextQuizQuestion").disabled=true;$("nextQuizQuestion").textContent=quizIndex===quizQuestions.length-1?"View results":"Next question →";$("quizOptions").querySelectorAll("[data-answer]").forEach(b=>b.onclick=()=>chooseFocusedAnswer(Number(b.dataset.answer)))}
 function chooseFocusedAnswer(i){if(quizLocked)return;quizLocked=true;let q=quizQuestions[quizIndex],ok=i===q.a;quizAnswered++;if(ok)quizCorrect++;$("quizOptions").querySelectorAll("[data-answer]").forEach((b,j)=>{b.disabled=true;if(j===q.a)b.classList.add("correct");else if(j===i)b.classList.add("incorrect")});$("quizFeedback").style.display="block";$("quizFeedback").classList.add(ok?"good":"bad");$("quizFeedback").innerHTML=quizMode==="practice"?'<b>'+(ok?"Correct ✓":"Review this answer")+'</b><p style="margin-bottom:0">'+escapeHtml(q.e)+'</p>':'Answer saved. Score and explanations will be reviewed after this session.';$("nextQuizQuestion").disabled=false;$("quizProgress").style.width=((quizIndex+1)/quizQuestions.length*100)+"%"}
