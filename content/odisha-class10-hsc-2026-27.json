@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "board": "ODISHA_BOARD",
+  "qualification": "HSC",
+  "class": 10,
+  "academicSession": "2026-27",
+  "sourceId": "bse-odisha-hsc-class-x-2026-27",
+  "sourceUrl": "https://bseodisha.nic.in/wp-content/uploads/2026/05/ANNUAL-Subject_wise_syllabus_class_X_26_27-2.pdf",
+  "sourceListingUrl": "https://bseodisha.nic.in/model_syllabus/",
+  "sourcePublishedOn": "2026-05-18",
+  "extractionStatus": "partial_review_required",
+  "subjects": [
+    {
+      "subject": "English (SLE)",
+      "prescribedBooks": [
+        "Skills of Communicative English",
+        "Learn and Practice Grammar"
+      ],
+      "terms": [
+        {
+          "term": "Term I",
+          "assessment": "IA-1 by second week of July 2026; Aspirational Component by last week of August 2026; Half-yearly examination by first week of September 2026",
+          "topics": [
+            {
+              "category": "Detailed Text",
+              "title": "All Things Bright & Beautiful"
+            },
+            {
+              "category": "Detailed Text",
+              "title": "A Letter to God"
+            },
+            {
+              "category": "Detailed Text",
+              "title": "At the High School"
+            },
+            {
+              "category": "Non-Detailed",
+              "title": "A Tiger in the House"
+            },
+            {
+              "category": "Grammar",
+              "title": "Tense revisited"
+            },
+            {
+              "category": "Grammar",
+              "title": "Types of Sentences"
+            },
+            {
+              "category": "Grammar",
+              "title": "Subject Verb Agreement"
+            },
+            {
+              "category": "Grammar",
+              "title": "Essay"
+            },
+            {
+              "category": "Grammar",
+              "title": "Translation & Reporting"
+            }
+          ]
+        },
+        {
+          "term": "Term II",
+          "assessment": "IA-3 by first week of November 2026; Aspirational Component by first week of January 2027; Annual examination by last week of February 2027",
+          "topics": [
+            {
+              "category": "Detailed Text",
+              "title": "Air Pollution: A Hidden Menace"
+            },
+            {
+              "category": "Detailed Text",
+              "title": "Village Song"
+            },
+            {
+              "category": "Detailed Text",
+              "title": "The Flower-School"
+            },
+            {
+              "category": "Non-Detailed",
+              "title": "The Village Judge"
+            },
+            {
+              "category": "Non-Detailed",
+              "title": "A Grain as big as a Hen’s Egg"
+            },
+            {
+              "category": "Grammar",
+              "title": "Phrasal Verbs"
+            },
+            {
+              "category": "Grammar",
+              "title": "Noun Clauses & Relative Clauses"
+            },
+            {
+              "category": "Grammar",
+              "title": "Adverb Clauses"
+            },
+            {
+              "category": "Grammar",
+              "title": "Essay"
+            },
+            {
+              "category": "Grammar",
+              "title": "Translation & Reporting"
+            },
+            {
+              "category": "Grammar",
+              "title": "The Passive"
+            }
+          ]
+        },
+        {
+          "term": "Term I (continued)",
+          "assessment": "IA-2 by last week of August 2026",
+          "topics": [
+            {
+              "category": "Detailed Text",
+              "title": "The Solitary Reaper"
+            },
+            {
+              "category": "Detailed Text",
+              "title": "Festivals of North-East India"
+            },
+            {
+              "category": "Non-Detailed",
+              "title": "The Beggar"
+            },
+            {
+              "category": "Non-Detailed",
+              "title": "A Great Son of India",
+              "note": "The source explicitly states no question will be set in the examination from this topic."
+            },
+            {
+              "category": "Grammar",
+              "title": "Non-finite Verb Forms"
+            },
+            {
+              "category": "Grammar",
+              "title": "Prepositions"
+            },
+            {
+              "category": "Grammar",
+              "title": "Letter and Applications"
+            },
+            {
+              "category": "Grammar",
+              "title": "Unseen passage"
+            }
+          ]
+        },
+        {
+          "term": "Term II (continued)",
+          "assessment": "IA-4 by first week of January 2027",
+          "topics": [
+            {
+              "category": "Detailed Text",
+              "title": "From the Formalin Jar"
+            },
+            {
+              "category": "Detailed Text",
+              "title": "School’s Goodbye"
+            },
+            {
+              "category": "Grammar",
+              "title": "Direct and Indirect Speech"
+            },
+            {
+              "category": "Grammar",
+              "title": "Unseen Passage"
+            },
+            {
+              "category": "Grammar",
+              "title": "Letter and Applications"
+            }
+          ]
+        }
+      ],
+      "revisionWindow": "Second week of January to second week of February 2027"
+    }
+  ],
+  "notes": [
+    "This is a partial structured extraction of the official PDF, focused on English (SLE); it is not a complete Class X syllabus.",
+    "Term labels and assessment timing are transcribed from the PDF layout; the PDF's multi-column table layout should be checked visually during QA before publishing.",
+    "Mathematics and General Science headings are present in the PDF, but OCR text for Odia chapter titles was garbled in the text extraction. Do not publish those chapter names until visually checked against the PDF pages.",
+    "This record contains syllabus metadata only, not textbook chapter text."
+  ]
+}
