@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "updatedOn": "2026-10-15",
+  "trackId": "ODISHA_STATE_BOARD",
+  "purpose": "Operational checklist for building verified Odisha State Board curriculum coverage. This is a work queue, not a published syllabus.",
+  "officialSources": [
+    {
+      "sourceId": "scert-odisha-curriculum",
+      "url": "https://scert.odisha.gov.in/departments/curriculum-textbook/",
+      "use": "SCERT identifies itself as state academic authority for curriculum/evaluation and textbook development; use for authority context, not as a chapter list."
+    },
+    {
+      "sourceId": "scert-odisha-new-books",
+      "url": "https://scert.odisha.gov.in/new-textbook-class-i-viii/",
+      "use": "Official new textbook listing for Classes I-VIII; verify class, exact title, edition/revision, medium and download link."
+    },
+    {
+      "sourceId": "bse-odisha-class-ix-x-syllabus",
+      "url": "https://bseodisha.nic.in/model_syllabus/",
+      "use": "Official BSE Odisha syllabus listing; keep HSC and Madhyama records separate for Classes IX-X."
+    },
+    {
+      "sourceId": "bse-odisha-hsc-class-x-2026-27",
+      "url": "https://bseodisha.nic.in/wp-content/uploads/2026/05/ANNUAL-Subject_wise_syllabus_class_X_26_27-2.pdf",
+      "use": "HSC Class X 2026-27 subject-wise syllabus; extraction and page-by-page visual verification required before publication."
+    }
+  ],
+  "policyNotes": [
+    "SCERT's official pages indicate new textbook development for Classes I-VIII in phases and current revision/corrigendum notices for Classes VI-VIII; never assume an older textbook remains current without checking the latest official listing.",
+    "The official SCERT site reports new textbooks for Classes V and VIII approved for academic year 2026-27; verify the exact class/subject title and whether the applicable file is final/current before mapping.",
+    "Class IX-X syllabus must be mapped by qualification track (HSC or Madhyama), class, subject, session and medium; do not merge tracks.",
+    "Odia-medium subject names and chapter titles must be transcribed from source pages/PDF visuals; do not rely on garbled OCR for publication.",
+    "Questions and explanations must be original unless reuse rights explicitly allow reproduction. Link to official books rather than republishing restricted files."
+  ],
+  "workQueue": [
+    {
+      "id": "odisha-6",
+      "classes": [
+        6
+      ],
+      "priority": 1,
+      "requiredChecks": [
+        "latest SCERT textbook listing and corrigenda",
+        "subject/title inventory",
+        "medium and edition",
+        "chapter headings checked visually",
+        "map each chapter to current syllabus outcomes"
+      ],
+      "status": "source_review_pending"
+    },
+    {
+      "id": "odisha-7",
+      "classes": [
+        7
+      ],
+      "priority": 1,
+      "requiredChecks": [
+        "latest SCERT textbook listing and corrigenda",
+        "subject/title inventory",
+        "medium and edition",
+        "chapter headings checked visually",
+        "map each chapter to current syllabus outcomes"
+      ],
+      "status": "source_review_pending"
+    },
+    {
+      "id": "odisha-8",
+      "classes": [
+        8
+      ],
+      "priority": 1,
+      "requiredChecks": [
+        "2026-27 newly approved/revised books",
+        "latest SCERT textbook listing and corrigenda",
+        "subject/title inventory",
+        "medium and edition",
+        "chapter headings checked visually",
+        "map each chapter to current syllabus outcomes"
+      ],
+      "status": "source_review_pending"
+    },
+    {
+      "id": "odisha-9-hsc",
+      "classes": [
+        9
+      ],
+      "qualificationTrack": "HSC",
+      "priority": 2,
+      "requiredChecks": [
+        "current 2026-27 BSE break-up syllabus",
+        "subject-by-subject chapter/outcome mapping",
+        "medium-specific book verification"
+      ],
+      "status": "source_review_pending"
+    },
+    {
+      "id": "odisha-9-madhyama",
+      "classes": [
+        9
+      ],
+      "qualificationTrack": "Madhyama",
+      "priority": 2,
+      "requiredChecks": [
+        "current 2026-27 BSE break-up syllabus",
+        "subject-by-subject chapter/outcome mapping",
+        "medium-specific book verification"
+      ],
+      "status": "source_review_pending"
+    },
+    {
+      "id": "odisha-10-hsc",
+      "classes": [
+        10
+      ],
+      "qualificationTrack": "HSC",
+      "priority": 2,
+      "requiredChecks": [
+        "review partial English SLE extraction against PDF pages",
+        "visually transcribe Odia Mathematics and General Science headings",
+        "verify each subject and prescribed book"
+      ],
+      "status": "in_review"
+    },
+    {
+      "id": "odisha-10-madhyama",
+      "classes": [
+        10
+      ],
+      "qualificationTrack": "Madhyama",
+      "priority": 2,
+      "requiredChecks": [
+        "extract from the separate current 2026-27 Madhyama syllabus",
+        "verify subject and textbook mapping independently"
+      ],
+      "status": "source_review_pending"
+    }
+  ],
+  "publicationGate": [
+    "Official source URL and access date recorded",
+    "Academic session and HSC/Madhyama track confirmed where relevant",
+    "Class, subject, medium, title and chapter headings checked against source",
+    "No OCR-uncertain Odia text published without visual review",
+    "Original learning notes and questions checked for correctness",
+    "Content validation passes and UI clearly marks unverified records"
+  ]
+}
