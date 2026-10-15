@@ -66,6 +66,31 @@
       "status": "official_source_identified",
       "reusePolicy": "Use official curriculum/syllabus as a reference; do not assume commercial school textbooks are centrally prescribed or redistributable.",
       "nextAction": "Identify current curriculum for Classes VI–VIII and current ICSE syllabus for Classes IX–X; separately record school-selected textbooks where needed."
+    },
+    {
+      "id": "bse-odisha-class-ix-x-syllabus",
+      "board": "Odisha Board",
+      "purpose": [
+        "secondary syllabus",
+        "exam syllabus"
+      ],
+      "title": "Board of Secondary Education Odisha — Class IX/X syllabus and textbooks",
+      "url": "https://bseodisha.nic.in/class_x_text_books/",
+      "status": "official_source_identified",
+      "reusePolicy": "Use as official syllabus reference. Verify each linked file's terms before redistribution.",
+      "nextAction": "Extract current 2026–27 HSC/Madhyama class IX and X break-up syllabi and map subjects/chapters; distinguish HSC from Madhyama."
+    },
+    {
+      "id": "odisha-curriculum-framework-2025",
+      "board": "Odisha Board",
+      "purpose": [
+        "curriculum framework"
+      ],
+      "title": "Odisha Curriculum Framework for School Education 2025",
+      "url": "https://scert.odisha.gov.in/wp-content/uploads/2026/01/OCF-SE-2025-Final-252-A_11zon.pdf",
+      "status": "official_source_identified",
+      "reusePolicy": "Framework document is a reference; individual textbook content rights remain separate.",
+      "nextAction": "Use as context for updated curriculum, but verify class-specific syllabus and approved textbook lists separately."
     }
   ]
 }
