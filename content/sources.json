@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-10-15",
+  "sources": [
+    {
+      "id": "ncert-textbooks",
+      "board": "CBSE",
+      "purpose": [
+        "textbooks",
+        "chapter references"
+      ],
+      "title": "NCERT Textbooks (Classes I–XII)",
+      "url": "https://ncert.nic.in/textbook.php",
+      "status": "official_source_identified",
+      "reusePolicy": "NCERT states that republishing, redistributing copies, or including textbooks in software/digital content packages is prohibited; written permission is required for links by websites/services. Do not bundle NCERT PDFs without permission.",
+      "nextAction": "Use as reference/source link only after confirming current terms; record the applicable class, subject, edition/session and chapter metadata."
+    },
+    {
+      "id": "scert-odisha-curriculum",
+      "board": "Odisha Board",
+      "purpose": [
+        "curriculum",
+        "syllabus",
+        "textbook references"
+      ],
+      "title": "SCERT Odisha — Curriculum & Textbook",
+      "url": "https://scert.odisha.gov.in/departments/curriculum-textbook/",
+      "status": "official_source_identified",
+      "reusePolicy": "Official source identified. Check each linked book/document's own terms and permissions before redistribution.",
+      "nextAction": "Review current SCERT 2025 framework and the applicable syllabus/textbook version by class and subject."
+    },
+    {
+      "id": "scert-odisha-new-books",
+      "board": "Odisha Board",
+      "purpose": [
+        "textbooks"
+      ],
+      "title": "SCERT Odisha — New Textbooks Classes I–VIII",
+      "url": "https://scert.odisha.gov.in/new-textbook-class-i-viii/",
+      "status": "official_source_identified",
+      "reusePolicy": "Do not assume downloadable means redistribution is permitted; verify individual book terms.",
+      "nextAction": "Inventory relevant Classes VI–VIII books and verify current academic session and download availability."
+    },
+    {
+      "id": "odisha-class-x-textbooks",
+      "board": "Odisha Board",
+      "purpose": [
+        "textbooks"
+      ],
+      "title": "Odisha Department of School & Mass Education — Class X Textbooks",
+      "url": "https://sme.odisha.gov.in/en/text-books-for-class-x",
+      "status": "official_source_identified",
+      "reusePolicy": "Verify each file's reuse permission before bundling or republishing.",
+      "nextAction": "Inventory current Class X subject/book/chapter files and map them to the applicable syllabus."
+    },
+    {
+      "id": "cisce-publications",
+      "board": "CISCE/ICSE",
+      "purpose": [
+        "curriculum",
+        "syllabus",
+        "resource materials"
+      ],
+      "title": "CISCE Publications and Curriculum Resources",
+      "url": "https://cisce.org/publications/",
+      "status": "official_source_identified",
+      "reusePolicy": "Use official curriculum/syllabus as a reference; do not assume commercial school textbooks are centrally prescribed or redistributable.",
+      "nextAction": "Identify current curriculum for Classes VI–VIII and current ICSE syllabus for Classes IX–X; separately record school-selected textbooks where needed."
+    }
+  ]
+}
