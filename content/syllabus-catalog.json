@@ -190,16 +190,17 @@
     {
       "board": "ODISHA_BOARD",
       "class": 10,
-      "academicSession": null,
+      "academicSession": "2026-27",
       "sourceIds": [
         "scert-odisha-curriculum",
         "odisha-class-x-textbooks",
         "bse-odisha-class-ix-x-syllabus",
-        "odisha-curriculum-framework-2025"
+        "odisha-curriculum-framework-2025",
+        "bse-odisha-hsc-class-x-2026-27"
       ],
       "subjects": [],
-      "verificationStatus": "not_verified",
-      "notes": "Subject and chapter lists must be extracted from the current official source; do not infer from generic sample topics. For secondary classes, verify HSC and Madhyama break-up syllabi separately for academic session 2026–27."
+      "verificationStatus": "source_found",
+      "notes": "BSE Odisha official listing dated 08 May 2026 confirms Class X HSC 2026–27 break-up syllabus and identifies its subject-wise PDF. PDF fetch timed out; no subject/chapter data has been verified or published. Madhyama is a separate syllabus and must not be merged with HSC."
     }
   ]
 }
