@@ -124,13 +124,7 @@ function translateOdishaStatic(){
    if(!el.dataset.odiaOriginal)el.dataset.odiaOriginal=el.textContent;
    const original=el.dataset.odiaOriginal.trim();if(ODIA_UI_TEXT[original])el.textContent=ODIA_UI_TEXT[original];
  });
- document.querySelectorAll("select option").forEach(el=>{
-   if(el.closest("#qs")&&el.textContent.trim()==="English")return;
-   if(el.closest("#subject")&&el.textContent.trim()==="English")return;
-   if(el.closest("#syllabusSubject")&&el.textContent.trim()==="English")return;
-   if(!el.dataset.odiaOriginal)el.dataset.odiaOriginal=el.textContent;
-   const original=el.dataset.odiaOriginal.trim();if(ODIA_UI_TEXT[original])el.textContent=ODIA_UI_TEXT[original];
- });
+;
  const subject=$("qs")?.value;
  if(subject==="English"){
    const note=$("quizBankNote");if(note)note.textContent="ଇଂରାଜୀ ବିଷୟର ପାଠ୍ୟବସ୍ତୁ ଇଂରାଜୀରେ ରହିବ। ଏହି ନମୁନା ପ୍ରଶ୍ନଗୁଡ଼ିକ ଏପର୍ଯ୍ୟନ୍ତ ଅଧିକୃତ ପାଠ୍ୟକ୍ରମ ସହ ଯାଞ୍ଚ ହୋଇନାହିଁ।";
