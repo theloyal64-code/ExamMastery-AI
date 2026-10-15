@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "updatedOn": "2026-10-15",
+  "note": "This inventory is a source-page listing, not a claim that every title is the current prescribed textbook for every 2026–27 class/track. Confirm the relevant BSE Odisha syllabus and school/board track before assigning.",
+  "entries": [
+    {
+      "board": "ODISHA_BOARD",
+      "class": 10,
+      "qualification": "HSC track — confirm against current BSE syllabus",
+      "academicSession": "2026-27",
+      "subject": "English",
+      "titles": [
+        "English Text Books Part-1",
+        "English Text Books Part-2",
+        "English Text Books ND"
+      ],
+      "sourceId": "odisha-class-x-textbooks",
+      "sourceUrl": "https://sme.odisha.gov.in/en/text-books-for-class-x",
+      "sourceStatus": "listed_on_official_source_page",
+      "reuseNote": "Official page states CC BY 4.0; retain attribution and verify each file's licensing/attribution details before redistribution."
+    },
+    {
+      "board": "ODISHA_BOARD",
+      "class": 10,
+      "qualification": "HSC track — confirm against current BSE syllabus",
+      "academicSession": "2026-27",
+      "subject": "Mathematics",
+      "titles": [
+        "Mathematics-Algebra (inner, chapters 1–6, answer file)",
+        "Mathematics-Geometry (inner, chapters 1–6, answer file)"
+      ],
+      "sourceId": "odisha-class-x-textbooks",
+      "sourceUrl": "https://sme.odisha.gov.in/en/text-books-for-class-x",
+      "sourceStatus": "listed_on_official_source_page",
+      "reuseNote": "Titles grouped from the official portal listing; chapter titles and exact syllabus mapping are not yet verified."
+    },
+    {
+      "board": "ODISHA_BOARD",
+      "class": 10,
+      "qualification": "HSC track — confirm against current BSE syllabus",
+      "academicSession": "2026-27",
+      "subject": "Physical Science",
+      "titles": [
+        "Physical Science Inner",
+        "Physical Science Chapters 1–9"
+      ],
+      "sourceId": "odisha-class-x-textbooks",
+      "sourceUrl": "https://sme.odisha.gov.in/en/text-books-for-class-x",
+      "sourceStatus": "listed_on_official_source_page",
+      "reuseNote": "Portal labels list inner/chapters; topic mapping and edition/session must be checked."
+    },
+    {
+      "board": "ODISHA_BOARD",
+      "class": 10,
+      "qualification": "HSC track — confirm against current BSE syllabus",
+      "academicSession": "2026-27",
+      "subject": "Life Science",
+      "titles": [
+        "Life Science Inner",
+        "Life Science SC-1",
+        "Life Science SC-2"
+      ],
+      "sourceId": "odisha-class-x-textbooks",
+      "sourceUrl": "https://sme.odisha.gov.in/en/text-books-for-class-x",
+      "sourceStatus": "listed_on_official_source_page",
+      "reuseNote": "Portal listing only; current syllabus mapping not yet verified."
+    },
+    {
+      "board": "ODISHA_BOARD",
+      "class": 10,
+      "qualification": "HSC track — confirm against current BSE syllabus",
+      "academicSession": "2026-27",
+      "subject": "Geography",
+      "titles": [
+        "Geography Part-1",
+        "Geography Part-2",
+        "Geography Part-3",
+        "Geography Inner"
+      ],
+      "sourceId": "odisha-class-x-textbooks",
+      "sourceUrl": "https://sme.odisha.gov.in/en/text-books-for-class-x",
+      "sourceStatus": "listed_on_official_source_page",
+      "reuseNote": "Portal listing only; confirm subject/track applicability."
+    },
+    {
+      "board": "ODISHA_BOARD",
+      "class": 10,
+      "qualification": "HSC track — confirm against current BSE syllabus",
+      "academicSession": "2026-27",
+      "subject": "History & Political Science",
+      "titles": [
+        "History and Political Science Book"
+      ],
+      "sourceId": "odisha-class-x-textbooks",
+      "sourceUrl": "https://sme.odisha.gov.in/en/text-books-for-class-x",
+      "sourceStatus": "listed_on_official_source_page",
+      "reuseNote": "Portal listing only; chapter mapping not yet verified."
+    },
+    {
+      "board": "ODISHA_BOARD",
+      "class": 10,
+      "qualification": "HSC track — confirm against current BSE syllabus",
+      "academicSession": "2026-27",
+      "subject": "Odia",
+      "titles": [
+        "Odia Text Book",
+        "Odia Grammar Book",
+        "Odia Grammar Suchi"
+      ],
+      "sourceId": "odisha-class-x-textbooks",
+      "sourceUrl": "https://sme.odisha.gov.in/en/text-books-for-class-x",
+      "sourceStatus": "listed_on_official_source_page",
+      "reuseNote": "Portal listing only; exact current edition and HSC/Madhyama applicability need checking."
+    },
+    {
+      "board": "ODISHA_BOARD",
+      "class": 10,
+      "qualification": "HSC track — confirm against current BSE syllabus",
+      "academicSession": "2026-27",
+      "subject": "Hindi",
+      "titles": [
+        "Hindi Grammar"
+      ],
+      "sourceId": "odisha-class-x-textbooks",
+      "sourceUrl": "https://sme.odisha.gov.in/en/text-books-for-class-x",
+      "sourceStatus": "listed_on_official_source_page",
+      "reuseNote": "Portal listing only; confirm prescribed status and track."
+    },
+    {
+      "board": "ODISHA_BOARD",
+      "class": 10,
+      "qualification": "HSC track — confirm against current BSE syllabus",
+      "academicSession": "2026-27",
+      "subject": "Sanskrit",
+      "titles": [
+        "Sanskrit Book",
+        "Sanskrit Grammar Part-1",
+        "Sanskrit Grammar Part-2"
+      ],
+      "sourceId": "odisha-class-x-textbooks",
+      "sourceUrl": "https://sme.odisha.gov.in/en/text-books-for-class-x",
+      "sourceStatus": "listed_on_official_source_page",
+      "reuseNote": "Portal listing only; confirm prescribed status and track."
+    }
+  ]
+}
