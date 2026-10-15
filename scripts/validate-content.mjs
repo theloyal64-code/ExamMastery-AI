@@ -6,6 +6,7 @@ const catalog = readJson("../content/syllabus-catalog.json");
 const schema = readJson("../content/content.schema.json");
 const bookCatalog = readJson("../content/book-catalog.json");
 const class10 = readJson("../content/odisha-class10-hsc-2026-27.json");
+const learningTracks = readJson("../content/learning-track-catalog.json");
 
 const errors = [];
 const sourceIds = new Set(sources.sources.map((source) => source.id));
@@ -38,6 +39,29 @@ for (const subject of class10.subjects || []) {
     for (const topic of term.topics || []) if (!topic.category || !topic.title) errors.push("Topic missing category/title in " + (subject.subject || "unknown subject") + ".");
   }
 }
+
+if (!Array.isArray(learningTracks.trackDefinitions) || learningTracks.trackDefinitions.length === 0) errors.push("learning-track-catalog.json must contain trackDefinitions.");
+const trackIds = new Set();
+const allowedTrackStatuses = ["not_verified", "in_review", "verified", "published"];
+for (const track of learningTracks.trackDefinitions || []) {
+  if (!track.trackId || !track.displayName || !track.board || !Array.isArray(track.classes) || !Array.isArray(track.supportedMediums)) {
+    errors.push("Learning track is missing required identity, class, or medium fields.");
+    continue;
+  }
+  if (trackIds.has(track.trackId)) errors.push("Duplicate learning track ID: " + track.trackId);
+  trackIds.add(track.trackId);
+  if (!allowedTrackStatuses.includes(track.verificationStatus)) errors.push("Invalid verification status for learning track " + track.trackId);
+  for (const sourceId of track.curriculumAuthoritySourceIds || []) {
+    if (!sourceIds.has(sourceId)) errors.push("Learning track " + track.trackId + " references unknown source ID " + sourceId);
+  }
+}
+for (const requiredTrack of ["ODISHA_STATE_BOARD", "OAV_NCERT", "PRIVATE_CBSE_SCHOOL", "CISCE_ICSE"]) {
+  if (!trackIds.has(requiredTrack)) errors.push("Missing required distinct learning track: " + requiredTrack);
+}
+if (!Array.isArray(learningTracks.requiredMappingFields) || !learningTracks.requiredMappingFields.includes("medium") || !learningTracks.requiredMappingFields.includes("prescribedBookTitle") || !learningTracks.requiredMappingFields.includes("academicSession")) {
+  errors.push("Learning track mapping must distinguish medium, prescribed book, and academic session.");
+}
+
 const expected = new Set();
 for (const board of catalog.scope.boards) {
   for (const classLevel of catalog.scope.classes) expected.add(`${board}:${classLevel}`);
@@ -67,4 +91,4 @@ if (errors.length) {
   for (const error of errors) console.error(`- ${error}`);
   process.exit(1);
 }
-console.log("Curriculum content validation passed: " + sources.sources.length + " official source records, " + catalog.coverage.length + " board/class coverage records, " + bookCatalog.entries.length + " textbook inventory entries. Odisha Class X extraction status: " + class10.extractionStatus + ".");
+console.log("Curriculum content validation passed: " + sources.sources.length + " official source records, " + catalog.coverage.length + " board/class coverage records, " + bookCatalog.entries.length + " textbook inventory entries, " + learningTracks.trackDefinitions.length + " distinct learning tracks. Odisha Class X extraction status: " + class10.extractionStatus + ".");
