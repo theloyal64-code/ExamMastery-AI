@@ -114,7 +114,7 @@ app.get("/api/auth/me", authRequired, (req, res) => res.json({ user: publicUser(
 app.post("/api/tutor", async (req, res) => {
   try {
     if (!apiKey) return res.status(503).json({ error: "AI backend is not configured. Set OPENAI_API_KEY in the hosting environment." });
-    const { question, context = "", grade = "8", board = "CBSE", subject = "General" } = req.body || {};
+    const { question, context = "", grade = "8", board = "CBSE", subject = "General", language = "auto" } = req.body || {};
     if (typeof question !== "string" || !question.trim()) return res.status(400).json({ error: "Please enter a question." });
     if (question.length > 4000 || typeof context !== "string" || context.length > 24000) return res.status(413).json({ error: "Question or book excerpt is too long. Please shorten it." });
     const system = [
@@ -122,7 +122,9 @@ app.post("/api/tutor", async (req, res) => {
       "Explain concepts clearly at the student's grade level. Use short steps and examples.",
       "For math, show working. If the supplied book context is relevant, prioritize it and say when the answer is not covered by it.",
       "Do not claim to have read material that was not provided. If unsure, say so.",
-      "Use the student's question language when practical."
+      "Use the student's question language when practical.",
+      language === "Odia" && subject !== "English" ? "For this response, use natural Odia in Odia script throughout. This language requirement takes priority over the language of the question. Keep English only for necessary technical terms." : "",
+      language === "English" || subject === "English" ? "For this response, use English." : ""
     ].join(" ");
     const user = `Student level: Class ${String(grade).slice(0, 12)}, Board: ${String(board).slice(0, 40)}, Subject: ${String(subject).slice(0, 80)}\n\nBook excerpt (may be empty):\n${context.slice(0, 24000) || "(No book text supplied)"}\n\nQuestion:\n${question.trim()}`;
     const upstream = await fetch("https://api.openai.com/v1/chat/completions", {
