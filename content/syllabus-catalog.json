@@ -179,11 +179,13 @@
       "class": 9,
       "academicSession": null,
       "sourceIds": [
-        "scert-odisha-curriculum"
+        "scert-odisha-curriculum",
+        "bse-odisha-class-ix-x-syllabus",
+        "odisha-curriculum-framework-2025"
       ],
       "subjects": [],
       "verificationStatus": "not_verified",
-      "notes": "Subject and chapter lists must be extracted from the current official source; do not infer from generic sample topics."
+      "notes": "Subject and chapter lists must be extracted from the current official source; do not infer from generic sample topics. For secondary classes, verify HSC and Madhyama break-up syllabi separately for academic session 2026–27."
     },
     {
       "board": "ODISHA_BOARD",
@@ -191,11 +193,13 @@
       "academicSession": null,
       "sourceIds": [
         "scert-odisha-curriculum",
-        "odisha-class-x-textbooks"
+        "odisha-class-x-textbooks",
+        "bse-odisha-class-ix-x-syllabus",
+        "odisha-curriculum-framework-2025"
       ],
       "subjects": [],
       "verificationStatus": "not_verified",
-      "notes": "Subject and chapter lists must be extracted from the current official source; do not infer from generic sample topics."
+      "notes": "Subject and chapter lists must be extracted from the current official source; do not infer from generic sample topics. For secondary classes, verify HSC and Madhyama break-up syllabi separately for academic session 2026–27."
     }
   ]
 }
