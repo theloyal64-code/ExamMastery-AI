@@ -105,6 +105,30 @@
       "status": "official_pdf_retrieved_partial_extraction",
       "reusePolicy": "Metadata and syllabus reference only. Do not bundle or republish the PDF without permission.",
       "nextAction": "English (SLE) syllabus partially structured in content/odisha-class10-hsc-2026-27.json. Review PDF table layout visually, then extract remaining subjects; OCR text for Odia-script Mathematics and General Science chapter titles needs visual verification."
+    },
+    {
+      "id": "bse-odisha-class-ix-2026-27",
+      "board": "Odisha Board",
+      "purpose": [
+        "Class IX HSC and Madhyama 2026–27 break-up syllabus"
+      ],
+      "title": "BSE Odisha — Class IX HSC/Madhyama syllabus listing",
+      "url": "https://bseodisha.nic.in/class_ix_text_books/",
+      "status": "official_listing_identified",
+      "reusePolicy": "Use as a source pointer only. Check terms of each linked syllabus file before reproducing or redistributing it.",
+      "nextAction": "Open the separate HSC and Madhyama Class IX 2026–27 files, transcribe each subject's syllabus and assessment schedule, and visually verify Odia-script headings."
+    },
+    {
+      "id": "bse-odisha-class-x-2026-27",
+      "board": "Odisha Board",
+      "purpose": [
+        "Class X HSC and Madhyama 2026–27 break-up syllabus"
+      ],
+      "title": "BSE Odisha — Class X HSC/Madhyama syllabus listing",
+      "url": "https://bseodisha.nic.in/class_x_text_books/",
+      "status": "official_listing_identified",
+      "reusePolicy": "Use as a source pointer only. Check terms of each linked syllabus file before reproducing or redistributing it.",
+      "nextAction": "Keep HSC and Madhyama files separate. Review the subject-wise syllabus visually and map class, subject, academic session and medium before publishing content."
     }
   ]
 }
