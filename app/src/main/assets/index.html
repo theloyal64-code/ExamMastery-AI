@@ -187,7 +187,201 @@ function isChapterTest(){return activeTestType==="chapter"}
 function syncQuizPickerMode(){const chapter=isChapterTest();$("chapterPicker").style.display=chapter?"block":"none";$("topicPicker").style.display=chapter?"none":"block";$("quizBankNote").textContent=chapter?"Chapter choices are demo mappings over starter questions, not the official chapter list for the selected curriculum profile/class/medium. Official mapping is pending verification.":"Topic-wise tests use Subject → Topic. Built-in questions are samples, not a complete board-wise question bank. Selected profile, class and medium are saved as test context only until curriculum mapping is verified."}
 document.querySelectorAll("[data-test-type]").forEach(b=>b.onclick=()=>{activeTestType=b.dataset.testType;go("quiz");$("quizSetup").style.display="block";$("quizSession").style.display="none";$("quizResults").style.display="none";$("qMode").value=["topic","chapter","weak"].includes(activeTestType)?"practice":"test";$("qCount").value=activeTestType==="mock"||activeTestType==="syllabus"?"36":activeTestType==="monthly"||activeTestType==="unit"?"20":"10";$("qDifficulty").value="All";const heading=document.querySelector("#quiz .heading h2");if(heading)heading.textContent=testTypeNames[activeTestType];syncQuizPickerMode();updateQuizTopics()});
 function updateQuizTopics(){const topics=Object.keys(quizBank[$("qs").value]||{});$("qTopic").innerHTML=topics.map(x=>'<option>'+escapeHtml(x)+'</option>').join("");const chapters=demoChapterMap[$("qs").value]||[];$("qChapter").innerHTML=chapters.map(([label])=>'<option value="'+escapeHtml(label)+'">'+escapeHtml(label)+'</option>').join("");updateQuizAvailability()}
-function getQuizPool(){const d=$("qDifficulty").value,subject=$("qs").value;let all=[];if(["topic","weak"].includes(activeTestType)){all=((quizBank[subject]||{})[$("qTopic").value]||[]).map(q=>({...q,subject,topic:$("qTopic").value}));}else if(isChapterTest()){const chosen=(demoChapterMap[subject]||[]).find(([label])=>label===$("qChapter").value);const topic=chosen&&chosen[1];all=((quizBank[subject]||{})[topic]||[]).map(q=>({...q,subject,topic,chapter:$("qChapter").value}));}else{Object.entries(quizBank).forEach(([s,topics])=>Object.entries(topics).forEach(([topic,questions])=>{if(activeTestType==="subject"&&s!==subject)return;questions.forEach(q=>all.push({...q,subject:s,topic}))}));}return all.filter(q=>d==="All"||q.d===d)}
+const odiaQuestionTranslations={
+  "Mathematics": {
+    "What is 25% of 240?": [
+      "୨୪୦ର ୨୫% କେତେ?",
+      [
+        "୪୦",
+        "୫୦",
+        "୬୦",
+        "୮୦"
+      ],
+      "୨୫% ଅର୍ଥ ଏକ ଚତୁର୍ଥାଂଶ। ୨୪୦ ÷ ୪ = ୬୦।"
+    ],
+    "A ₹800 item has a 15% discount. What is the sale price?": [
+      "୮୦୦ ଟଙ୍କାର ଜିନିଷରେ ୧୫% ରିହାତି ମିଳିଲେ ବିକ୍ରୟ ମୂଲ୍ୟ କେତେ?",
+      [
+        "₹୬୮୦",
+        "₹୬୮୫",
+        "₹୭୦୦",
+        "₹୭୨୦"
+      ],
+      "୮୦୦ର ୧୫% = ୧୨୦ ଟଙ୍କା। ୮୦୦ − ୧୨୦ = ୬୮୦ ଟଙ୍କା।"
+    ],
+    "A number rises by 20%, then falls by 20%. The final value is:": [
+      "ଏକ ସଂଖ୍ୟା ପ୍ରଥମେ ୨୦% ବଢ଼ିଲା, ପରେ ୨୦% କମିଲା। ଶେଷ ମୂଲ୍ୟ କେତେ ହେବ?",
+      [
+        "ଅପରିବର୍ତ୍ତିତ",
+        "୪% କମ୍",
+        "୪% ଅଧିକ",
+        "୮% କମ୍"
+      ],
+      "୧୦୦ × ୧.୨ × ୦.୮ = ୯୬। ତେଣୁ ମୂଳ ମୂଲ୍ୟଠାରୁ ୪% କମ୍।"
+    ],
+    "Solve: 3x + 5 = 20.": [
+      "ସମାଧାନ କରନ୍ତୁ: ୩x + ୫ = ୨୦।",
+      [
+        "x = ୩",
+        "x = ୫",
+        "x = ୮",
+        "x = ୧୫"
+      ],
+      "୫ ବିୟୋଗ କଲେ ୩x = ୧୫। ୩ରେ ଭାଗ କଲେ x = ୫।"
+    ],
+    "If a = 4 and b = −2, find a² − 3b.": [
+      "a = ୪ ଏବଂ b = −୨ ହେଲେ, a² − ୩b ର ମୂଲ୍ୟ କେତେ?",
+      [
+        "୧୦",
+        "୧୬",
+        "୨୨",
+        "−୨୨"
+      ],
+      "୧୬ − ୩(−୨) = ୧୬ + ୬ = ୨୨।"
+    ],
+    "Two consecutive integers add up to 41. What is the larger integer?": [
+      "କ୍ରମାଗତ ଦୁଇଟି ପୂର୍ଣ୍ଣସଂଖ୍ୟାର ଯୋଗଫଳ ୪୧। ବଡ଼ ସଂଖ୍ୟାଟି କେତେ?",
+      [
+        "୧୯",
+        "୨୦",
+        "୨୧",
+        "୨୨"
+      ],
+      "ସଂଖ୍ୟା ଦୁଇଟି ୨୦ ଓ ୨୧। ବଡ଼ ସଂଖ୍ୟା ୨୧।"
+    ]
+  },
+  "Science": {
+    "What is the SI unit of force?": [
+      "ବଳର SI ଏକକ କ’ଣ?",
+      [
+        "ଜୁଲ୍",
+        "ୱାଟ୍",
+        "ନ୍ୟୁଟନ୍",
+        "ପାସ୍କାଲ୍"
+      ],
+      "ବଳକୁ ନ୍ୟୁଟନ୍ (N) ରେ ମାପାଯାଏ।"
+    ],
+    "A cyclist travels 150 m in 30 s. Average speed?": [
+      "ଜଣେ ସାଇକେଲ୍ ଚାଳକ ୩୦ ସେକେଣ୍ଡରେ ୧୫୦ ମିଟର ଯାଏ। ହାରାହାରି ବେଗ କେତେ?",
+      [
+        "୩ ମି/ସେ",
+        "୫ ମି/ସେ",
+        "୩୦ ମି/ସେ",
+        "୧୮୦ ମି/ସେ"
+      ],
+      "ବେଗ = ଦୂରତା ÷ ସମୟ = ୧୫୦ ÷ ୩୦ = ୫ ମି/ସେ।"
+    ],
+    "Two bulbs are connected in series. One bulb breaks. What happens in an ideal circuit?": [
+      "ଦୁଇଟି ବଲ୍ବକୁ ଶ୍ରେଣୀ ସଂଯୋଗରେ ଲଗାଯାଇଛି। ଗୋଟିଏ ବଲ୍ବ ନଷ୍ଟ ହେଲେ ଆଦର୍ଶ ବିଦ୍ୟୁତ୍ ପରିପଥରେ କ’ଣ ହେବ?",
+      [
+        "ଅନ୍ୟଟି ଜଳିବ",
+        "ଦୁଇଟିଯାକ ଲିଭିଯିବ",
+        "ଅନ୍ୟଟି ଅଧିକ ଉଜ୍ଜ୍ୱଳ ହେବ",
+        "ବ୍ୟାଟେରୀର ଭୋଲ୍ଟେଜ୍ ଦୁଇଗୁଣ ହେବ"
+      ],
+      "ଗୋଟିଏ ବଲ୍ବ ନଷ୍ଟ ହେଲେ ପରିପଥର ଏକମାତ୍ର ପଥ ଭାଙ୍ଗିଯାଏ, ତେଣୁ ଦୁଇଟିଯାକ ଲିଭିଯାଏ।"
+    ],
+    "Which cell structure contains most genetic material?": [
+      "କୋଷର କେଉଁ ଅଂଶରେ ଅଧିକାଂଶ ଜନ୍ମଗତ ପଦାର୍ଥ ରହିଥାଏ?",
+      [
+        "କୋଷ ପ୍ରାଚୀର",
+        "କୋଷ କେନ୍ଦ୍ରକ",
+        "ରସଧାନୀ",
+        "କୋଷ ଝିଲ୍ଲୀ"
+      ],
+      "କୋଷ କେନ୍ଦ୍ରକରେ କୋଷର ଅଧିକାଂଶ DNA ରହିଥାଏ।"
+    ],
+    "Which gas do plants take in for photosynthesis?": [
+      "ଆଲୋକ ସଂଶ୍ଳେଷଣ ପାଇଁ ଉଦ୍ଭିଦ କେଉଁ ଗ୍ୟାସ୍ ଗ୍ରହଣ କରେ?",
+      [
+        "ଅମ୍ଳଜାନ",
+        "ଯବକ୍ଷାରଜାନ",
+        "ଅଙ୍ଗାରକାମ୍ଳ",
+        "ହାଇଡ୍ରୋଜେନ୍"
+      ],
+      "ଉଦ୍ଭିଦ ଆଲୋକ ଶକ୍ତି ବ୍ୟବହାର କରି ଶର୍କରା ତିଆରି କରିବା ପାଇଁ ଅଙ୍ଗାରକାମ୍ଳ ଓ ଜଳ ବ୍ୟବହାର କରେ।"
+    ],
+    "What is the main role of haemoglobin in red blood cells?": [
+      "ଲୋହିତ ରକ୍ତକଣିକାରେ ହିମୋଗ୍ଲୋବିନ୍‌ର ମୁଖ୍ୟ କାର୍ଯ୍ୟ କ’ଣ?",
+      [
+        "ଇନ୍‌ସୁଲିନ୍ ତିଆରି",
+        "ଅମ୍ଳଜାନ ପରିବହନ",
+        "ଚର୍ବି ହଜମ",
+        "ହାଡ଼ ତିଆରି"
+      ],
+      "ହିମୋଗ୍ଲୋବିନ୍ ଅମ୍ଳଜାନ ସହ ଯୋଡ଼ି ଏହାକୁ ଶରୀରର ବିଭିନ୍ନ ଅଂଶକୁ ପହଞ୍ଚାଇବାରେ ସାହାଯ୍ୟ କରେ।"
+    ]
+  },
+  "Social Science": {
+    "Which is the largest ocean on Earth?": [
+      "ପୃଥିବୀର ସବୁଠାରୁ ବଡ଼ ମହାସାଗର କେଉଁଟି?",
+      [
+        "ଆଟଲାଣ୍ଟିକ୍",
+        "ଭାରତ ମହାସାଗର",
+        "ଆର୍କଟିକ୍",
+        "ପ୍ରଶାନ୍ତ ମହାସାଗର"
+      ],
+      "ପ୍ରଶାନ୍ତ ମହାସାଗର କ୍ଷେତ୍ରଫଳ ଅନୁସାରେ ସବୁଠାରୁ ବଡ଼।"
+    ],
+    "Why do coastal areas often have a smaller daily temperature range?": [
+      "ଉପକୂଳ ଅଞ୍ଚଳରେ ଦୈନିକ ତାପମାତ୍ରାର ତାରତମ୍ୟ ସାଧାରଣତଃ କମ୍ କାହିଁକି?",
+      [
+        "ସମୁଦ୍ର ଜଳ ଧୀରେ ଗରମ ଓ ଥଣ୍ଡା ହୁଏ",
+        "ଉପକୂଳରେ ସୂର୍ଯ୍ୟାଲୋକ ପଡ଼େ ନାହିଁ",
+        "ପବନ ସମସ୍ତ ଉତ୍ତାପ ବନ୍ଦ କରେ",
+        "ଲୁଣ ବାଷ୍ପୀଭବନକୁ ରୋକେ"
+      ],
+      "ଜଳର ନିର୍ଦ୍ଦିଷ୍ଟ ତାପଧାରିତା ଅଧିକ ଥିବାରୁ ଏହା ସ୍ଥଳଭାଗ ତୁଳନାରେ ଧୀରେ ଗରମ ଓ ଥଣ୍ଡା ହୁଏ।"
+    ],
+    "Lines of longitude measure distance east or west of the:": [
+      "ଦ୍ରାଘିମା ରେଖା କେଉଁ ରେଖାର ପୂର୍ବ କିମ୍ବା ପଶ୍ଚିମ ଦିଗର କୋଣୀୟ ଦୂରତା ମାପେ?",
+      [
+        "ବିଷୁବ ରେଖା",
+        "ମୂଳ ମଧ୍ୟାହ୍ନ ରେଖା",
+        "କର୍କଟ କ୍ରାନ୍ତି ରେଖା",
+        "ଉତ୍ତର ମେରୁ"
+      ],
+      "ଦ୍ରାଘିମା ମୂଳ ମଧ୍ୟାହ୍ନ ରେଖାର ପୂର୍ବ କିମ୍ବା ପଶ୍ଚିମ ଦିଗର କୋଣୀୟ ଦୂରତା ମାପେ।"
+    ],
+    "In a democracy, government authority ultimately comes from:": [
+      "ଗଣତନ୍ତ୍ରରେ ସରକାରଙ୍କ କ୍ଷମତାର ମୂଳ ଉତ୍ସ କିଏ?",
+      [
+        "ଜନସାଧାରଣ",
+        "କେବଳ ସେନା",
+        "ଗୋଟିଏ ରାଜପରିବାର",
+        "ବିଦେଶୀ କମ୍ପାନୀ"
+      ],
+      "ଗଣତନ୍ତ୍ରରେ ସରକାରଙ୍କ କ୍ଷମତା ଜନସାଧାରଣଙ୍କଠାରୁ ଆସେ, ସାଧାରଣତଃ ନିର୍ବାଚନ ମାଧ୍ୟମରେ।"
+    ],
+    "What is a main purpose of a constitution?": [
+      "ସମ୍ବିଧାନର ମୁଖ୍ୟ ଉଦ୍ଦେଶ୍ୟ କ’ଣ?",
+      [
+        "ଦୈନିକ ପାଣିପାଗ ଲେଖିବା",
+        "ସରକାରର ଗଠନ ଓ ମୂଳ ନୀତି ନିର୍ଦ୍ଧାରଣ",
+        "ସମସ୍ତ ଅଦାଲତ ବଦଳାଇବା",
+        "ପ୍ରତ୍ୟେକ ବ୍ୟକ୍ତିଗତ କ୍ରୟ ନିଷ୍ପତ୍ତି କରିବା"
+      ],
+      "ସମ୍ବିଧାନ ମୁଖ୍ୟ ସଂସ୍ଥା, କ୍ଷମତା, ନିୟମ ଓ ଅଧିକାର ନିର୍ଦ୍ଧାରଣ କରେ।"
+    ],
+    "Why is separation of powers important?": [
+      "କ୍ଷମତା ବିଭାଜନ କାହିଁକି ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ?",
+      [
+        "ସମସ୍ତ କ୍ଷମତା ଗୋଟିଏ କାର୍ଯ୍ୟାଳୟରେ ରଖେ",
+        "ଆଇନର ଆବଶ୍ୟକତା ହଟାଏ",
+        "ନିୟନ୍ତ୍ରଣ ଓ ସନ୍ତୁଳନ ମାଧ୍ୟମରେ କ୍ଷମତାର ଏକାଧିକାର କମାଏ",
+        "ନାଗରିକଙ୍କୁ ଭୋଟ୍ ଦେବାରୁ ରୋକେ"
+      ],
+      "କ୍ଷମତା ବିଭାଜନ ଓ ପରସ୍ପର ନିୟନ୍ତ୍ରଣ କ୍ଷମତାର ଦୁରୁପଯୋଗ ଓ ଏକାଧିକାର କମାଇଥାଏ।"
+    ]
+  }
+};
+function localizeQuizQuestion(question,subject){
+ if($("qBoard").value!=="ODISHA_BOARD"||subject==="English")return question;
+ const translated=odiaQuestionTranslations[subject]?.[question.q];
+ if(!translated)return question;
+ return {...question,q:translated[0],o:translated[1],e:translated[2]};
+}
+function getQuizPool(){const d=$("qDifficulty").value,subject=$("qs").value;let all=[];if(["topic","weak"].includes(activeTestType)){all=((quizBank[subject]||{})[$("qTopic").value]||[]).map(q=>({...localizeQuizQuestion(q,subject),subject,topic:$("qTopic").value}));}else if(isChapterTest()){const chosen=(demoChapterMap[subject]||[]).find(([label])=>label===$("qChapter").value);const topic=chosen&&chosen[1];all=((quizBank[subject]||{})[topic]||[]).map(q=>({...localizeQuizQuestion(q,subject),subject,topic,chapter:$("qChapter").value}));}else{Object.entries(quizBank).forEach(([s,topics])=>Object.entries(topics).forEach(([topic,questions])=>{if(activeTestType==="subject"&&s!==subject)return;questions.forEach(q=>all.push({...localizeQuizQuestion(q,s),subject:s,topic}))}));}return all.filter(q=>d==="All"||q.d===d)}
 function updateQuizAvailability(){const n=getQuizPool().length;$("qAvailable").textContent=n+" sample questions available for this "+(isChapterTest()?"chapter":"topic/test");$("startQuiz").disabled=!n}
 $("qs").onchange=updateQuizTopics;$("qTopic").onchange=updateQuizAvailability;$("qChapter").onchange=updateQuizAvailability;$("qDifficulty").onchange=updateQuizAvailability;$("qBoard").onchange=()=>{if($("qBoard").value==="ODISHA_BOARD")$("qMedium").value="Odia";else if($("qBoard").value==="OAV"||$("qBoard").value==="CISCE_ICSE")$("qMedium").value="English";updateQuizAvailability();syncOdishaLanguage("qBoard")};
 function startFocusedQuiz(){let pool=getQuizPool();if(!pool.length){toast("No questions available for this difficulty.");return}quizQuestions=pool.slice().sort(()=>Math.random()-.5).slice(0,Math.min(Number($("qCount").value)||10,pool.length));quizIndex=quizCorrect=quizAnswered=0;quizMode=$("qMode").value;$("quizSetup").style.display="none";$("quizResults").style.display="none";$("quizSession").style.display="block";$("quizSessionLabel").textContent=(testTypeNames[activeTestType]||"Focused Practice")+" · Class "+$("ql").value+" · "+(activeTestType==="topic"||activeTestType==="weak"?$("qs").value+" / "+$("qTopic").value:activeTestType==="chapter"?$("qs").value+" / "+$("qChapter").value:activeTestType==="subject"?$("qs").value:"Mixed subjects");renderFocusedQuestion()}
