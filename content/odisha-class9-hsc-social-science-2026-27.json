@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "board": "ODISHA_BOARD",
+  "qualification": "HSC",
+  "class": 9,
+  "academicSession": "2026-27",
+  "subject": "Social Science (SSC)",
+  "sourceId": "bse-odisha-class-ix-2026-27",
+  "sourceUrl": "https://bseodisha.nic.in/wp-content/uploads/2026/05/Subject_wise_syllabus_class_IX_26_27.pdf",
+  "sourceListingUrl": "https://bseodisha.nic.in/class_ix_text_books/",
+  "sourcePublishedOn": "2026-05-18",
+  "extractionStatus": "partial_review_required",
+  "prescribedBooks": [
+    {
+      "title": "ଇତିହାସ ଓ ରାଜନୀତି ବିଜ୍ଞାନ",
+      "translation": "History and Political Science",
+      "translationStatus": "working translation; verify rendered PDF"
+    },
+    {
+      "title": "ଭୂଗୋଳ ଓ ଅର୍ଥନୀତି",
+      "translation": "Geography and Economics",
+      "translationStatus": "working translation; verify rendered PDF"
+    }
+  ],
+  "terms": [
+    {
+      "term": "Term I",
+      "assessment": "IA-1: second week of July 2026; Aspirational Component: last week of August 2026; Half-yearly: first week of September 2026",
+      "topics": [
+        {
+          "category": "History",
+          "title": "Some important developments in world history",
+          "sourceText": "ବିଶ୍ୱର କେତେକ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ଅଗ୍ରଗତି",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        },
+        {
+          "category": "Political Science",
+          "title": "Fundamental Rights, Fundamental Duties and Directive Principles of State Policy",
+          "sourceText": "ମୌଳିକ ଅଧିକାର, ମୌଳିକ କର୍ତ୍ତବ୍ୟ ଓ ରାଷ୍ଟ୍ରନୀତି ନିର୍ଦ୍ଦେଶାବଳୀ",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        },
+        {
+          "category": "Geography",
+          "title": "India",
+          "sourceText": "ଭାରତ",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        },
+        {
+          "category": "Economics",
+          "title": "Economic development",
+          "sourceText": "ଅର୍ଥନୈତିକ ବିକାଶ",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        }
+      ]
+    },
+    {
+      "term": "Term I (continued)",
+      "assessment": "IA-2: last week of August 2026",
+      "topics": [
+        {
+          "category": "History",
+          "title": "The world after 1945: selected major developments",
+          "sourceText": "୧୯୪୫ ପରବର୍ତ୍ତୀ ପୃଥିବୀ, କେତେକ ପ୍ରମୁଖ ଘଟଣା ପ୍ରବାହ",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        },
+        {
+          "category": "Political Science",
+          "title": "Indian nationalism, national integration and democratic values",
+          "sourceText": "ଭାରତୀୟ ଜାତୀୟତାବାଦ, ଜାତୀୟ ସଂହତି ଏବଂ ଗଣତାନ୍ତ୍ରିକ ମୂଲ୍ୟବୋଧ",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        },
+        {
+          "category": "Geography",
+          "title": "Climate",
+          "sourceText": "ଜଳବାୟୁ",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        },
+        {
+          "category": "Geography",
+          "title": "Natural vegetation and wildlife of India",
+          "sourceText": "ଭାରତର ପ୍ରାକୃତିକ ଉଦ୍ଭିଦ ଓ ବନ୍ୟପ୍ରାଣୀ",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        }
+      ]
+    },
+    {
+      "term": "Term II",
+      "assessment": "IA-3: last week of November 2026; Aspirational Component: third week of February 2027; Annual examination: second week of March 2027",
+      "topics": [
+        {
+          "category": "History",
+          "title": "Towards a new world order",
+          "sourceText": "ଏକ ନୂତନ ବିଶ୍ୱ ଅଭିମୁଖେ",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        },
+        {
+          "category": "Political Science",
+          "title": "Human rights, right to information and India's Right to Information Act",
+          "sourceText": "ମାନବାଧିକାର, ସୂଚନା ଅଧିକାର, ଭାରତର ସୂଚନା ଅଧିକାର ଆଇନ",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        },
+        {
+          "category": "Geography",
+          "title": "Rivers of India",
+          "sourceText": "ଭାରତର ନଦୀ",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        },
+        {
+          "category": "Economics",
+          "title": "Money, banking and insurance",
+          "sourceText": "ମୁଦ୍ରା, ବ୍ୟାଙ୍କିଙ୍ଗ୍ ଓ ବୀମା",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        }
+      ]
+    },
+    {
+      "term": "Term II (continued)",
+      "assessment": "IA-4: third week of February 2027",
+      "topics": [
+        {
+          "category": "History",
+          "title": "India's heritage",
+          "sourceText": "ଭାରତର ଐତିହ୍ୟ",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        },
+        {
+          "category": "Political Science",
+          "title": "Formation and functions of the United Nations; India and the United Nations",
+          "sourceText": "ସଂଯୁକ୍ତ ରାଷ୍ଟ୍ରସଂଘ ଗଠନ ଓ କାର୍ଯ୍ୟାବଳୀ, ଭାରତ ଓ ସଂଯୁକ୍ତ ରାଷ୍ଟ୍ରସଂଘ",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        },
+        {
+          "category": "Geography",
+          "title": "Population",
+          "sourceText": "ଜନସଂଖ୍ୟା",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        },
+        {
+          "category": "Geography",
+          "title": "Natural and human-made disasters and management",
+          "sourceText": "ମାନବୀୟ ବିପତ୍ତି ଓ ପରିଚାଳନା",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Partial extraction of BSE Odisha Class IX HSC 2026–27 Social Science. Topic labels are working translations from Odia PDF text extraction and require visual verification.",
+    "The source PDF uses a multi-column layout; topic/term grouping must be checked against the rendered PDF before publication.",
+    "HSC only; do not reuse this record for the separate Madhyama syllabus.",
+    "This is syllabus metadata only, not textbook content."
+  ]
+}
