@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "board": "ODISHA_BOARD",
+  "qualification": "HSC",
+  "class": 9,
+  "academicSession": "2026-27",
+  "subject": "General Science (GSC)",
+  "sourceId": "bse-odisha-class-ix-2026-27",
+  "sourceUrl": "https://bseodisha.nic.in/wp-content/uploads/2026/05/Subject_wise_syllabus_class_IX_26_27.pdf",
+  "sourceListingUrl": "https://bseodisha.nic.in/class_ix_text_books/",
+  "sourcePublishedOn": "2026-05-18",
+  "extractionStatus": "partial_review_required",
+  "prescribedBooks": [
+    {
+      "title": "ଭୌତିକ ବିଜ୍ଞାନ",
+      "translation": "Physics",
+      "translationStatus": "working translation; verify rendered PDF"
+    },
+    {
+      "title": "ଜୀବ ବିଜ୍ଞାନ (୨୦୨୨ ସଂସ୍କରଣ)",
+      "translation": "Life Science (2022 edition)",
+      "translationStatus": "working translation; verify rendered PDF"
+    }
+  ],
+  "terms": [
+    {
+      "term": "Term I",
+      "assessment": "IA-1: second week of July 2026; Aspirational Component: last week of August 2026; Half-yearly: first week of September 2026",
+      "topics": [
+        {
+          "category": "Physics",
+          "title": "Matter around us",
+          "sourceText": "ଆମ ଚତୁଃପାର୍ଶ୍ୱରେ ଥିବା ପଦାର୍ଥ",
+          "translationStatus": "working English translation; Odia PDF/OCR needs visual verification"
+        },
+        {
+          "category": "Physics",
+          "title": "Is matter around us pure?",
+          "sourceText": "ଆମ ଚାରିପାଖରେ ଥିବା ପଦାର୍ଥ ବିଶୁଦ୍ଧ କି?",
+          "translationStatus": "working English translation; Odia PDF/OCR needs visual verification"
+        },
+        {
+          "category": "Biology",
+          "title": "Biodiversity",
+          "sourceText": "ଜୈବ ବିବିଧତା",
+          "translationStatus": "working English translation; Odia PDF/OCR needs visual verification"
+        }
+      ]
+    },
+    {
+      "term": "Term I (continued)",
+      "assessment": "IA-2: last week of August 2026",
+      "topics": [
+        {
+          "category": "Physics",
+          "title": "Atoms and molecules",
+          "sourceText": "ପରମାଣୁ ଓ ଅଣୁ",
+          "translationStatus": "working English translation; Odia PDF/OCR needs visual verification"
+        },
+        {
+          "category": "Physics",
+          "title": "Structure of atom",
+          "sourceText": "ପରମାଣୁ ଗଠନ",
+          "translationStatus": "working English translation; Odia PDF/OCR needs visual verification"
+        },
+        {
+          "category": "Physics",
+          "title": "Gravitation",
+          "sourceText": "ମହାକର୍ଷଣ",
+          "translationStatus": "working English translation; Odia PDF/OCR needs visual verification"
+        },
+        {
+          "category": "Biology",
+          "title": "Tissues",
+          "sourceText": "ଟିସୁତନ୍ତ୍ର",
+          "translationStatus": "working English translation; Odia PDF/OCR needs visual verification"
+        },
+        {
+          "category": "Biology",
+          "title": "Disease and its prevention",
+          "sourceText": "ରୋଗ ଓ ତାହାର ନିରାକରଣ",
+          "translationStatus": "working English translation; Odia PDF/OCR needs visual verification"
+        }
+      ]
+    },
+    {
+      "term": "Term II",
+      "assessment": "IA-3: last week of November 2026; Aspirational Component: third week of February 2027; Annual examination: second week of March 2027",
+      "topics": [
+        {
+          "category": "Physics",
+          "title": "Motion",
+          "sourceText": "ଗତି",
+          "translationStatus": "working English translation; Odia PDF/OCR needs visual verification"
+        },
+        {
+          "category": "Physics",
+          "title": "Force and laws of motion",
+          "sourceText": "ବଳ ଓ ଗତି ନିୟମ",
+          "translationStatus": "working English translation; Odia PDF/OCR needs visual verification"
+        },
+        {
+          "category": "Biology",
+          "title": "Cell and its organization",
+          "sourceText": "ଜୀବକୋଷ ଓ ଏହାର ସଂଗଠନ",
+          "translationStatus": "working English translation; Odia PDF/OCR needs visual verification"
+        },
+        {
+          "category": "Biology",
+          "title": "Improvement of food resources",
+          "sourceText": "ଖାଦ୍ୟ ସମ୍ପଦର ଉନ୍ନତିକରଣ",
+          "translationStatus": "working English translation; Odia PDF/OCR needs visual verification"
+        }
+      ]
+    },
+    {
+      "term": "Term II (continued)",
+      "assessment": "IA-4: third week of February 2027",
+      "topics": [
+        {
+          "category": "Physics",
+          "title": "Work and energy",
+          "sourceText": "କାର୍ଯ୍ୟ ଓ ଶକ୍ତି",
+          "translationStatus": "working English translation; Odia PDF/OCR needs visual verification"
+        },
+        {
+          "category": "Physics",
+          "title": "Sound",
+          "sourceText": "ଧ୍ୱନି",
+          "translationStatus": "working English translation; Odia PDF/OCR needs visual verification"
+        },
+        {
+          "category": "Biology",
+          "title": "Natural resources and its pollution",
+          "sourceText": "ପ୍ରାକୃତିକ ସମ୍ପଦ ଓ ତାହାର ପ୍ରଦୂଷଣ",
+          "translationStatus": "working English translation; Odia PDF/OCR needs visual verification"
+        },
+        {
+          "category": "Biology",
+          "title": "Disaster management",
+          "sourceText": "ବିପର୍ଯ୍ୟୟ ପରିଚାଳନା",
+          "translationStatus": "working English translation; Odia PDF/OCR needs visual verification"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Partial structured extraction from the official BSE Odisha Class IX HSC 2026–27 syllabus PDF; the multi-column table's Odia OCR is imperfect, so English translations are working labels and require visual verification against the rendered PDF.",
+    "The listed subject/topic grouping follows the PDF text extraction and must be checked visually before being treated as verified.",
+    "HSC profile only. Keep the separate Madhyama syllabus distinct.",
+    "This record stores syllabus metadata only; it does not reproduce prescribed textbook content."
+  ]
+}
