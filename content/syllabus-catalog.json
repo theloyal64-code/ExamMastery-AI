@@ -210,5 +210,81 @@
       "verificationStatus": "in_review",
       "notes": "BSE Odisha publishes separate HSC and Madhyama Class X break-up syllabi for 2026–27. HSC English (SLE) has a partial extraction only; remaining subjects and Madhyama require page-by-page verification."
     }
-  ]
+  ],
+  "appSubjectStructure": {
+    "version": 1,
+    "purpose": "Canonical app navigation structure; this is not a claim that every class/board syllabus has been verified.",
+    "classes": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "coreSubjects": [
+      {
+        "id": "mathematics",
+        "displayName": "Mathematics",
+        "aliases": [
+          "Maths",
+          "Mathematics"
+        ]
+      },
+      {
+        "id": "science",
+        "displayName": "Science",
+        "aliases": [
+          "Science",
+          "General Science"
+        ]
+      },
+      {
+        "id": "english",
+        "displayName": "English",
+        "aliases": [
+          "English"
+        ]
+      },
+      {
+        "id": "social-science",
+        "displayName": "Social Science",
+        "aliases": [
+          "Social Science",
+          "SSC"
+        ],
+        "sections": [
+          {
+            "id": "history",
+            "displayName": "History"
+          },
+          {
+            "id": "geography",
+            "displayName": "Geography"
+          },
+          {
+            "id": "economics",
+            "displayName": "Economics"
+          },
+          {
+            "id": "civics-polity",
+            "displayName": "Civics / Political Science (Polity)",
+            "classLabels": {
+              "6": "Civics (use board's official label)",
+              "7": "Civics (use board's official label)",
+              "8": "Civics (use board's official label)",
+              "9": "Political Science / Polity (use board's official label)",
+              "10": "Political Science / Polity (use board's official label)"
+            }
+          }
+        ]
+      }
+    ],
+    "rules": [
+      "Keep exactly four core subject tiles for Classes 6–10.",
+      "History, Geography, Economics and Civics/Political Science are sections within Social Science, not separate core subject tiles.",
+      "Populate each class/board's chapters only from its official syllabus and prescribed books.",
+      "Do not assume every section exists in every class or board; show only sections supported by that track's verified syllabus.",
+      "Keep Odisha HSC and Odisha Madhyama as separate learning tracks; do not merge their syllabus mappings."
+    ]
+  }
 }
