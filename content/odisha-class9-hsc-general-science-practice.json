@@ -585,6 +585,294 @@
       "reviewedBy": null,
       "reviewedAt": null,
       "version": 1
+    },
+    {
+      "id": "odisha9-hsc-gsc-force-13",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "General Science (GSC)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Force and laws of motion",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Working syllabus topic: Force and laws of motion; BSE Odisha Class IX HSC 2026–27. Original practice question, not an official board question.",
+      "learningOutcome": "Practise a foundational concept related to the syllabus heading “Force and laws of motion”.",
+      "difficulty": "medium",
+      "content": {
+        "prompt": "According to Newton's third law, when one object exerts a force on another, the second object:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Exerts no force back"
+          },
+          {
+            "id": "B",
+            "text": "Exerts an equal and opposite force on the first"
+          },
+          {
+            "id": "C",
+            "text": "Always stops moving"
+          },
+          {
+            "id": "D",
+            "text": "Doubles the first object's mass"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "B",
+        "explanation": "Newton's third law states that forces between two interacting bodies are equal in magnitude and opposite in direction."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-gsc-sound-14",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "General Science (GSC)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Sound",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Working syllabus topic: Sound; BSE Odisha Class IX HSC 2026–27. Original practice question, not an official board question.",
+      "learningOutcome": "Practise a foundational concept related to the syllabus heading “Sound”.",
+      "difficulty": "medium",
+      "content": {
+        "prompt": "Sound travels through air mainly as:",
+        "options": [
+          {
+            "id": "A",
+            "text": "A transverse electromagnetic wave"
+          },
+          {
+            "id": "B",
+            "text": "A longitudinal mechanical wave"
+          },
+          {
+            "id": "C",
+            "text": "A stream of electrons"
+          },
+          {
+            "id": "D",
+            "text": "A vacuum wave that needs no medium"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "B",
+        "explanation": "Sound in air travels as a longitudinal mechanical wave, with compressions and rarefactions."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-gsc-food-15",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "General Science (GSC)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Improvement of food resources",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Working syllabus topic: Improvement of food resources; BSE Odisha Class IX HSC 2026–27. Original practice question, not an official board question.",
+      "learningOutcome": "Practise a foundational concept related to the syllabus heading “Improvement of food resources”.",
+      "difficulty": "medium",
+      "content": {
+        "prompt": "Which practice can help maintain soil fertility in crop fields?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Growing the same crop endlessly without nutrient replacement"
+          },
+          {
+            "id": "B",
+            "text": "Balanced use of manures and fertilizers based on soil needs"
+          },
+          {
+            "id": "C",
+            "text": "Removing all organic matter from soil"
+          },
+          {
+            "id": "D",
+            "text": "Never rotating crops"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "B",
+        "explanation": "Balanced nutrient management, including suitable organic manures and fertilizers, helps maintain soil fertility."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-gsc-pollution-16",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "General Science (GSC)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Natural resources and its pollution",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Working syllabus topic: Natural resources and its pollution; BSE Odisha Class IX HSC 2026–27. Original practice question, not an official board question.",
+      "learningOutcome": "Practise a foundational concept related to the syllabus heading “Natural resources and its pollution”.",
+      "difficulty": "medium",
+      "content": {
+        "prompt": "Which action most directly helps reduce plastic pollution in the environment?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Burning plastic waste outdoors"
+          },
+          {
+            "id": "B",
+            "text": "Throwing plastic into rivers"
+          },
+          {
+            "id": "C",
+            "text": "Reducing single-use plastic and reusing suitable items"
+          },
+          {
+            "id": "D",
+            "text": "Mixing plastic with food waste"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "C",
+        "explanation": "Reducing single-use plastics and reusing suitable items prevents waste generation and leakage into the environment."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-gsc-disaster-17",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "General Science (GSC)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Disaster management",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Working syllabus topic: Disaster management; BSE Odisha Class IX HSC 2026–27. Original practice question, not an official board question.",
+      "learningOutcome": "Practise a foundational concept related to the syllabus heading “Disaster management”.",
+      "difficulty": "medium",
+      "content": {
+        "prompt": "During an earthquake indoors, the safer immediate action is generally to:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Use the lift to exit quickly"
+          },
+          {
+            "id": "B",
+            "text": "Stand beside glass windows"
+          },
+          {
+            "id": "C",
+            "text": "Drop, cover, and hold on away from windows"
+          },
+          {
+            "id": "D",
+            "text": "Run onto a balcony"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "C",
+        "explanation": "Drop, cover, and hold on helps protect from falling objects; follow local emergency guidance."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-gsc-energy-18",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "General Science (GSC)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Work and energy",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Working syllabus topic: Work and energy; BSE Odisha Class IX HSC 2026–27. Original practice question, not an official board question.",
+      "learningOutcome": "Practise a foundational concept related to the syllabus heading “Work and energy”.",
+      "difficulty": "medium",
+      "content": {
+        "prompt": "Which is an example of kinetic energy?",
+        "options": [
+          {
+            "id": "A",
+            "text": "A book resting on a shelf"
+          },
+          {
+            "id": "B",
+            "text": "A stretched spring held still"
+          },
+          {
+            "id": "C",
+            "text": "A moving bicycle"
+          },
+          {
+            "id": "D",
+            "text": "Water stored behind a dam at rest"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "C",
+        "explanation": "Kinetic energy is the energy an object has because of its motion."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
     }
   ]
 }
