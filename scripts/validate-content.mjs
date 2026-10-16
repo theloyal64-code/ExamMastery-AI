@@ -6,6 +6,7 @@ const catalog = readJson("../content/syllabus-catalog.json");
 const schema = readJson("../content/content.schema.json");
 const bookCatalog = readJson("../content/book-catalog.json");
 const class10 = readJson("../content/odisha-class10-hsc-2026-27.json");
+const class9English = readJson("../content/odisha-class9-hsc-english-2026-27.json");
 const learningTracks = readJson("../content/learning-track-catalog.json");
 const odishaClass6to8 = readJson("../content/odisha-class6-8-book-inventory.json");
 
@@ -33,6 +34,14 @@ if (class10.board !== "ODISHA_BOARD" || class10.class !== 10 || class10.qualific
 if (!class10.sourceId || !sourceIds.has(class10.sourceId)) errors.push("Odisha Class X source record references unknown sourceId.");
 if (!["partial_review_required", "in_review", "verified", "published"].includes(class10.extractionStatus)) errors.push("Invalid extractionStatus in Odisha Class X source record.");
 if (!Array.isArray(class10.subjects)) errors.push("Odisha Class X record must contain a subjects array.");
+if (class9English.board !== "ODISHA_BOARD" || class9English.class !== 9 || class9English.qualification !== "HSC" || class9English.subject !== "English (SLE)") errors.push("Odisha Class IX English source record must retain the Odisha Board/HSC/English identity.");
+if (!class9English.sourceId || !sourceIds.has(class9English.sourceId)) errors.push("Odisha Class IX English record references unknown sourceId.");
+if (class9English.academicSession !== "2026-27" || !["partial_review_required", "in_review", "verified", "published"].includes(class9English.extractionStatus)) errors.push("Invalid session or extractionStatus in Odisha Class IX English source record.");
+if (!Array.isArray(class9English.syllabusGroups) || class9English.syllabusGroups.length === 0) errors.push("Odisha Class IX English record must contain syllabusGroups.");
+for (const group of class9English.syllabusGroups || []) {
+  if (!group.term || !Array.isArray(group.topics) || group.topics.length === 0) errors.push("Invalid syllabus group in Odisha Class IX English record.");
+  for (const topic of group.topics || []) if (!topic.category || !topic.title) errors.push("Topic missing category/title in Odisha Class IX English record.");
+}
 for (const subject of class10.subjects || []) {
   if (!subject.subject || !Array.isArray(subject.terms)) errors.push("Each Odisha Class X subject must have a name and terms array.");
   for (const term of subject.terms || []) {
@@ -113,4 +122,4 @@ if (errors.length) {
   for (const error of errors) console.error(`- ${error}`);
   process.exit(1);
 }
-console.log("Curriculum content validation passed: " + sources.sources.length + " official source records, " + catalog.coverage.length + " board/class coverage records, " + bookCatalog.entries.length + " textbook inventory entries, " + learningTracks.trackDefinitions.length + " distinct learning tracks and " + odishaClass6to8.classInventories.length + " Odisha Classes VI-VIII textbook inventories. Odisha Class X extraction status: " + class10.extractionStatus + ".");
+console.log("Curriculum content validation passed: " + sources.sources.length + " official source records, " + catalog.coverage.length + " board/class coverage records, " + bookCatalog.entries.length + " textbook inventory entries, " + learningTracks.trackDefinitions.length + " distinct learning tracks and " + odishaClass6to8.classInventories.length + " Odisha Classes VI-VIII textbook inventories. Odisha Class X extraction status: " + class10.extractionStatus + "; Odisha Class IX English extraction status: " + class9English.extractionStatus + ".");
