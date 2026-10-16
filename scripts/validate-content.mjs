@@ -12,6 +12,8 @@ const class9Maths = readJson("../content/odisha-class9-hsc-mathematics-2026-27.j
 const class9MathsPractice = readJson("../content/odisha-class9-hsc-mathematics-practice.json");
 const class9Science = readJson("../content/odisha-class9-hsc-general-science-2026-27.json");
 const class9SciencePractice = readJson("../content/odisha-class9-hsc-general-science-practice.json");
+const class9SocialScience = readJson("../content/odisha-class9-hsc-social-science-2026-27.json");
+const class9SocialSciencePractice = readJson("../content/odisha-class9-hsc-social-science-practice.json");
 const learningTracks = readJson("../content/learning-track-catalog.json");
 const odishaClass6to8 = readJson("../content/odisha-class6-8-book-inventory.json");
 
@@ -75,6 +77,25 @@ for (const record of class9SciencePractice.records || []) {
   if (!record.answer || !["A", "B", "C", "D"].includes(record.answer.correctOption) || !record.answer.explanation) errors.push("Missing or invalid answer/explanation on Science practice record " + record.id);
   if (!record.sourceIds || !record.sourceIds.includes(class9SciencePractice.sourceId)) errors.push("Science practice record " + record.id + " does not reference the official syllabus source.");
   if (record.verificationStatus !== "needs_review") errors.push("New Science practice record must remain needs_review until QA: " + record.id);
+}
+
+if (class9SocialScience.board !== "ODISHA_BOARD" || class9SocialScience.class !== 9 || class9SocialScience.qualification !== "HSC" || class9SocialScience.subject !== "Social Science (SSC)" || class9SocialScience.academicSession !== "2026-27") errors.push("Class IX HSC Social Science syllabus must retain its Odisha board/session identity.");
+if (!class9SocialScience.sourceId || !sourceIds.has(class9SocialScience.sourceId) || !Array.isArray(class9SocialScience.terms) || class9SocialScience.terms.length === 0) errors.push("Class IX HSC Social Science syllabus has an invalid source or terms array.");
+for (const term of class9SocialScience.terms || []) {
+  if (!term.term || !Array.isArray(term.topics) || term.topics.length === 0) errors.push("Invalid Class IX HSC Social Science term.");
+  for (const topic of term.topics || []) if (!topic.category || !topic.title || !topic.sourceText || !topic.translationStatus) errors.push("Social Science topic must retain category, source text and translation-review status.");
+}
+if (class9SocialSciencePractice.board !== "ODISHA_BOARD" || class9SocialSciencePractice.class !== 9 || class9SocialSciencePractice.qualification !== "HSC" || class9SocialSciencePractice.subject !== "Social Science (SSC)" || class9SocialSciencePractice.academicSession !== "2026-27") errors.push("Class IX Social Science practice bank must retain Odisha HSC 2026–27 identity.");
+if (!class9SocialSciencePractice.sourceId || !sourceIds.has(class9SocialSciencePractice.sourceId) || !Array.isArray(class9SocialSciencePractice.records) || class9SocialSciencePractice.records.length === 0) errors.push("Class IX Social Science practice bank has an invalid source or records array.");
+const socialScienceQuestionIds = new Set();
+for (const record of class9SocialSciencePractice.records || []) {
+  if (!record.id || socialScienceQuestionIds.has(record.id)) errors.push("Missing or duplicate ID in Class IX Social Science practice bank: " + (record.id || "(missing)"));
+  socialScienceQuestionIds.add(record.id);
+  if (record.board !== "ODISHA_BOARD" || record.class !== 9 || record.subject !== "Social Science (SSC)" || record.academicSession !== "2026-27") errors.push("Incorrect identity on Social Science practice record " + record.id);
+  if (!record.content || !record.content.prompt || !Array.isArray(record.content.options) || record.content.options.length !== 4) errors.push("Invalid question/options on Social Science practice record " + record.id);
+  if (!record.answer || !["A", "B", "C", "D"].includes(record.answer.correctOption) || !record.answer.explanation) errors.push("Missing or invalid answer/explanation on Social Science practice record " + record.id);
+  if (!record.sourceIds || !record.sourceIds.includes(class9SocialSciencePractice.sourceId)) errors.push("Social Science practice record " + record.id + " does not reference the official syllabus source.");
+  if (record.verificationStatus !== "needs_review") errors.push("New Social Science practice record must remain needs_review until QA: " + record.id);
 }
 
 if (class9Practice.board !== "ODISHA_BOARD" || class9Practice.class !== 9 || class9Practice.qualification !== "HSC" || class9Practice.academicSession !== "2026-27") errors.push("Class IX English practice bank must retain Odisha HSC 2026–27 identity.");
@@ -177,4 +198,4 @@ if (errors.length) {
   for (const error of errors) console.error(`- ${error}`);
   process.exit(1);
 }
-console.log("Curriculum content validation passed: " + sources.sources.length + " official source records, " + catalog.coverage.length + " board/class coverage records, " + bookCatalog.entries.length + " textbook inventory entries, " + learningTracks.trackDefinitions.length + " distinct learning tracks and " + odishaClass6to8.classInventories.length + " Odisha Classes VI-VIII textbook inventories. Odisha Class X extraction status: " + class10.extractionStatus + "; Odisha Class IX English extraction status: " + class9English.extractionStatus + "; original Class IX practice questions: " + class9Practice.records.length + " English, " + class9MathsPractice.records.length + " Mathematics and " + class9SciencePractice.records.length + " General Science (needs review).");
+console.log("Curriculum content validation passed: " + sources.sources.length + " official source records, " + catalog.coverage.length + " board/class coverage records, " + bookCatalog.entries.length + " textbook inventory entries, " + learningTracks.trackDefinitions.length + " distinct learning tracks and " + odishaClass6to8.classInventories.length + " Odisha Classes VI-VIII textbook inventories. Odisha Class X extraction status: " + class10.extractionStatus + "; Odisha Class IX English extraction status: " + class9English.extractionStatus + "; original Class IX practice questions: " + class9Practice.records.length + " English, " + class9MathsPractice.records.length + " Mathematics, " + class9SciencePractice.records.length + " General Science and " + class9SocialSciencePractice.records.length + " Social Science (needs review).");
