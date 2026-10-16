@@ -1,0 +1,590 @@
+{
+  "schemaVersion": 1,
+  "board": "ODISHA_BOARD",
+  "qualification": "HSC",
+  "class": 9,
+  "subject": "General Science (GSC)",
+  "academicSession": "2026-27",
+  "sourceId": "bse-odisha-class-ix-2026-27",
+  "contentType": "original_practice_questions",
+  "reviewStatus": "needs_review",
+  "note": "Original practice questions based on broad topics listed in the official syllabus; not official board questions. Science topic translations and all answer keys require review before publication.",
+  "records": [
+    {
+      "id": "odisha9-hsc-gsc-matter-01",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "General Science (GSC)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Matter around us",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Working syllabus topic: Matter around us; BSE Odisha Class IX HSC 2026–27. Original practice question, not an official board question.",
+      "learningOutcome": "Practise a foundational concept related to the syllabus heading “Matter around us”.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "Which statement best describes particles in matter?",
+        "options": [
+          {
+            "id": "A",
+            "text": "They are completely motionless"
+          },
+          {
+            "id": "B",
+            "text": "They have spaces between them and are in motion"
+          },
+          {
+            "id": "C",
+            "text": "They exist only in gases"
+          },
+          {
+            "id": "D",
+            "text": "They have no mass"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "B",
+        "explanation": "Particles of matter have spaces between them and are continuously moving."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-gsc-matter-02",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "General Science (GSC)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Is matter around us pure?",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Working syllabus topic: Is matter around us pure?; BSE Odisha Class IX HSC 2026–27. Original practice question, not an official board question.",
+      "learningOutcome": "Practise a foundational concept related to the syllabus heading “Is matter around us pure?”.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "A mixture in which composition is uniform throughout is called:",
+        "options": [
+          {
+            "id": "A",
+            "text": "A suspension"
+          },
+          {
+            "id": "B",
+            "text": "A heterogeneous mixture"
+          },
+          {
+            "id": "C",
+            "text": "A homogeneous mixture"
+          },
+          {
+            "id": "D",
+            "text": "An element only"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "C",
+        "explanation": "A homogeneous mixture has uniform composition throughout."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-gsc-biodiversity-03",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "General Science (GSC)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Biodiversity",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Working syllabus topic: Biodiversity; BSE Odisha Class IX HSC 2026–27. Original practice question, not an official board question.",
+      "learningOutcome": "Practise a foundational concept related to the syllabus heading “Biodiversity”.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "Biodiversity refers to:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Variety of living organisms"
+          },
+          {
+            "id": "B",
+            "text": "Only the number of humans"
+          },
+          {
+            "id": "C",
+            "text": "Only non-living things"
+          },
+          {
+            "id": "D",
+            "text": "A single species in one place"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "A",
+        "explanation": "Biodiversity means the variety of life, including different organisms and ecosystems."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-gsc-atoms-04",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "General Science (GSC)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Atoms and molecules",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Working syllabus topic: Atoms and molecules; BSE Odisha Class IX HSC 2026–27. Original practice question, not an official board question.",
+      "learningOutcome": "Practise a foundational concept related to the syllabus heading “Atoms and molecules”.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "The smallest unit of an element that retains its chemical identity is an:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Atom"
+          },
+          {
+            "id": "B",
+            "text": "Tissue"
+          },
+          {
+            "id": "C",
+            "text": "Cell"
+          },
+          {
+            "id": "D",
+            "text": "Mixture"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "A",
+        "explanation": "An atom is the smallest unit of an element that retains its chemical identity."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-gsc-atom-structure-05",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "General Science (GSC)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Structure of atom",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Working syllabus topic: Structure of atom; BSE Odisha Class IX HSC 2026–27. Original practice question, not an official board question.",
+      "learningOutcome": "Practise a foundational concept related to the syllabus heading “Structure of atom”.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "Which subatomic particle has a negative electric charge?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Proton"
+          },
+          {
+            "id": "B",
+            "text": "Neutron"
+          },
+          {
+            "id": "C",
+            "text": "Electron"
+          },
+          {
+            "id": "D",
+            "text": "Nucleus as a whole"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "C",
+        "explanation": "Electrons carry a negative electric charge."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-gsc-gravitation-06",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "General Science (GSC)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Gravitation",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Working syllabus topic: Gravitation; BSE Odisha Class IX HSC 2026–27. Original practice question, not an official board question.",
+      "learningOutcome": "Practise a foundational concept related to the syllabus heading “Gravitation”.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "The force that attracts objects toward Earth is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Magnetic force"
+          },
+          {
+            "id": "B",
+            "text": "Gravitational force"
+          },
+          {
+            "id": "C",
+            "text": "Friction only"
+          },
+          {
+            "id": "D",
+            "text": "Buoyant force"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "B",
+        "explanation": "Earth's gravity attracts objects toward its centre."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-gsc-tissues-07",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "General Science (GSC)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Tissues",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Working syllabus topic: Tissues; BSE Odisha Class IX HSC 2026–27. Original practice question, not an official board question.",
+      "learningOutcome": "Practise a foundational concept related to the syllabus heading “Tissues”.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "A group of similar cells working together to perform a function is called a:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Tissue"
+          },
+          {
+            "id": "B",
+            "text": "Molecule"
+          },
+          {
+            "id": "C",
+            "text": "Planet"
+          },
+          {
+            "id": "D",
+            "text": "Mixture"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "A",
+        "explanation": "A tissue is a group of similar cells performing a common function."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-gsc-disease-08",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "General Science (GSC)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Disease and its prevention",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Working syllabus topic: Disease and its prevention; BSE Odisha Class IX HSC 2026–27. Original practice question, not an official board question.",
+      "learningOutcome": "Practise a foundational concept related to the syllabus heading “Disease and its prevention”.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "Which action helps prevent the spread of many infectious diseases?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sharing unwashed utensils"
+          },
+          {
+            "id": "B",
+            "text": "Ignoring hand hygiene"
+          },
+          {
+            "id": "C",
+            "text": "Washing hands with soap"
+          },
+          {
+            "id": "D",
+            "text": "Taking antibiotics without advice"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "C",
+        "explanation": "Handwashing with soap reduces the transfer of many infectious agents."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-gsc-motion-09",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "General Science (GSC)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Motion",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Working syllabus topic: Motion; BSE Odisha Class IX HSC 2026–27. Original practice question, not an official board question.",
+      "learningOutcome": "Practise a foundational concept related to the syllabus heading “Motion”.",
+      "difficulty": "medium",
+      "content": {
+        "prompt": "An object changes its position relative to a reference point over time. It is in:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Rest in every frame"
+          },
+          {
+            "id": "B",
+            "text": "Motion"
+          },
+          {
+            "id": "C",
+            "text": "Chemical change"
+          },
+          {
+            "id": "D",
+            "text": "Thermal equilibrium"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "B",
+        "explanation": "Motion is a change in position with time relative to a reference point."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-gsc-force-10",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "General Science (GSC)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Force and laws of motion",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Working syllabus topic: Force and laws of motion; BSE Odisha Class IX HSC 2026–27. Original practice question, not an official board question.",
+      "learningOutcome": "Practise a foundational concept related to the syllabus heading “Force and laws of motion”.",
+      "difficulty": "medium",
+      "content": {
+        "prompt": "A net force on an object can change its:",
+        "options": [
+          {
+            "id": "A",
+            "text": "State of motion"
+          },
+          {
+            "id": "B",
+            "text": "Mass in every case"
+          },
+          {
+            "id": "C",
+            "text": "Chemical symbol"
+          },
+          {
+            "id": "D",
+            "text": "Number of atoms automatically"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "A",
+        "explanation": "A net force can change an object's speed or direction, causing acceleration."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-gsc-cell-11",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "General Science (GSC)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Cell and its organization",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Working syllabus topic: Cell and its organization; BSE Odisha Class IX HSC 2026–27. Original practice question, not an official board question.",
+      "learningOutcome": "Practise a foundational concept related to the syllabus heading “Cell and its organization”.",
+      "difficulty": "medium",
+      "content": {
+        "prompt": "Which cell structure controls many activities of a typical eukaryotic cell and contains genetic material?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Cell wall only"
+          },
+          {
+            "id": "B",
+            "text": "Nucleus"
+          },
+          {
+            "id": "C",
+            "text": "Vacuole only"
+          },
+          {
+            "id": "D",
+            "text": "Ribosome only"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "B",
+        "explanation": "The nucleus contains most of a eukaryotic cell's genetic material and regulates many activities."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-gsc-work-energy-12",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "General Science (GSC)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Work and energy",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Working syllabus topic: Work and energy; BSE Odisha Class IX HSC 2026–27. Original practice question, not an official board question.",
+      "learningOutcome": "Practise a foundational concept related to the syllabus heading “Work and energy”.",
+      "difficulty": "medium",
+      "content": {
+        "prompt": "In basic physics, work is done on an object when a force causes:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Displacement with a force component along it"
+          },
+          {
+            "id": "B",
+            "text": "Colour change only"
+          },
+          {
+            "id": "C",
+            "text": "No displacement in any direction"
+          },
+          {
+            "id": "D",
+            "text": "Mass to disappear"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "A",
+        "explanation": "Mechanical work requires displacement and a component of force along that displacement."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    }
+  ]
+}
