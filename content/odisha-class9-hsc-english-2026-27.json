@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "board": "ODISHA_BOARD",
+  "qualification": "HSC",
+  "class": 9,
+  "academicSession": "2026-27",
+  "subject": "English (SLE)",
+  "sourceId": "bse-odisha-class-ix-2026-27",
+  "sourceUrl": "https://bseodisha.nic.in/wp-content/uploads/2026/05/Subject_wise_syllabus_class_IX_26_27.pdf",
+  "sourceListingUrl": "https://bseodisha.nic.in/class_ix_text_books/",
+  "sourcePublishedOn": "2026-05-18",
+  "extractionStatus": "partial_review_required",
+  "prescribedBooks": [
+    "Skills of Communicative English",
+    "Learn and Practice Grammar"
+  ],
+  "syllabusGroups": [
+    {
+      "term": "Term I",
+      "assessment": "IA-1 to be completed during the second week of July 2026; half-yearly examination during the first week of September 2026.",
+      "topics": [
+        {
+          "category": "Detailed Text",
+          "title": "The Priceless Gift"
+        },
+        {
+          "category": "Detailed Text",
+          "title": "Home and Love"
+        },
+        {
+          "category": "Non-Detailed",
+          "title": "The Trunk of Ganesh"
+        },
+        {
+          "category": "Grammar",
+          "title": "Parts of a Sentence"
+        },
+        {
+          "category": "Grammar",
+          "title": "Verbs"
+        },
+        {
+          "category": "Grammar",
+          "title": "Time and Tense"
+        },
+        {
+          "category": "Writing",
+          "title": "Essay"
+        },
+        {
+          "category": "Writing",
+          "title": "Translation"
+        }
+      ]
+    },
+    {
+      "term": "Term I (continued)",
+      "assessment": "IA-2 to be completed during the last week of August 2026.",
+      "topics": [
+        {
+          "category": "Detailed Text",
+          "title": "The Swimmer who does not need her legs"
+        },
+        {
+          "category": "Detailed Text",
+          "title": "Road Safety Week"
+        },
+        {
+          "category": "Detailed Text",
+          "title": "Nine Gold Medals"
+        },
+        {
+          "category": "Non-Detailed",
+          "title": "The Lost Child"
+        },
+        {
+          "category": "Grammar",
+          "title": "Auxiliaries"
+        },
+        {
+          "category": "Grammar",
+          "title": "The Noun Phrase"
+        },
+        {
+          "category": "Grammar",
+          "title": "Pre & post modifiers in the noun phrase"
+        },
+        {
+          "category": "Writing",
+          "title": "Letter and Application"
+        },
+        {
+          "category": "Reading",
+          "title": "Unseen Passage"
+        }
+      ]
+    },
+    {
+      "term": "Term II",
+      "assessment": "IA-3 to be completed during the last week of November 2026; annual examination during the second week of March 2027.",
+      "topics": [
+        {
+          "category": "Detailed Text",
+          "title": "Missile Man of India"
+        },
+        {
+          "category": "Detailed Text",
+          "title": "The Noble Nature"
+        },
+        {
+          "category": "Detailed Text",
+          "title": "No men are foreign"
+        },
+        {
+          "category": "Non-Detailed",
+          "title": "The First Step"
+        },
+        {
+          "category": "Non-Detailed",
+          "title": "The Magic Flute"
+        },
+        {
+          "category": "Grammar",
+          "title": "Countables & Uncountables"
+        },
+        {
+          "category": "Grammar",
+          "title": "Determiners"
+        },
+        {
+          "category": "Grammar",
+          "title": "Adjectives"
+        },
+        {
+          "category": "Writing",
+          "title": "Essay"
+        },
+        {
+          "category": "Writing",
+          "title": "Translation"
+        }
+      ]
+    },
+    {
+      "term": "Term II (continued)",
+      "assessment": "IA-4 to be completed during the third week of February 2027.",
+      "topics": [
+        {
+          "category": "Detailed Text",
+          "title": "A Hero"
+        },
+        {
+          "category": "Detailed Text",
+          "title": "Alexander Selkirk"
+        },
+        {
+          "category": "Non-Detailed",
+          "title": "The portrait of a lady"
+        },
+        {
+          "category": "Grammar",
+          "title": "Adverse & Adverbials"
+        },
+        {
+          "category": "Grammar",
+          "title": "Negatives & Interrogatives"
+        },
+        {
+          "category": "Grammar",
+          "title": "The Predicate Phrase"
+        },
+        {
+          "category": "Writing",
+          "title": "Letter & Application"
+        },
+        {
+          "category": "Reading",
+          "title": "Unseen Passage"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "This is a partial structured extraction of the official Class IX HSC English (SLE) syllabus for 2026–27, not a complete Class IX syllabus.",
+    "The source PDF presents Term I and Term II content in a multi-column table. Topic groups and assessment dates should be checked visually against the PDF before publication.",
+    "The syllabus is recorded for the HSC qualification only; do not apply it to the separate Madhyama track.",
+    "This record contains syllabus metadata only, not textbook chapter text."
+  ]
+}
