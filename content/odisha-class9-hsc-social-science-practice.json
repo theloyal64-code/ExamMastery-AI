@@ -1,0 +1,494 @@
+{
+  "schemaVersion": 1,
+  "board": "ODISHA_BOARD",
+  "qualification": "HSC",
+  "class": 9,
+  "subject": "Social Science (SSC)",
+  "academicSession": "2026-27",
+  "sourceId": "bse-odisha-class-ix-2026-27",
+  "contentType": "original_practice_questions",
+  "reviewStatus": "needs_review",
+  "note": "Original practice questions based on broad working translations of official syllabus headings; not official board questions. Review source translations and answer keys before publication.",
+  "records": [
+    {
+      "id": "odisha9-hsc-ssc-history-01",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "Social Science (SSC)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: History",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Working syllabus heading: History; BSE Odisha Class IX HSC 2026–27. Original practice question, not an official board question.",
+      "learningOutcome": "Practise a foundational concept associated with the working syllabus category History.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "In history, a source is useful because it can help us:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Understand evidence about the past"
+          },
+          {
+            "id": "B",
+            "text": "Predict every future event exactly"
+          },
+          {
+            "id": "C",
+            "text": "Replace all other evidence"
+          },
+          {
+            "id": "D",
+            "text": "Prove a claim without examination"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "A",
+        "explanation": "Historical sources provide evidence that must be interpreted and checked."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-ssc-rights-02",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "Social Science (SSC)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Political Science",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Working syllabus heading: Political Science; BSE Odisha Class IX HSC 2026–27. Original practice question, not an official board question.",
+      "learningOutcome": "Practise a foundational concept associated with the working syllabus category Political Science.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "Fundamental Rights in a constitution primarily protect:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Only government offices"
+          },
+          {
+            "id": "B",
+            "text": "Basic rights and freedoms of people"
+          },
+          {
+            "id": "C",
+            "text": "Only businesses"
+          },
+          {
+            "id": "D",
+            "text": "Only foreign citizens"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "B",
+        "explanation": "Fundamental Rights protect key freedoms and legal protections recognised by the constitution."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-ssc-duties-03",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "Social Science (SSC)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Political Science",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Working syllabus heading: Political Science; BSE Odisha Class IX HSC 2026–27. Original practice question, not an official board question.",
+      "learningOutcome": "Practise a foundational concept associated with the working syllabus category Political Science.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "Fundamental Duties are best understood as:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Responsibilities citizens are expected to observe"
+          },
+          {
+            "id": "B",
+            "text": "A list of school subjects"
+          },
+          {
+            "id": "C",
+            "text": "Rules applying only to tourists"
+          },
+          {
+            "id": "D",
+            "text": "A replacement for all laws"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "A",
+        "explanation": "Fundamental Duties describe civic responsibilities of citizens."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-ssc-india-04",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "Social Science (SSC)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Geography",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Working syllabus heading: Geography; BSE Odisha Class IX HSC 2026–27. Original practice question, not an official board question.",
+      "learningOutcome": "Practise a foundational concept associated with the working syllabus category Geography.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "Which is a major reason India has varied physical geography?",
+        "options": [
+          {
+            "id": "A",
+            "text": "It has only one type of landform"
+          },
+          {
+            "id": "B",
+            "text": "It includes mountains, plains, plateaus and coastal regions"
+          },
+          {
+            "id": "C",
+            "text": "It has no rivers"
+          },
+          {
+            "id": "D",
+            "text": "It lies entirely in a desert"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "B",
+        "explanation": "India contains diverse landforms, including the Himalayas, plains, plateaus and coastal areas."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-ssc-climate-05",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "Social Science (SSC)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Geography",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Working syllabus heading: Geography; BSE Odisha Class IX HSC 2026–27. Original practice question, not an official board question.",
+      "learningOutcome": "Practise a foundational concept associated with the working syllabus category Geography.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "Climate refers to the usual pattern of weather over:",
+        "options": [
+          {
+            "id": "A",
+            "text": "A few minutes only"
+          },
+          {
+            "id": "B",
+            "text": "A long period"
+          },
+          {
+            "id": "C",
+            "text": "One single afternoon only"
+          },
+          {
+            "id": "D",
+            "text": "One thunderstorm only"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "B",
+        "explanation": "Climate describes long-term patterns and averages of weather."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-ssc-vegetation-06",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "Social Science (SSC)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Geography",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Working syllabus heading: Geography; BSE Odisha Class IX HSC 2026–27. Original practice question, not an official board question.",
+      "learningOutcome": "Practise a foundational concept associated with the working syllabus category Geography.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "Natural vegetation in a region is influenced by factors such as:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Climate and soil"
+          },
+          {
+            "id": "B",
+            "text": "Only road names"
+          },
+          {
+            "id": "C",
+            "text": "Only population names"
+          },
+          {
+            "id": "D",
+            "text": "The number of schools only"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "A",
+        "explanation": "Temperature, rainfall, soil and relief affect the vegetation of a region."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-ssc-economics-07",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "Social Science (SSC)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Economics",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Working syllabus heading: Economics; BSE Odisha Class IX HSC 2026–27. Original practice question, not an official board question.",
+      "learningOutcome": "Practise a foundational concept associated with the working syllabus category Economics.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "Economic development generally aims to improve:",
+        "options": [
+          {
+            "id": "A",
+            "text": "People's well-being and living conditions"
+          },
+          {
+            "id": "B",
+            "text": "Only the number of coins in circulation"
+          },
+          {
+            "id": "C",
+            "text": "Only the size of maps"
+          },
+          {
+            "id": "D",
+            "text": "Only the number of roads regardless of need"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "A",
+        "explanation": "Economic development concerns improvements in well-being, opportunities and living standards."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-ssc-rivers-08",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "Social Science (SSC)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Geography",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Working syllabus heading: Geography; BSE Odisha Class IX HSC 2026–27. Original practice question, not an official board question.",
+      "learningOutcome": "Practise a foundational concept associated with the working syllabus category Geography.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "Rivers are important resources because they can provide:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Water for people and agriculture"
+          },
+          {
+            "id": "B",
+            "text": "Only mineral fuels"
+          },
+          {
+            "id": "C",
+            "text": "No useful resources"
+          },
+          {
+            "id": "D",
+            "text": "Only salt water everywhere"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "A",
+        "explanation": "Rivers support water supply, agriculture and ecosystems, among other uses."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-ssc-money-09",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "Social Science (SSC)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Economics",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Working syllabus heading: Economics; BSE Odisha Class IX HSC 2026–27. Original practice question, not an official board question.",
+      "learningOutcome": "Practise a foundational concept associated with the working syllabus category Economics.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "The main role of money in everyday exchange is to act as a:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Medium of exchange"
+          },
+          {
+            "id": "B",
+            "text": "Type of rainfall"
+          },
+          {
+            "id": "C",
+            "text": "Natural disaster"
+          },
+          {
+            "id": "D",
+            "text": "Political boundary"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "A",
+        "explanation": "Money is widely used as a medium of exchange for goods and services."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-ssc-un-010",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "Social Science (SSC)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Political Science",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Working syllabus heading: Political Science; BSE Odisha Class IX HSC 2026–27. Original practice question, not an official board question.",
+      "learningOutcome": "Practise a foundational concept associated with the working syllabus category Political Science.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "The United Nations was established mainly to promote international cooperation and:",
+        "options": [
+          {
+            "id": "A",
+            "text": "World peace and security"
+          },
+          {
+            "id": "B",
+            "text": "The end of all national governments"
+          },
+          {
+            "id": "C",
+            "text": "A single global language by law"
+          },
+          {
+            "id": "D",
+            "text": "The abolition of all borders immediately"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "A",
+        "explanation": "The UN's purposes include maintaining international peace and security and fostering cooperation."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    }
+  ]
+}
