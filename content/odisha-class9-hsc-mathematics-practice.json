@@ -1,0 +1,590 @@
+{
+  "schemaVersion": 1,
+  "board": "ODISHA_BOARD",
+  "qualification": "HSC",
+  "class": 9,
+  "subject": "Mathematics (MTH)",
+  "academicSession": "2026-27",
+  "sourceId": "bse-odisha-class-ix-2026-27",
+  "contentType": "original_practice_questions",
+  "reviewStatus": "needs_review",
+  "note": "Original practice questions aligned to topics listed in the official syllabus. Not official board questions. Review topic translation and answer keys before publication.",
+  "records": [
+    {
+      "id": "odisha9-hsc-mth-m1",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "Mathematics (MTH)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Sets (M1)",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Syllabus topic: Set operations and applications of sets; BSE Odisha Class IX HSC 2026–27. Question is original practice content, not an official board question.",
+      "learningOutcome": "Practice foundational Class IX Mathematics skills related to Set operations and applications of sets.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "Let A = {1, 2, 3} and B = {3, 4}. What is A ∩ B?",
+        "options": [
+          {
+            "id": "A",
+            "text": "{1, 2, 3, 4}"
+          },
+          {
+            "id": "B",
+            "text": "{3}"
+          },
+          {
+            "id": "C",
+            "text": "{1, 2}"
+          },
+          {
+            "id": "D",
+            "text": "{4}"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "B",
+        "explanation": "The intersection contains elements common to both sets; only 3 is common."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-mth-m2",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "Mathematics (MTH)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Sets (M2)",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Syllabus topic: Set operations and applications of sets; BSE Odisha Class IX HSC 2026–27. Question is original practice content, not an official board question.",
+      "learningOutcome": "Practice foundational Class IX Mathematics skills related to Set operations and applications of sets.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "If A = {a, b, c} and B = {b, c, d}, what is A ∪ B?",
+        "options": [
+          {
+            "id": "A",
+            "text": "{b, c}"
+          },
+          {
+            "id": "B",
+            "text": "{a, d}"
+          },
+          {
+            "id": "C",
+            "text": "{a, b, c, d}"
+          },
+          {
+            "id": "D",
+            "text": "{a, b, c, b, c, d}"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "C",
+        "explanation": "The union includes every distinct element in either set."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-mth-m3",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "Mathematics (MTH)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Real Numbers (M3)",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Syllabus topic: Real numbers; BSE Odisha Class IX HSC 2026–27. Question is original practice content, not an official board question.",
+      "learningOutcome": "Practice foundational Class IX Mathematics skills related to Real numbers.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "Which of these is irrational?",
+        "options": [
+          {
+            "id": "A",
+            "text": "0.25"
+          },
+          {
+            "id": "B",
+            "text": "√2"
+          },
+          {
+            "id": "C",
+            "text": "7/8"
+          },
+          {
+            "id": "D",
+            "text": "−3"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "B",
+        "explanation": "√2 cannot be expressed as a ratio of two integers; it is irrational."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-mth-m4",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "Mathematics (MTH)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Real Numbers (M4)",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Syllabus topic: Real numbers; BSE Odisha Class IX HSC 2026–27. Question is original practice content, not an official board question.",
+      "learningOutcome": "Practice foundational Class IX Mathematics skills related to Real numbers.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "Which fraction represents 0.75?",
+        "options": [
+          {
+            "id": "A",
+            "text": "1/4"
+          },
+          {
+            "id": "B",
+            "text": "2/3"
+          },
+          {
+            "id": "C",
+            "text": "3/4"
+          },
+          {
+            "id": "D",
+            "text": "4/5"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "C",
+        "explanation": "0.75 = 75/100 = 3/4 after simplifying."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-mth-m5",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "Mathematics (MTH)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Lines and Angles (M5)",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Syllabus topic: Lines and angles; BSE Odisha Class IX HSC 2026–27. Question is original practice content, not an official board question.",
+      "learningOutcome": "Practice foundational Class IX Mathematics skills related to Lines and angles.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "Two angles on a straight line are x° and 65°. Find x.",
+        "options": [
+          {
+            "id": "A",
+            "text": "25°"
+          },
+          {
+            "id": "B",
+            "text": "65°"
+          },
+          {
+            "id": "C",
+            "text": "115°"
+          },
+          {
+            "id": "D",
+            "text": "125°"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "C",
+        "explanation": "Angles on a straight line add to 180°, so x = 180° − 65° = 115°."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-mth-m6",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "Mathematics (MTH)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Lines and Angles (M6)",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Syllabus topic: Lines and angles; BSE Odisha Class IX HSC 2026–27. Question is original practice content, not an official board question.",
+      "learningOutcome": "Practice foundational Class IX Mathematics skills related to Lines and angles.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "Vertically opposite angles are:",
+        "options": [
+          {
+            "id": "A",
+            "text": "always equal"
+          },
+          {
+            "id": "B",
+            "text": "always supplementary"
+          },
+          {
+            "id": "C",
+            "text": "always 90°"
+          },
+          {
+            "id": "D",
+            "text": "always unequal"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "A",
+        "explanation": "Vertically opposite angles formed by two intersecting lines are equal."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-mth-m7",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "Mathematics (MTH)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Congruence of Triangles (M7)",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Syllabus topic: Congruence of triangles; BSE Odisha Class IX HSC 2026–27. Question is original practice content, not an official board question.",
+      "learningOutcome": "Practice foundational Class IX Mathematics skills related to Congruence of triangles.",
+      "difficulty": "medium",
+      "content": {
+        "prompt": "Which condition is sufficient to prove two triangles congruent?",
+        "options": [
+          {
+            "id": "A",
+            "text": "AAA"
+          },
+          {
+            "id": "B",
+            "text": "SSS"
+          },
+          {
+            "id": "C",
+            "text": "SSA in every case"
+          },
+          {
+            "id": "D",
+            "text": "One angle only"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "B",
+        "explanation": "SSS (three corresponding sides equal) is a triangle congruence criterion."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-mth-m8",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "Mathematics (MTH)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Congruence of Triangles (M8)",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Syllabus topic: Congruence of triangles; BSE Odisha Class IX HSC 2026–27. Question is original practice content, not an official board question.",
+      "learningOutcome": "Practice foundational Class IX Mathematics skills related to Congruence of triangles.",
+      "difficulty": "medium",
+      "content": {
+        "prompt": "If two triangles have two corresponding sides and the included angle equal, which criterion applies?",
+        "options": [
+          {
+            "id": "A",
+            "text": "ASA"
+          },
+          {
+            "id": "B",
+            "text": "SAS"
+          },
+          {
+            "id": "C",
+            "text": "RHS only"
+          },
+          {
+            "id": "D",
+            "text": "AAA"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "B",
+        "explanation": "SAS means Side–Angle–Side, with the angle included between the two sides."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-mth-m9",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "Mathematics (MTH)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Algebraic Expressions (M9)",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Syllabus topic: Algebraic expressions and identities; BSE Odisha Class IX HSC 2026–27. Question is original practice content, not an official board question.",
+      "learningOutcome": "Practice foundational Class IX Mathematics skills related to Algebraic expressions and identities.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "Simplify: 3x + 5x − 2.",
+        "options": [
+          {
+            "id": "A",
+            "text": "8x − 2"
+          },
+          {
+            "id": "B",
+            "text": "8x + 2"
+          },
+          {
+            "id": "C",
+            "text": "15x − 2"
+          },
+          {
+            "id": "D",
+            "text": "6x"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "A",
+        "explanation": "Combine like terms: 3x + 5x = 8x; the constant −2 remains."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-mth-m10",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "Mathematics (MTH)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Algebraic Equations (M10)",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Syllabus topic: Algebraic equations; BSE Odisha Class IX HSC 2026–27. Question is original practice content, not an official board question.",
+      "learningOutcome": "Practice foundational Class IX Mathematics skills related to Algebraic equations.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "Solve: 2x + 5 = 17.",
+        "options": [
+          {
+            "id": "A",
+            "text": "5"
+          },
+          {
+            "id": "B",
+            "text": "6"
+          },
+          {
+            "id": "C",
+            "text": "7"
+          },
+          {
+            "id": "D",
+            "text": "11"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "B",
+        "explanation": "Subtract 5 from both sides: 2x = 12; divide by 2 to get x = 6."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-mth-m11",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "Mathematics (MTH)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Ratio and Proportion (M11)",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Syllabus topic: Ratio and proportion; BSE Odisha Class IX HSC 2026–27. Question is original practice content, not an official board question.",
+      "learningOutcome": "Practice foundational Class IX Mathematics skills related to Ratio and proportion.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "The ratio 12:18 in simplest form is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "2:3"
+          },
+          {
+            "id": "B",
+            "text": "3:2"
+          },
+          {
+            "id": "C",
+            "text": "6:9"
+          },
+          {
+            "id": "D",
+            "text": "4:9"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "A",
+        "explanation": "Divide both terms by their greatest common divisor, 6, to get 2:3."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-mth-m12",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "Mathematics (MTH)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Probability (M12)",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Syllabus topic: Probability; BSE Odisha Class IX HSC 2026–27. Question is original practice content, not an official board question.",
+      "learningOutcome": "Practice foundational Class IX Mathematics skills related to Probability.",
+      "difficulty": "medium",
+      "content": {
+        "prompt": "A fair six-sided die is rolled once. What is the probability of rolling an even number?",
+        "options": [
+          {
+            "id": "A",
+            "text": "1/6"
+          },
+          {
+            "id": "B",
+            "text": "1/3"
+          },
+          {
+            "id": "C",
+            "text": "1/2"
+          },
+          {
+            "id": "D",
+            "text": "2/3"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "C",
+        "explanation": "There are 3 even outcomes (2, 4, 6) out of 6 equally likely outcomes, so 3/6 = 1/2."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    }
+  ]
+}
