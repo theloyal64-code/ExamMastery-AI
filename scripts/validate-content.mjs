@@ -8,6 +8,8 @@ const bookCatalog = readJson("../content/book-catalog.json");
 const class10 = readJson("../content/odisha-class10-hsc-2026-27.json");
 const class9English = readJson("../content/odisha-class9-hsc-english-2026-27.json");
 const class9Practice = readJson("../content/odisha-class9-hsc-english-practice.json");
+const class9Maths = readJson("../content/odisha-class9-hsc-mathematics-2026-27.json");
+const class9MathsPractice = readJson("../content/odisha-class9-hsc-mathematics-practice.json");
 const learningTracks = readJson("../content/learning-track-catalog.json");
 const odishaClass6to8 = readJson("../content/odisha-class6-8-book-inventory.json");
 
@@ -35,6 +37,25 @@ if (class10.board !== "ODISHA_BOARD" || class10.class !== 10 || class10.qualific
 if (!class10.sourceId || !sourceIds.has(class10.sourceId)) errors.push("Odisha Class X source record references unknown sourceId.");
 if (!["partial_review_required", "in_review", "verified", "published"].includes(class10.extractionStatus)) errors.push("Invalid extractionStatus in Odisha Class X source record.");
 if (!Array.isArray(class10.subjects)) errors.push("Odisha Class X record must contain a subjects array.");
+if (class9Maths.board !== "ODISHA_BOARD" || class9Maths.class !== 9 || class9Maths.qualification !== "HSC" || class9Maths.subject !== "Mathematics (MTH)" || class9Maths.academicSession !== "2026-27") errors.push("Class IX HSC Mathematics syllabus must retain its Odisha board/session identity.");
+if (!class9Maths.sourceId || !sourceIds.has(class9Maths.sourceId) || !Array.isArray(class9Maths.terms) || class9Maths.terms.length === 0) errors.push("Class IX HSC Mathematics syllabus has an invalid source or terms array.");
+for (const term of class9Maths.terms || []) {
+  if (!term.term || !Array.isArray(term.topics) || term.topics.length === 0) errors.push("Invalid Class IX HSC Mathematics term.");
+  for (const topic of term.topics || []) if (!topic.title || !topic.sourceText || !topic.translationStatus) errors.push("Mathematics syllabus topic must retain its source text and translation-review status.");
+}
+if (class9MathsPractice.board !== "ODISHA_BOARD" || class9MathsPractice.class !== 9 || class9MathsPractice.qualification !== "HSC" || class9MathsPractice.subject !== "Mathematics (MTH)" || class9MathsPractice.academicSession !== "2026-27") errors.push("Class IX Mathematics practice bank must retain Odisha HSC 2026–27 identity.");
+if (!class9MathsPractice.sourceId || !sourceIds.has(class9MathsPractice.sourceId) || !Array.isArray(class9MathsPractice.records) || class9MathsPractice.records.length === 0) errors.push("Class IX Mathematics practice bank has an invalid source or records array.");
+const mathQuestionIds = new Set();
+for (const record of class9MathsPractice.records || []) {
+  if (!record.id || mathQuestionIds.has(record.id)) errors.push("Missing or duplicate ID in Class IX Mathematics practice bank: " + (record.id || "(missing)"));
+  mathQuestionIds.add(record.id);
+  if (record.board !== "ODISHA_BOARD" || record.class !== 9 || record.subject !== "Mathematics (MTH)" || record.academicSession !== "2026-27") errors.push("Incorrect identity on Mathematics practice record " + record.id);
+  if (!record.content || !record.content.prompt || !Array.isArray(record.content.options) || record.content.options.length < 2) errors.push("Invalid question/options on Mathematics practice record " + record.id);
+  if (!record.answer || !record.answer.correctOption || !record.answer.explanation) errors.push("Missing answer/explanation on Mathematics practice record " + record.id);
+  if (!record.sourceIds || !record.sourceIds.includes(class9MathsPractice.sourceId)) errors.push("Mathematics practice record " + record.id + " does not reference the official syllabus source.");
+  if (record.verificationStatus !== "needs_review") errors.push("New Mathematics practice record must remain needs_review until QA: " + record.id);
+}
+
 if (class9Practice.board !== "ODISHA_BOARD" || class9Practice.class !== 9 || class9Practice.qualification !== "HSC" || class9Practice.academicSession !== "2026-27") errors.push("Class IX English practice bank must retain Odisha HSC 2026–27 identity.");
 if (!class9Practice.sourceId || !sourceIds.has(class9Practice.sourceId) || !Array.isArray(class9Practice.records) || class9Practice.records.length === 0) errors.push("Class IX English practice bank has an invalid source or records array.");
 const practiceIds = new Set();
@@ -135,4 +156,4 @@ if (errors.length) {
   for (const error of errors) console.error(`- ${error}`);
   process.exit(1);
 }
-console.log("Curriculum content validation passed: " + sources.sources.length + " official source records, " + catalog.coverage.length + " board/class coverage records, " + bookCatalog.entries.length + " textbook inventory entries, " + learningTracks.trackDefinitions.length + " distinct learning tracks and " + odishaClass6to8.classInventories.length + " Odisha Classes VI-VIII textbook inventories. Odisha Class X extraction status: " + class10.extractionStatus + "; Odisha Class IX English extraction status: " + class9English.extractionStatus + "; original Class IX practice questions: " + class9Practice.records.length + " (needs review).");
+console.log("Curriculum content validation passed: " + sources.sources.length + " official source records, " + catalog.coverage.length + " board/class coverage records, " + bookCatalog.entries.length + " textbook inventory entries, " + learningTracks.trackDefinitions.length + " distinct learning tracks and " + odishaClass6to8.classInventories.length + " Odisha Classes VI-VIII textbook inventories. Odisha Class X extraction status: " + class10.extractionStatus + "; Odisha Class IX English extraction status: " + class9English.extractionStatus + "; original Class IX practice questions: " + class9Practice.records.length + " English and " + class9MathsPractice.records.length + " Mathematics original practice questions (needs review).");
