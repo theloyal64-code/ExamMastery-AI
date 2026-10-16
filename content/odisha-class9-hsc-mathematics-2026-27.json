@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "board": "ODISHA_BOARD",
+  "qualification": "HSC",
+  "class": 9,
+  "academicSession": "2026-27",
+  "subject": "Mathematics (MTH)",
+  "sourceId": "bse-odisha-class-ix-2026-27",
+  "sourceUrl": "https://bseodisha.nic.in/wp-content/uploads/2026/05/Subject_wise_syllabus_class_IX_26_27.pdf",
+  "sourceListingUrl": "https://bseodisha.nic.in/class_ix_text_books/",
+  "sourcePublishedOn": "2026-05-18",
+  "extractionStatus": "partial_review_required",
+  "prescribedBooks": [
+    "ମାଧ୍ୟମିକ ବୀଜଗଣିତ (title OCR needs verification)",
+    "ମାଧ୍ୟମିକ ଜ୍ୟାମିତି (title OCR needs verification)"
+  ],
+  "terms": [
+    {
+      "term": "Term I",
+      "assessment": "IA-1: second week of July 2026; Aspirational Component: last week of August 2026; Half-yearly: first week of September 2026",
+      "topics": [
+        {
+          "title": "Set operations and applications of sets",
+          "sourceText": "ସେଟ୍ ପ୍ରକ୍ରିୟା ଓ ସେଟ୍ ର ପ୍ରୟୋଗ",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        },
+        {
+          "title": "Real numbers",
+          "sourceText": "ବାସ୍ତବ ସଂଖ୍ୟା",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        },
+        {
+          "title": "Lines and angles",
+          "sourceText": "ରେଖା ଓ କୋଣ",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        },
+        {
+          "title": "Congruence of triangles",
+          "sourceText": "ତ୍ରିଭୁଜମାନଙ୍କ ସର୍ବସମତା",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        },
+        {
+          "title": "Construction (sections 6.1 and 6.2)",
+          "sourceText": "ଅଙ୍କନ (6.1 & 6.2)",
+          "translationStatus": "section label retained; book title/translation review required"
+        }
+      ]
+    },
+    {
+      "term": "Term I (continued)",
+      "assessment": "IA-2: last week of August 2026",
+      "topics": [
+        {
+          "title": "Algebraic expressions and identities",
+          "sourceText": "ବୀଜଗାଣିତିକ ପରିପ୍ରକାଶ ଓ ଅଭେଦ",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        },
+        {
+          "title": "Algebraic equations",
+          "sourceText": "ବୀଜଗାଣିତିକ ସମୀକରଣ",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        },
+        {
+          "title": "Mensuration (sections 5.1–5.4)",
+          "sourceText": "ପରିମିତି (5.1 to 5.4)",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        },
+        {
+          "title": "Construction (sections 6.3 and 6.4)",
+          "sourceText": "ଅଙ୍କନ (6.3 & 6.4)",
+          "translationStatus": "section label retained; book title/translation review required"
+        },
+        {
+          "title": "Trigonometry (sections 7.1–7.4)",
+          "sourceText": "ତ୍ରିକୋଣମିତି (7.1 to 7.4)",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        }
+      ]
+    },
+    {
+      "term": "Term II",
+      "assessment": "IA-3: last week of November 2026; Aspirational Component: third week of February 2027; Annual examination: second week of March 2027",
+      "topics": [
+        {
+          "title": "Coordinate geometry",
+          "sourceText": "ସ୍ଥାନାଙ୍କ ଜ୍ୟାମିତି",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        },
+        {
+          "title": "Ratio and proportion",
+          "sourceText": "ଅନୁପାତ ଓ ସମାନୁପାତ",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        },
+        {
+          "title": "Quadrilaterals",
+          "sourceText": "ଚତୁର୍ଭୁଜ",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        },
+        {
+          "title": "Areas",
+          "sourceText": "କ୍ଷେତ୍ରଫଳ",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        },
+        {
+          "title": "Construction (sections 6.5 and 6.6)",
+          "sourceText": "ଅଙ୍କନ (6.5 & 6.6)",
+          "translationStatus": "section label retained; book title/translation review required"
+        }
+      ]
+    },
+    {
+      "term": "Term II (continued)",
+      "assessment": "IA-4: third week of February 2027",
+      "topics": [
+        {
+          "title": "Statistics",
+          "sourceText": "ପରିସଂଖ୍ୟାନ",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        },
+        {
+          "title": "Probability",
+          "sourceText": "ସମ୍ଭାବ୍ୟତା",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        },
+        {
+          "title": "Mensuration (sections 5.5–5.8)",
+          "sourceText": "ପରିମିତି (5.5 to 5.8)",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        },
+        {
+          "title": "Construction (section 6.7)",
+          "sourceText": "ଅଙ୍କନ (6.7)",
+          "translationStatus": "section label retained; book title/translation review required"
+        },
+        {
+          "title": "Trigonometry (section 7.5)",
+          "sourceText": "ତ୍ରିକୋଣମିତି (7.5)",
+          "translationStatus": "working English translation; verify against rendered PDF"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Topics and assessment schedule are transcribed from the official BSE Odisha Class IX HSC 2026–27 syllabus PDF. English topic names are working translations of the Odia-script extraction and require visual QA against the PDF page before being marked verified.",
+    "This is a partial syllabus structure for Mathematics only, not the complete Class IX syllabus.",
+    "HSC profile only. Keep Madhyama syllabus separate.",
+    "This record contains syllabus metadata, not textbook chapter text."
+  ]
+}
