@@ -186,10 +186,11 @@
         "bse-odisha-class-x-2026-27"
       ],
       "subjects": [
-        "English (SLE) — HSC partial extraction"
+        "English (SLE) — partial extraction",
+        "Mathematics (MTH) — partial extraction"
       ],
       "verificationStatus": "in_review",
-      "notes": "Official BSE Odisha 2026–27 HSC Class IX English (SLE) syllabus partially structured in content/odisha-class9-hsc-english-2026-27.json. The separate Madhyama syllabus and other HSC subjects are not yet extracted; verify the multi-column PDF layout visually before publishing."
+      "notes": "BSE Odisha Class IX HSC 2026–27 English (SLE) and Mathematics (MTH) have partial structured records. English grammar and Mathematics original practice banks are added but remain needs_review. Mathematics topic translations need visual verification against the official PDF. Remaining HSC subjects and the separate Madhyama syllabus are not yet extracted."
     },
     {
       "board": "ODISHA_BOARD",
