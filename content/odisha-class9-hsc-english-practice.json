@@ -1,0 +1,590 @@
+{
+  "schemaVersion": 1,
+  "board": "ODISHA_BOARD",
+  "qualification": "HSC",
+  "class": 9,
+  "subject": "English (SLE)",
+  "academicSession": "2026-27",
+  "sourceId": "bse-odisha-class-ix-2026-27",
+  "contentType": "original_practice_questions",
+  "reviewStatus": "needs_review",
+  "note": "Original grammar practice questions mapped to official syllabus topics. These are not official board questions; review answer keys before publishing.",
+  "records": [
+    {
+      "id": "odisha9-hsc-eng-q1",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "English (SLE)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Parts of a Sentence (Q1)",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Syllabus topic: Parts of a Sentence; official Class IX HSC SLE syllabus 2026–27. The question itself is original practice content.",
+      "learningOutcome": "Apply the Class IX English syllabus skill: Parts of a Sentence.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "Identify the subject in: “The young athlete won the race.”",
+        "options": [
+          {
+            "id": "A",
+            "text": "The young athlete"
+          },
+          {
+            "id": "B",
+            "text": "won the race"
+          },
+          {
+            "id": "C",
+            "text": "the race"
+          },
+          {
+            "id": "D",
+            "text": "young"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "A",
+        "explanation": "The subject tells who or what the sentence is about: “The young athlete.”"
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-eng-q2",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "English (SLE)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Parts of a Sentence (Q2)",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Syllabus topic: Parts of a Sentence; official Class IX HSC SLE syllabus 2026–27. The question itself is original practice content.",
+      "learningOutcome": "Apply the Class IX English syllabus skill: Parts of a Sentence.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "Identify the predicate in: “Our teacher explained the lesson clearly.”",
+        "options": [
+          {
+            "id": "A",
+            "text": "Our teacher"
+          },
+          {
+            "id": "B",
+            "text": "the lesson"
+          },
+          {
+            "id": "C",
+            "text": "explained the lesson clearly"
+          },
+          {
+            "id": "D",
+            "text": "clearly"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "C",
+        "explanation": "The predicate states what the subject does or what is said about it."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-eng-q3",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "English (SLE)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Parts of a Sentence (Q3)",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Syllabus topic: Parts of a Sentence; official Class IX HSC SLE syllabus 2026–27. The question itself is original practice content.",
+      "learningOutcome": "Apply the Class IX English syllabus skill: Parts of a Sentence.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "Which sentence has an imperative form?",
+        "options": [
+          {
+            "id": "A",
+            "text": "The sky is cloudy."
+          },
+          {
+            "id": "B",
+            "text": "Please close the window."
+          },
+          {
+            "id": "C",
+            "text": "Did you finish the work?"
+          },
+          {
+            "id": "D",
+            "text": "What a beautiful view!"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "B",
+        "explanation": "An imperative sentence gives a command, request, instruction, or advice."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-eng-q4",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "English (SLE)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Verbs (Q4)",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Syllabus topic: Verbs; official Class IX HSC SLE syllabus 2026–27. The question itself is original practice content.",
+      "learningOutcome": "Apply the Class IX English syllabus skill: Verbs.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "Choose the main verb: “The children were playing outside.”",
+        "options": [
+          {
+            "id": "A",
+            "text": "children"
+          },
+          {
+            "id": "B",
+            "text": "were"
+          },
+          {
+            "id": "C",
+            "text": "playing"
+          },
+          {
+            "id": "D",
+            "text": "outside"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "C",
+        "explanation": "“Playing” is the main action verb; “were” is the helping verb."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-eng-q5",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "English (SLE)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Verbs (Q5)",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Syllabus topic: Verbs; official Class IX HSC SLE syllabus 2026–27. The question itself is original practice content.",
+      "learningOutcome": "Apply the Class IX English syllabus skill: Verbs.",
+      "difficulty": "medium",
+      "content": {
+        "prompt": "Choose the correct verb: “Each of the players ___ a water bottle.”",
+        "options": [
+          {
+            "id": "A",
+            "text": "have"
+          },
+          {
+            "id": "B",
+            "text": "has"
+          },
+          {
+            "id": "C",
+            "text": "are having"
+          },
+          {
+            "id": "D",
+            "text": "were having"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "B",
+        "explanation": "“Each” is singular, so the verb takes the singular form “has.”"
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-eng-q6",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "English (SLE)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Verbs (Q6)",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Syllabus topic: Verbs; official Class IX HSC SLE syllabus 2026–27. The question itself is original practice content.",
+      "learningOutcome": "Apply the Class IX English syllabus skill: Verbs.",
+      "difficulty": "medium",
+      "content": {
+        "prompt": "Which sentence uses a linking verb?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Rina kicked the ball."
+          },
+          {
+            "id": "B",
+            "text": "The soup smells delicious."
+          },
+          {
+            "id": "C",
+            "text": "They built a bridge."
+          },
+          {
+            "id": "D",
+            "text": "He opened the door."
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "B",
+        "explanation": "“Smells” links the subject “soup” to the description “delicious.”"
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-eng-q7",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "English (SLE)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Time and Tense (Q7)",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Syllabus topic: Time and Tense; official Class IX HSC SLE syllabus 2026–27. The question itself is original practice content.",
+      "learningOutcome": "Apply the Class IX English syllabus skill: Time and Tense.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "Choose the correct form: “Mina ___ to school every day.”",
+        "options": [
+          {
+            "id": "A",
+            "text": "walk"
+          },
+          {
+            "id": "B",
+            "text": "walks"
+          },
+          {
+            "id": "C",
+            "text": "walked"
+          },
+          {
+            "id": "D",
+            "text": "is walk"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "B",
+        "explanation": "The simple present describes a routine; the third-person singular subject “Mina” takes “walks.”"
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-eng-q8",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "English (SLE)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Time and Tense (Q8)",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Syllabus topic: Time and Tense; official Class IX HSC SLE syllabus 2026–27. The question itself is original practice content.",
+      "learningOutcome": "Apply the Class IX English syllabus skill: Time and Tense.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "Complete the sentence: “We ___ the museum yesterday.”",
+        "options": [
+          {
+            "id": "A",
+            "text": "visit"
+          },
+          {
+            "id": "B",
+            "text": "have visited"
+          },
+          {
+            "id": "C",
+            "text": "visited"
+          },
+          {
+            "id": "D",
+            "text": "will visit"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "C",
+        "explanation": "“Yesterday” indicates a finished past action, so use the simple past “visited.”"
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-eng-q9",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "English (SLE)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Time and Tense (Q9)",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Syllabus topic: Time and Tense; official Class IX HSC SLE syllabus 2026–27. The question itself is original practice content.",
+      "learningOutcome": "Apply the Class IX English syllabus skill: Time and Tense.",
+      "difficulty": "medium",
+      "content": {
+        "prompt": "Choose the correct form: “I ___ my homework, so I can go out now.”",
+        "options": [
+          {
+            "id": "A",
+            "text": "finish"
+          },
+          {
+            "id": "B",
+            "text": "finished yesterday"
+          },
+          {
+            "id": "C",
+            "text": "have finished"
+          },
+          {
+            "id": "D",
+            "text": "will finishing"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "C",
+        "explanation": "The present perfect connects a completed action with the present result."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-eng-q10",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "English (SLE)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Time and Tense (Q10)",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Syllabus topic: Time and Tense; official Class IX HSC SLE syllabus 2026–27. The question itself is original practice content.",
+      "learningOutcome": "Apply the Class IX English syllabus skill: Time and Tense.",
+      "difficulty": "medium",
+      "content": {
+        "prompt": "Complete the sentence: “At 8 p.m. last night, they ___ dinner.”",
+        "options": [
+          {
+            "id": "A",
+            "text": "have"
+          },
+          {
+            "id": "B",
+            "text": "were having"
+          },
+          {
+            "id": "C",
+            "text": "will have"
+          },
+          {
+            "id": "D",
+            "text": "are having"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "B",
+        "explanation": "The past continuous describes an action in progress at a particular time in the past."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-eng-q11",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "English (SLE)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Parts of a Sentence (Q11)",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Syllabus topic: Parts of a Sentence; official Class IX HSC SLE syllabus 2026–27. The question itself is original practice content.",
+      "learningOutcome": "Apply the Class IX English syllabus skill: Parts of a Sentence.",
+      "difficulty": "easy",
+      "content": {
+        "prompt": "Which is a complete sentence?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Because the rain was heavy."
+          },
+          {
+            "id": "B",
+            "text": "After the match ended."
+          },
+          {
+            "id": "C",
+            "text": "The bus arrived late."
+          },
+          {
+            "id": "D",
+            "text": "While we waited."
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "C",
+        "explanation": "“The bus arrived late” expresses a complete thought with a subject and predicate."
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    },
+    {
+      "id": "odisha9-hsc-eng-q12",
+      "board": "ODISHA_BOARD",
+      "class": 9,
+      "subject": "English (SLE)",
+      "chapterId": null,
+      "kind": "question",
+      "title": "Original practice: Verbs (Q12)",
+      "language": "English",
+      "academicSession": "2026-27",
+      "sourceIds": [
+        "bse-odisha-class-ix-2026-27"
+      ],
+      "sourceReference": "Syllabus topic: Verbs; official Class IX HSC SLE syllabus 2026–27. The question itself is original practice content.",
+      "learningOutcome": "Apply the Class IX English syllabus skill: Verbs.",
+      "difficulty": "hard",
+      "content": {
+        "prompt": "Choose the correct verb: “Neither the captain nor the players ___ ready.”",
+        "options": [
+          {
+            "id": "A",
+            "text": "is"
+          },
+          {
+            "id": "B",
+            "text": "was"
+          },
+          {
+            "id": "C",
+            "text": "are"
+          },
+          {
+            "id": "D",
+            "text": "has"
+          }
+        ],
+        "questionType": "single_choice"
+      },
+      "answer": {
+        "correctOption": "C",
+        "explanation": "With “neither…nor,” the verb generally agrees with the nearer subject; “players” is plural, so use “are.”"
+      },
+      "verificationStatus": "needs_review",
+      "redistributionPermission": "not_applicable_original",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "version": 1
+    }
+  ]
+}
