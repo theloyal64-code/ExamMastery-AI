@@ -169,6 +169,24 @@ for (const classRecord of odishaClass6to8.classInventories || []) {
 for (const classLevel of [6, 7, 8]) if (!inventoriedClasses.has(classLevel)) errors.push("Missing Odisha textbook inventory for Class " + classLevel);
 if (!odishaClass6to8.reuseNote || !Array.isArray(odishaClass6to8.sourceCaveats)) errors.push("Odisha Classes VI-VIII inventory must document verification/reuse caveats.");
 
+const appSubjectStructure = catalog.appSubjectStructure;
+if (!appSubjectStructure || appSubjectStructure.version !== 1 || !Array.isArray(appSubjectStructure.classes) || appSubjectStructure.classes.join(",") !== "6,7,8,9,10") {
+  errors.push("Canonical app subject structure must cover Classes 6–10.");
+}
+const coreSubjectIds = (appSubjectStructure?.coreSubjects || []).map((subject) => subject.id);
+if (coreSubjectIds.join(",") !== "mathematics,science,english,social-science") {
+  errors.push("App navigation must contain exactly the four agreed core subjects: Mathematics, Science, English, Social Science.");
+}
+const socialScience = (appSubjectStructure?.coreSubjects || []).find((subject) => subject.id === "social-science");
+const socialSectionIds = (socialScience?.sections || []).map((section) => section.id);
+if (socialSectionIds.join(",") !== "history,geography,economics,civics-polity") {
+  errors.push("Social Science must group History, Geography, Economics, and Civics/Political Science (Polity) as sections.");
+}
+if (!(appSubjectStructure?.rules || []).some((rule) => rule.includes("official syllabus")) ||
+    !(appSubjectStructure?.rules || []).some((rule) => rule.includes("Madhyama"))) {
+  errors.push("Canonical subject structure must preserve official-syllabus verification and separate Odisha learning tracks.");
+}
+
 const expected = new Set();
 for (const board of catalog.scope.boards) {
   for (const classLevel of catalog.scope.classes) expected.add(`${board}:${classLevel}`);
