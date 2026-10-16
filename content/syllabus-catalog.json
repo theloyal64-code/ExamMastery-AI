@@ -187,10 +187,11 @@
       ],
       "subjects": [
         "English (SLE) — partial extraction",
-        "Mathematics (MTH) — partial extraction"
+        "Mathematics (MTH) — partial extraction",
+        "General Science (GSC) — partial extraction"
       ],
       "verificationStatus": "in_review",
-      "notes": "BSE Odisha Class IX HSC 2026–27 English (SLE) and Mathematics (MTH) have partial structured records. English grammar and Mathematics original practice banks are added but remain needs_review. Mathematics topic translations need visual verification against the official PDF. Remaining HSC subjects and the separate Madhyama syllabus are not yet extracted."
+      "notes": "BSE Odisha Class IX HSC 2026–27 English (SLE), Mathematics (MTH), and General Science (GSC) have partial structured records. English, Mathematics, and General Science original practice banks remain needs_review. Mathematics and Science topic translations require visual verification against the official PDF. Remaining HSC subjects and the separate Madhyama syllabus are not yet extracted."
     },
     {
       "board": "ODISHA_BOARD",
